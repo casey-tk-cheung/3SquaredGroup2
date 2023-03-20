@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "Tiplocs.js",
+  "scripts": {
+  "start": "node server"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
