@@ -2,7 +2,7 @@
   "name": "psp_schemas",
   "version": "1.0.0",
   "description": "",
-  "main": "Tiplocs.js",
+  "main": "server.js",
   "scripts": {
   "start": "node server"
   },
