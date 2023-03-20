@@ -2,8 +2,8 @@ const express = require ('express');
 const app = express(); //initialise the server
 const path = require('path');
 const port = process.env.PORT || 3000;
-const getWorkingTiplocs = require('./getWorkingTiplocs')
-const jsonFile = require("./allTiplocs.json");
+const getWorkingTiplocs = require('./3SQUARED_Project/backend/getWorkingTiplocs')
+const jsonFile = require("./3SQUARED_Project/backend/allTiplocs.json");
 
 const headers = new Headers();
 headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
