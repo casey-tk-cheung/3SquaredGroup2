@@ -11,7 +11,7 @@ headers.append('X-ApiVersion', '1');
 
 //static asset directories
 app.use(express.static(__dirname + '/..' + '/frontend'))
-app.use(express.static(__dirname + '/..' + '/backend'))
+//app.use(express.static(__dirname + '/..' + '/backend'))
 
 app.get('/', (req, res) => 
 {
