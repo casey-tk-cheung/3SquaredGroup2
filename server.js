@@ -1,7 +1,7 @@
 const express = require ('express');
 const app = express(); //initialise the server
 const path = require('path');
-const port = 8080;
+const port = process.env.PORT || 8080;
 const getWorkingTiplocs = require('./getWorkingTiplocs')
 const jsonFile = require("./allTiplocs.json");
 
