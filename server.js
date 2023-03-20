@@ -16,7 +16,7 @@ app.use(express.static(__dirname + '/..' + '3SQUARED_Project/backend'))
 app.get('/', (req, res) => 
 {
   //getWorkingTiplocs(jsonFile, 25, '2023-02-16', '2023-02-16', headers)
-  res.sendFile(path.join(__dirname, '..', 'frontend', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'frontend', '3SQUARED_Project/index.html'));
 })
 
 
