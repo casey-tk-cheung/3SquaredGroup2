@@ -10,8 +10,8 @@ headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
 headers.append('X-ApiVersion', '1');
 
 //static asset directories
-app.use(express.static(__dirname + '/..' + 'frontend'))
-app.use(express.static(__dirname + '/..' + 'backend'))
+app.use(express.static(__dirname + '/..' + 'wwwroot/3SQUARED_Project/frontend'))
+app.use(express.static(__dirname + '/..' + 'wwwroot/3SQUARED_Project/backend'))
 
 app.get('/', (req, res) => 
 {
