@@ -9,14 +9,15 @@ const headers = new Headers();
 headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
 headers.append('X-ApiVersion', '1');
 
+app.use(express.static("./public"));
 //static asset directories
-app.use(express.static(__dirname + '/..' + 'wwwroot/3SQUARED_Project/frontend'))
-app.use(express.static(__dirname + '/..' + 'wwwroot/3SQUARED_Project/backend'))
+//app.use(express.static(__dirname + '/..' + 'wwwroot/3SQUARED_Project/frontend'))
+//app.use(express.static(__dirname + '/..' + 'wwwroot/3SQUARED_Project/backend'))
 
 app.get('/', (req, res) => 
 {
   //getWorkingTiplocs(jsonFile, 25, '2023-02-16', '2023-02-16', headers)
-  res.sendFile(path.join(__dirname, '..', 'wwwroot/3SQUARED_Project/frontend', 'index.html'));
+  //res.sendFile(path.join(__dirname, '..', 'wwwroot/3SQUARED_Project/frontend', 'index.html'));
 })
 
 
