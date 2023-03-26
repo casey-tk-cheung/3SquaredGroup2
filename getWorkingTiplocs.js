@@ -1,7 +1,17 @@
 const fs = require('fs');
+const 
+fetch = (...args) =>
+	import('node-fetch').then(({default: fetch}) => fetch(...args));
 
-// gets the tiplocs with trains for that day
-function getWorkingTiplocs(tiplocArray, tiplocsAtOnce, startDate, endDate, headers) {
+module.exports = {
+ getWorkingTiplocs :  function (tiplocArray, tiplocsAtOnce, startDate, endDate ) {
+    const options = {
+	method: 'GET',
+	headers: {
+		'X-ApiKey': 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A',
+		'X-ApiVersion': '1'
+	}
+};
     let createNew = true;
     let temp;
     let workingTiplocs;
@@ -12,10 +22,11 @@ function getWorkingTiplocs(tiplocArray, tiplocsAtOnce, startDate, endDate, heade
         } else {
             temp = (tiplocArray.slice(i, tiplocArray.length)).toString(); // gets the remaining tiplocs
         }
-        fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${temp}/${startDate} 00:00:00/${endDate} 23:59:59`, { headers: headers })
+        fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${temp}/${startDate} 00:00:00/${endDate} 23:59:59`, options)
         .then(res => res.json())
         .then(data => {
             // checks if data is empty
+            
             if (data.length != 0) {
                 for (let k = 0; k < data.length; k++) {
                     const originLocation = data[k].originLocation;
@@ -29,6 +40,7 @@ function getWorkingTiplocs(tiplocArray, tiplocsAtOnce, startDate, endDate, heade
                 else {
                     workingTiplocs = workingTiplocs.concat(data);
                 }
+                console.dir(workingTiplocs)
                 fs.writeFileSync('tiplocs.json', JSON.stringify(workingTiplocs, null, 2), 'utf-8')
             }
             })
@@ -37,5 +49,4 @@ function getWorkingTiplocs(tiplocArray, tiplocsAtOnce, startDate, endDate, heade
             });
     }
 }
-
-module.exports = { getWorkingTiplocs }
+}
