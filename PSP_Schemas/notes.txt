@@ -1,2 +1,0 @@
-the getActiveTiplocs function can be done when a connection is made 
-(socket.io).
