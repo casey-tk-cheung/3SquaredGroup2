@@ -5,8 +5,8 @@ const port = process.env.PORT || 3000;
 //const jsonFile = require("./allTiplocs.json");
 const fs = require('fs');
 const tiplocArray = require("./allTiplocs.json");
-const https = require("https");
-const server = https.createServer(app);
+const http = require("http");
+const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 

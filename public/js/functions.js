@@ -55,18 +55,20 @@ function filterTiplocs(){
     var container = document.getElementById('menuItems').replaceChildren();
     var container = document.getElementById('menuItems');
     if (query != ''){
-        let gettiplocs = fetch("3SQUARED_Project/frontend/tiplocs.json")
+        let gettiplocs = fetch("../tiplocs.json")
             .then(r => r.json())
             .then(data => {
                 for (const item of data) {
-                    if (item.originLocation.toLowerCase().includes(query.toLowerCase()))
-                    {
-                    var p = document.createElement('p');
-                    p.innerHTML = item.originLocation;
-                    p.id = item.originTiploc;
-                    p.addEventListener("click", expandMenu);
-                    p.classList.add('menuOptions');
-                    container.append(p);
+                    if (item.originLocation){
+                        if (item.originLocation.toLowerCase().includes(query.toLowerCase()))
+                        {
+                            var p = document.createElement('p');
+                            p.innerHTML = item.originLocation;
+                            p.id = item.originTiploc;
+                            p.addEventListener("click", expandMenu);
+                            p.classList.add('menuOptions');
+                            container.append(p);
+                        }
                     }
                 }
             }
