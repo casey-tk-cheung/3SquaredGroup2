@@ -17,7 +17,6 @@ body {
     transition: opacity 0.5s ease-in-out; */
     background-color: white;
     width: 350px;
-    min-width: 250px;
     z-index: 10;
     overflow-y: scroll;
     height: 100%;
@@ -25,9 +24,9 @@ body {
     position: relative;
 }
 
-#sidebar div{
+/* #sidebar div{
     margin-top: 50px;
-}
+} */
 
 .menu{
     height: 100%;
