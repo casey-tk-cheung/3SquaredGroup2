@@ -22,18 +22,19 @@ body {
     height: 100%;
     box-shadow: 0px 5px 18px #888888;
     position: relative;
+    overflow-y: hidden;
 }
 
 /* #sidebar div{
     margin-top: 50px;
 } */
 
-.menu{
+.menu {
     height: 100%;
     width: 100%;
 }
 
-#journeyMenu{
+#journeyMenu {
     display: none;
 }
 
@@ -80,21 +81,21 @@ p.menuOptions:hover {
     font-family: 'Open Sans', sans-serif;
 }
 
-#secondMenu{
+#secondMenu {
     z-index: 1;
 }
 
-#secondMenuItems{
+#secondMenuItems {
     overflow-y: scroll;
 }
 
-#markersInfo{
+#markersInfo {
     position: absolute;
     bottom: 30px;
     right: 10px;
     z-index: 1000;
     display: flex;
-    background-color:rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     border-color: black;
     border-radius: 20px;
     box-shadow: 0px 5px 18px #888888;
@@ -104,22 +105,25 @@ p.menuOptions:hover {
     gap: 10px;
     visibility: hidden;
     padding: 5px;
+    backdrop-filter: blur(2px);
 }
 
-#tiplocSearch{
+#tiplocSearch {
     align-self: center;
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
     margin-top: 5px;
     width: 80%;
 }
-#keyBtn{
+
+#keyBtn {
     position: absolute;
     bottom: 5px;
     right: 5px;
     z-index: 1000;
 }
-#tiplocBtn{
+
+#tiplocBtn {
     position: absolute;
     bottom: 5px;
     left: 5px;
