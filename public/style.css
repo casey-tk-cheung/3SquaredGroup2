@@ -95,6 +95,7 @@ p.menuOptions:hover {
     align-items: center;
     font-family: 'Open Sans', sans-serif;
     gap: 10px;
+    opacity: 0;
 }
 
 #tiplocSearch{
