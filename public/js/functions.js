@@ -44,6 +44,8 @@ function resetSidebar(){
     clearSidebar();
     tiplocMenu.style.display = 'inline';
     // tiplocSearch.value = "";
+    var b = document.getElementById("tiplocBtn");
+    b.style.visibility = 'hidden';
 }
 
 function journeyClicked(e) {
@@ -55,6 +57,8 @@ function journeyClicked(e) {
     })
     addTileLayer();
     route(e);
+    var b = document.getElementById("tiplocBtn");
+    b.style.visibility = 'visible';
 }
 
 function filterTiplocs(){
@@ -98,12 +102,21 @@ function filterTiplocs(){
 function toggleKey(){
     var b = document.getElementById("keyBtn");
     var s = document.getElementById("markersInfo");
-    if(s.style.opacity != 0){
-        b.innerHTML = "Show Key";
-        s.style.opacity = 0;
+    if(b.innerHTML == 'Show Key'){
+        s.style.visibility = 'visible';
+        b.innerHTML = 'Hide Key'
     }
     else{
-        b.innerHTML = "Hide Key";
-        s.style.opacity = 100;
+        s.style.visibility = 'hidden';
+        b.innerHTML = 'Show Key';
+    }
+}
+function tiplocBtnClick(){
+    var b = document.getElementById("tiplocBtn")
+    if(b.innerHTML == "Show all Tiplocs"){
+        b.innerHTML = "Hide all Tiplocs";
+    }
+    else{
+        b.innerHTML = "Show all Tiplocs";
     }
 }
