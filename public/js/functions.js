@@ -44,7 +44,7 @@ function clearSidebar() {
 function resetSidebar(){
     clearSidebar();
     tiplocMenu.style.display = 'inline';
-    tiplocSearch.value = "";
+    // tiplocSearch.value = "";
 }
 
 function journeyClicked(e) {
