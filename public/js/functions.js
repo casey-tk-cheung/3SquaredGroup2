@@ -11,6 +11,7 @@ function getJourneys(e) {
     fetch(`API/Tiplocs/${tiploc}`)
         .then(res => res.json())
         .then(data => {
+            data = data.data;
             var container = document.getElementById('journeyMenu');
             var resultsCount = document.createElement('p');
             resultsCount.innerHTML = `${data.length} trains today`;
