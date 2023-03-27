@@ -5,13 +5,10 @@ function getJourneys(e) {
     clearSidebar();
     var secondMenu = document.getElementById('journeyMenu');
     secondMenu.style.display = 'inline';
-    const headers = new Headers();
-    headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
-    headers.append('X-ApiVersion', '1');
     var tiploc = e.currentTarget.id;
     var date = new Date().toISOString();
     date = date.substring(0, date.length - 14);
-    fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${tiploc}/${date} 00:00:00/${date} 23:59:59`, { headers: headers })
+    fetch(`API/Tiplocs/${tiploc}`)
         .then(res => res.json())
         .then(data => {
             var container = document.getElementById('journeyMenu');
@@ -64,7 +61,7 @@ function filterTiplocs(){
     var container = document.getElementById('tiplocMenu').replaceChildren();
     var container = document.getElementById('tiplocMenu');  
     if (query != ''){
-        let gettiplocs = fetch("tiplocs.json")
+        let gettiplocs = fetch("../tiplocs.json")
             .then(r => r.json())
             .then(data => {
                 for (const item of data) {
