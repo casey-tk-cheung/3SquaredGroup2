@@ -15,7 +15,7 @@ const io = new Server(server);
 app.use(express.static("./public"));
 
 //router for API calls
-const APIRouter = require('./APIrouter');
+const APIRouter = require('./APIrouter.js');
 app.use('/API', APIRouter);
 
 server.listen(`${port}`, () => {
@@ -25,12 +25,25 @@ server.listen(`${port}`, () => {
 //need error handling for if the connection times out;
 //in general, too many requests and the webpage 'freezes'
 
+
+const headers = new Headers();
+headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
+headers.append('X-ApiVersion', '1');
+
+dateStart = "2023-03-27"
+dateEnd = "2023-03-27"
+tiplocsAtOnce = 25
+
+
+//need error handling for if the connection times out;
+//in general, too many requests and the webpage 'freezes'
+
 io.on('connection', async (socket) => {
-    
-  let tiplocsAtOnce = 25
   let createNew = true;
   let temp;
   let workingTiplocs;
+  const controller = new AbortController()
+  const timeoutId = setTimeout(() => controller.abort(), 5000)
   //console.log(tiplocArray)
   // loops through the list of tiplocs
   for (let i = 0; i < tiplocArray.length; i += tiplocsAtOnce) {
@@ -39,7 +52,7 @@ io.on('connection', async (socket) => {
       } else {
           temp = (tiplocArray.slice(i, tiplocArray.length)).toString(); // gets the remaining tiplocs
       }
-      await fetch(`API/Tiplocs/${temp}`)
+      await fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${temp}/${dateStart} 00:00:00/${dateEnd} 23:59:59`, { headers: headers }, {signal: controller.signal})
       .then(res => res.json())
       .then(data => {
           // checks if data is empty
@@ -58,7 +71,6 @@ io.on('connection', async (socket) => {
               else {
                   workingTiplocs = workingTiplocs.concat(data);
               }
-              console.log('add')
               fs.writeFileSync('./public/tiplocs.json', JSON.stringify(workingTiplocs, null, 2), {encoding:'utf8',flag:'w'})
           }
           })
