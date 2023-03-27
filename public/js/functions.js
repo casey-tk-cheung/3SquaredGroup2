@@ -118,3 +118,12 @@ function toggleKey(){
         s.style.opacity = 100;
     }
 }
+function tiplocBtnClick(){
+    var b = document.getElementById("tiplocBtn")
+    if(b.innerHTML == "Show all Tiplocs"){
+        b.innerHTML = "Hide all Tiplocs";
+    }
+    else{
+        b.innerHTML = "Show all Tiplocs";
+    }
+}
