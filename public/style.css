@@ -111,3 +111,9 @@ p.menuOptions:hover {
     right: 5px;
     z-index: 1000;
 }
+#tiplocBtn{
+    position: absolute;
+    bottom: 5px;
+    left: 355px;
+    z-index: 1000;
+}
