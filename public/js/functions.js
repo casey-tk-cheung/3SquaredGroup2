@@ -99,8 +99,20 @@ function filterTiplocs(){
             )
     }
 }
-var keyBtn = L.DonUtil.get('keyBtn');
+// var keyBtn = L.DonUtil.get('keyBtn');
 
-L.DomEvent.on(keyBtn, 'click', function(){
-    //Do something with click event
-});
+// L.DomEvent.on(keyBtn, 'click', function(){
+    
+// });
+function toggleKey(){
+    var b = document.getElementById("keyBtn");
+    var s = document.getElementById("markersInfo");
+    if(s.style.opacity != 0){
+        b.innerHTML = "Show Key";
+        s.style.opacity = 0;
+    }
+    else{
+        b.innerHTML = "Hide Key";
+        s.style.opacity = 100;
+    }
+}
