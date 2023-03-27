@@ -1,4 +1,4 @@
-var container = document.getElementById('menuItems');
+var container = document.getElementById('tiplocMenu');
 
 let gettiplocs = fetch("./tiplocs.json")
     .then(r => r.json())
@@ -8,7 +8,7 @@ let gettiplocs = fetch("./tiplocs.json")
                 var p = document.createElement('p');
                 p.innerHTML = item.originLocation;
                 p.id = item.originTiploc;
-                p.addEventListener("click", expandMenu);
+                p.addEventListener("click", getJourneys);
                 p.classList.add('menuOptions');
                 container.append(p);
             }

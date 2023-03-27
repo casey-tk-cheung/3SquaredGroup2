@@ -1,9 +1,9 @@
 var tiplocSearch = document.getElementById('tiplocSearch');
 tiplocSearch.addEventListener('input', filterTiplocs);
 
-function expandMenu(e) {
-    closeSecondMenu();
-    var secondMenu = document.getElementById('secondMenu');
+function getJourneys(e) {
+    clearSidebar();
+    var secondMenu = document.getElementById('journeyMenu');
     secondMenu.style.display = 'inline';
     const headers = new Headers();
     headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
@@ -14,7 +14,7 @@ function expandMenu(e) {
     fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${tiploc}/${date} 00:00:00/${date} 23:59:59`, { headers: headers })
         .then(res => res.json())
         .then(data => {
-            var container = document.getElementById('secondMenuItems');
+            var container = document.getElementById('journeyMenu');
             var resultsCount = document.createElement('p');
             resultsCount.innerHTML = `${data.length} trains today`;
             resultsCount.style.fontSize = '14px';
@@ -34,14 +34,21 @@ function expandMenu(e) {
         })
 }
 
-function closeSecondMenu() {
-    secondMenu.style.display = 'none';
-    var secondMenuContainer = document.getElementById('secondMenuItems')
-    secondMenuContainer.replaceChildren();
+function clearSidebar() {
+    var tiplocMenu = document.getElementById('tiplocMenu');
+    tiplocMenu.style.display = 'none';
+    var journeyMenu = document.getElementById('journeyMenu');
+    journeyMenu.replaceChildren();
+}
+
+function resetSidebar(){
+    clearSidebar();
+    tiplocMenu.style.display = 'inline';
+    tiplocSearch.value = "";
 }
 
 function journeyClicked(e) {
-    closeSecondMenu();
+    clearSidebar();
     map.eachLayer(function (layer) {
         if (layer != Location.tileLayer) {
             map.removeLayer(layer);
@@ -54,8 +61,8 @@ function journeyClicked(e) {
 function filterTiplocs(){
     var query = tiplocSearch.value;
     console.log(query);
-    var container = document.getElementById('menuItems').replaceChildren();
-    var container = document.getElementById('menuItems');
+    var container = document.getElementById('tiplocMenu').replaceChildren();
+    var container = document.getElementById('tiplocMenu');  
     if (query != ''){
         let gettiplocs = fetch("tiplocs.json")
             .then(r => r.json())
@@ -67,14 +74,14 @@ function filterTiplocs(){
                             var p = document.createElement('p');
                             p.innerHTML = item.originLocation;
                             p.id = item.originTiploc;
-                            p.addEventListener("click", expandMenu);
+                            p.addEventListener("click", getJourneys);
                             p.classList.add('menuOptions');
                             container.append(p);
                         }
                     }
                 }
             }
-            )
+        )
     }
     else {
         let gettiplocs = fetch("tiplocs.json")
@@ -84,7 +91,7 @@ function filterTiplocs(){
                     var p = document.createElement('p');
                     p.innerHTML = item.originLocation;
                     p.id = item.originTiploc;
-                    p.addEventListener("click", expandMenu);
+                    p.addEventListener("click", journeyClicked);
                     p.classList.add('menuOptions');
                     container.append(p);
                 }
@@ -92,3 +99,8 @@ function filterTiplocs(){
             )
     }
 }
+var keyBtn = L.DonUtil.get('keyBtn');
+
+L.DomEvent.on(keyBtn, 'click', function(){
+    //Do something with click event
+});

@@ -8,29 +8,39 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <div id="dateTime"></div>
-    <div id="markersInfo">
+    <button id="keyBtn">Show Key</button>
+     <div id="markersInfo">
         <img src="assets/destinationMarker.png" style="height: 40px;">
         Origin / Destination
         <img src="assets/station.png" style="height: 35px; width: 35px;">
         Stations
-    </div>
+        <img src="asset/train.png" style="height: 35px; width: 35px;">
+        Train
+    </div>  
     <div class='flex-row' style="height: 100vh; width:100%; position:absolute">
-        <div id="menu" class="floatingGroup">
-            <div style="display: flex; justify-content: center;">
+        <div id="sidebar">
+            <div style="position: fixed; width: 250px; height: 45px; background-color: white; display: flex; align-items: center; justify-content: space-around; margin-top: 0px;">
+                <span class="iconify" data-icon="material-symbols:arrow-back-rounded" data-width="20" data-height="20" onclick="resetSidebar()"></span>
+                <div style="display: flex; align-items: center; justify-content: center; margin-top: 0px;">
+                    <input id="tiplocSearch" type="text" placeholder="Search tiplocs" style="width: 100%;">
+                </div>
+            </div>
+
+            <div id="tiplocMenu" class="menu"></div>
+            <div id="journeyMenu" class="menu"></div>
+            <!-- <div style="display: flex; justify-content: center;">
                 <input type="text" id="tiplocSearch" placeholder="Search locations...">
             </div>
             <div id="menuItems"></div>
-        </div>
-        <div class="floatingGroup" id="secondMenu" style="margin: 15px; display: none; ">
-            <p class="menuOptions" onclick="closeSecondMenu()" style="font-size: 12px; color: gray">Close</p>
-            <div id="secondMenuItems">
-
-            </div>
+            <div id="secondMenu" style="margin: 15px; display: none; ">
+                <p class="menuOptions" onclick="closeSecondMenu()" style="font-size: 12px; color: gray">Close</p>
+                <div id="secondMenuItems"></div>
+            </div> -->
         </div>
     </div>
     <div id="map"></div>
@@ -46,5 +56,6 @@
 <script type="text/javascript" src="js/functions.js"></script>
 <!-- <script type="text/javascript" src="js/livetrain.js"></script> -->
 <script type='text/javascript' src='js/clock.js'></script>
-<script type="text/javascript" src="js/movingMarker.js"></script> 
+<script type="text/javascript" src="js/movingMarker.js"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>

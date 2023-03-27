@@ -12,15 +12,30 @@ body {
     z-index: 0;
 }
 
-#menu {
-    margin-left: 20px;
-    opacity: 60%;
-    transition: opacity 0.5s ease-in-out;
+#sidebar {
+    /* opacity: 60%;
+    transition: opacity 0.5s ease-in-out; */
+    background-color: white;
+    width: 350px;
+    min-width: 250px;
+    z-index: 10;
+    overflow-y: scroll;
+    height: 100%;
+    box-shadow: 0px 5px 18px #888888;
+    position: relative;
 }
 
-#menu:hover {
-    opacity: 100%;
-    transition: opacity 0.2s;
+#sidebar div{
+    margin-top: 50px;
+}
+
+.menu{
+    height: 100%;
+    width: 100%;
+}
+
+#journeyMenu{
+    display: none;
 }
 
 .floatingGroup {
@@ -32,7 +47,6 @@ body {
     border-radius: 8px;
     box-shadow: 0px 5px 18px #888888;
     overflow-y: scroll;
-
 }
 
 p {
@@ -65,6 +79,7 @@ p.menuOptions:hover {
 }
 
 #secondMenu{
+    z-index: 1;
 }
 
 #secondMenuItems{
@@ -89,4 +104,10 @@ p.menuOptions:hover {
     font-family: 'Open Sans', sans-serif;
     margin-top: 5px;
     width: 80%;
+}
+#keyBtn{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 1000;
 }
