@@ -5,15 +5,13 @@ function getJourneys(e) {
     clearSidebar();
     var secondMenu = document.getElementById('journeyMenu');
     secondMenu.style.display = 'inline';
-    const headers = new Headers();
-    headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
-    headers.append('X-ApiVersion', '1');
     var tiploc = e.currentTarget.id;
     var date = new Date().toISOString();
     date = date.substring(0, date.length - 14);
-    fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${tiploc}/${date} 00:00:00/${date} 23:59:59`, { headers: headers })
+    fetch(`API/Tiplocs/${tiploc}`)
         .then(res => res.json())
         .then(data => {
+            data = data.data;
             var container = document.getElementById('journeyMenu');
             var resultsCount = document.createElement('p');
             resultsCount.innerHTML = `${data.length} trains today`;
@@ -45,6 +43,8 @@ function resetSidebar(){
     clearSidebar();
     tiplocMenu.style.display = 'inline';
     // tiplocSearch.value = "";
+    var b = document.getElementById("tiplocBtn");
+    b.style.visibility = 'hidden';
 }
 
 function journeyClicked(e) {
@@ -56,6 +56,8 @@ function journeyClicked(e) {
     })
     addTileLayer();
     route(e);
+    var b = document.getElementById("tiplocBtn");
+    b.style.visibility = 'visible';
 }
 
 function filterTiplocs(){
@@ -64,7 +66,7 @@ function filterTiplocs(){
     var container = document.getElementById('tiplocMenu').replaceChildren();
     var container = document.getElementById('tiplocMenu');  
     if (query != ''){
-        let gettiplocs = fetch("tiplocs.json")
+        let gettiplocs = fetch("../tiplocs.json")
             .then(r => r.json())
             .then(data => {
                 for (const item of data) {
@@ -107,12 +109,21 @@ function filterTiplocs(){
 function toggleKey(){
     var b = document.getElementById("keyBtn");
     var s = document.getElementById("markersInfo");
-    if(s.style.opacity != 0){
-        b.innerHTML = "Show Key";
-        s.style.opacity = 0;
+    if(b.innerHTML == 'Show Key'){
+        s.style.visibility = 'visible';
+        b.innerHTML = 'Hide Key'
     }
     else{
-        b.innerHTML = "Hide Key";
-        s.style.opacity = 100;
+        s.style.visibility = 'hidden';
+        b.innerHTML = 'Show Key';
+    }
+}
+function tiplocBtnClick(){
+    var b = document.getElementById("tiplocBtn")
+    if(b.innerHTML == "Show all Tiplocs"){
+        b.innerHTML = "Hide all Tiplocs";
+    }
+    else{
+        b.innerHTML = "Show all Tiplocs";
     }
 }

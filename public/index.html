@@ -10,10 +10,14 @@
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <link rel="stylesheet" href="style.css" />
 </head>
-
+<script src = "/socket.io/socket.io.js"></script>
+<script>
+   const socket = io();
+</script>
 <body>
     <div id="dateTime"></div>
-    <button id="keyBtn" onclick="toggleKey()">Hide Key</button>
+    <button id="tiplocBtn" onclick="tiplocBtnClick()">Show all Tiplocs</button>
+    <button id="keyBtn" onclick="toggleKey()">Show Key</button>
      <div id="markersInfo">
         <img src="assets/destinationMarker.png" style="height: 40px;">
         Origin / Destination
