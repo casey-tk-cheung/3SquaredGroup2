@@ -61,14 +61,16 @@ function filterTiplocs(){
             .then(r => r.json())
             .then(data => {
                 for (const item of data) {
-                    if (item.originLocation.toLowerCase().includes(query.toLowerCase()))
-                    {
-                    var p = document.createElement('p');
-                    p.innerHTML = item.originLocation;
-                    p.id = item.originTiploc;
-                    p.addEventListener("click", expandMenu);
-                    p.classList.add('menuOptions');
-                    container.append(p);
+                    if (item.originLocation){
+                        if (item.originLocation.toLowerCase().includes(query.toLowerCase()))
+                        {
+                            var p = document.createElement('p');
+                            p.innerHTML = item.originLocation;
+                            p.id = item.originTiploc;
+                            p.addEventListener("click", expandMenu);
+                            p.classList.add('menuOptions');
+                            container.append(p);
+                        }
                     }
                 }
             }

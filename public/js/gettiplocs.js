@@ -4,6 +4,7 @@ let gettiplocs = fetch("./tiplocs.json")
     .then(r => r.json())
     .then(data => {
         for (const item of data) {
+            if (item.originTiploc){
                 var p = document.createElement('p');
                 p.innerHTML = item.originLocation;
                 p.id = item.originTiploc;
@@ -11,5 +12,6 @@ let gettiplocs = fetch("./tiplocs.json")
                 p.classList.add('menuOptions');
                 container.append(p);
             }
+        }
         }
     )
