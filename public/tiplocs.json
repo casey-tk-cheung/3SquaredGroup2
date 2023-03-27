@@ -88,6 +88,10 @@
     "originTiploc": "ABRDCH"
   },
   {
+    "originLocation": "ABERDEEN",
+    "originTiploc": "ABRDEEN"
+  },
+  {
     "originLocation": "ABINGTON",
     "originTiploc": "ABINGTN"
   },
@@ -708,6 +712,10 @@
     "originTiploc": "BSPSLYD"
   },
   {
+    "originLocation": "WHITEMOOR YARD L.D.C GBRF",
+    "originTiploc": "WHTMLDC"
+  },
+  {
     "originLocation": "BLETCHLEY CEMEX GBRF",
     "originTiploc": "BLTCHGB"
   },
@@ -992,6 +1000,10 @@
     "originTiploc": "TUNSTDS"
   },
   {
+    "originLocation": "BREDBURY R.T.S. (FLHH)",
+    "originTiploc": "BREDFHH"
+  },
+  {
     "originLocation": "BRENTFORD TOWN DAYS GBRF",
     "originTiploc": "BRNTGBF"
   },
@@ -1074,6 +1086,10 @@
   {
     "originLocation": "CARDIFF TIDAL T.C.",
     "originTiploc": "CARDFTS"
+  },
+  {
+    "originLocation": "MASBOROUGH F.D.",
+    "originTiploc": "MBROSTY"
   },
   {
     "originLocation": "ABINGTON",
@@ -1218,6 +1234,10 @@
   {
     "originLocation": "FELIXSTOWE NORTH F.L.T.",
     "originTiploc": "FLXSNFL"
+  },
+  {
+    "originLocation": "MOSSEND LOCO HOLDING SDGS",
+    "originTiploc": "MOSELHS"
   },
   {
     "originLocation": "MOSSEND LOCO HOLDING SDGS",
@@ -1478,6 +1498,10 @@
   {
     "originLocation": "CRAWLEY F.Y.(FLHH)",
     "originTiploc": "CRAWFHH"
+  },
+  {
+    "originLocation": "CREWE BAS HALL S.S.M.",
+    "originTiploc": "CREWBHM"
   },
   {
     "originLocation": "CREWE BAS HALL S.S.M.",
@@ -1976,6 +2000,14 @@
     "originTiploc": "DONCIGB"
   },
   {
+    "originLocation": "FERRYBRIDGE PS GYPSUM GBRF",
+    "originTiploc": "FERYGGB"
+  },
+  {
+    "originLocation": "DONCASTER DOWN DECOY GBRF",
+    "originTiploc": "DONCDDG"
+  },
+  {
     "originLocation": "DONCASTER ROBERT RDS SHED",
     "originTiploc": "DONCRSG"
   },
@@ -2094,6 +2126,10 @@
   {
     "originLocation": "DONCASTER UP DECOY",
     "originTiploc": "DONCUDY"
+  },
+  {
+    "originLocation": "DONCASTER DOWN DECOY GBRF",
+    "originTiploc": "DONCDDG"
   },
   {
     "originLocation": "TONBRIDGE WEST YARD GBRF",
@@ -2400,6 +2436,10 @@
     "originTiploc": "ELGHENY"
   },
   {
+    "originLocation": "MOUNTSORELL GBRF",
+    "originTiploc": "MOUNGBR"
+  },
+  {
     "originLocation": "EASTLEIGH TRSMD",
     "originTiploc": "ELGHTMD"
   },
@@ -2434,6 +2474,10 @@
   {
     "originLocation": "STAINES UP LOOP",
     "originTiploc": "STAINUL"
+  },
+  {
+    "originLocation": "SOUTHAMPTON UP GOODS LOOP",
+    "originTiploc": "SOTOUGL"
   },
   {
     "originLocation": "IPSWICH S.S.",
@@ -2960,8 +3004,20 @@
     "originTiploc": "FRTWLM"
   },
   {
+    "originLocation": "ABERDEEN",
+    "originTiploc": "ABRDEEN"
+  },
+  {
     "originLocation": "POLMADIE CAR M.D.",
     "originTiploc": "PLMDCMD"
+  },
+  {
+    "originLocation": "EDINBURGH",
+    "originTiploc": "EDINBUR"
+  },
+  {
+    "originLocation": "GLASGOW CENTRAL",
+    "originTiploc": "GLGC"
   },
   {
     "originLocation": "CREWE BAS HALL S.S.M.",
@@ -2970,6 +3026,10 @@
   {
     "originLocation": "TUNSTEAD SDGS",
     "originTiploc": "TUNSTDS"
+  },
+  {
+    "originLocation": "ELY",
+    "originTiploc": "ELYY"
   },
   {
     "originLocation": "LONDON EUSTON",
@@ -3014,6 +3074,14 @@
   {
     "originLocation": "GLASGOW CENTRAL",
     "originTiploc": "GLGC"
+  },
+  {
+    "originLocation": "LONDON EUSTON",
+    "originTiploc": "EUSTON"
+  },
+  {
+    "originLocation": "LONDON EUSTON",
+    "originTiploc": "EUSTON"
   },
   {
     "originLocation": "WESTBURY DOWN T.C.",
@@ -3094,6 +3162,18 @@
   {
     "originLocation": "GLASGOW CENTRAL",
     "originTiploc": "GLGC"
+  },
+  {
+    "originLocation": "GLASGOW CENTRAL",
+    "originTiploc": "GLGC"
+  },
+  {
+    "originLocation": "GLASGOW CENTRAL",
+    "originTiploc": "GLGC"
+  },
+  {
+    "originLocation": "LONDON EUSTON",
+    "originTiploc": "EUSTON"
   },
   {
     "originLocation": "GLOUCESTER N.Y. GBRF",
@@ -3492,6 +3572,10 @@
   {
     "originLocation": "INCE & ELTON ENCIRC WORKS",
     "originTiploc": "INELENC"
+  },
+  {
+    "originLocation": "STANTON GATE FLHH",
+    "originTiploc": "STNTFHH"
   },
   {
     "originLocation": "INVERNESS",
@@ -4946,6 +5030,14 @@
     "originTiploc": "KNGX"
   },
   {
+    "originLocation": "LEEDS",
+    "originTiploc": "LEEDS"
+  },
+  {
+    "originLocation": "LEEDS",
+    "originTiploc": "LEEDS"
+  },
+  {
     "originLocation": "FERME PARK RECP.",
     "originTiploc": "FRMPKRS"
   },
@@ -5044,6 +5136,10 @@
   {
     "originLocation": "MARCH DOWN R.S GBRF",
     "originTiploc": "MRCHDRG"
+  },
+  {
+    "originLocation": "MARCH UP R.S.",
+    "originTiploc": "MARCHUS"
   },
   {
     "originLocation": "MARCH UP R.S.",
@@ -5162,6 +5258,10 @@
   {
     "originLocation": "HEDON ROAD SIDINGS",
     "originTiploc": "HULLHRS"
+  },
+  {
+    "originLocation": "MASBOROUGH F.D.",
+    "originTiploc": "MBROSTY"
   },
   {
     "originLocation": "MASBOROUGH F.D.",
@@ -5448,6 +5548,10 @@
     "originTiploc": "DIRFTRR"
   },
   {
+    "originLocation": "MOSSEND LOCO HOLDING SDGS",
+    "originTiploc": "MOSELHS"
+  },
+  {
     "originLocation": "HAMILTON GBRF",
     "originTiploc": "HAMLGBR"
   },
@@ -5496,6 +5600,10 @@
     "originTiploc": "MOUNGBR"
   },
   {
+    "originLocation": "MOUNTSORELL GBRF",
+    "originTiploc": "MOUNGBR"
+  },
+  {
     "originLocation": "TOTON T.M.D.",
     "originTiploc": "TOTOTMD"
   },
@@ -5522,6 +5630,10 @@
   {
     "originLocation": "NEASDEN CHARRINGTON FLHH",
     "originTiploc": "NEASFHH"
+  },
+  {
+    "originLocation": "NEASDEN BRETT GBRF",
+    "originTiploc": "NEASBGB"
   },
   {
     "originLocation": "NEASDEN ENGINEERS SDGS",
@@ -5626,6 +5738,14 @@
   {
     "originLocation": "LEEDS",
     "originTiploc": "LEEDS"
+  },
+  {
+    "originLocation": "NEVILLE HILL T&R.S.M.D",
+    "originTiploc": "NEVLTMD"
+  },
+  {
+    "originLocation": "NEVILLE HILL T&R.S.M.D",
+    "originTiploc": "NEVLTMD"
   },
   {
     "originLocation": "TEES DOCK BSC EXPORT BERTH",
@@ -5854,6 +5974,10 @@
   {
     "originLocation": "NORTHAMPTON EMD",
     "originTiploc": "NMPTEMD"
+  },
+  {
+    "originLocation": "NORTHAMPTON CASTLE YRD GBF",
+    "originTiploc": "NMPTCYG"
   },
   {
     "originLocation": "FORT WILLIAM ALCAN GBRF",
@@ -6152,6 +6276,10 @@
     "originTiploc": "PBROVGB"
   },
   {
+    "originLocation": "MARCH UP R.S.",
+    "originTiploc": "MARCHUS"
+  },
+  {
     "originLocation": "PETERBOROUGH WEST YARD",
     "originTiploc": "PBROWY"
   },
@@ -6230,6 +6358,10 @@
   {
     "originLocation": "POLMADIE CAR M.D.",
     "originTiploc": "PLMDCMD"
+  },
+  {
+    "originLocation": "GLASGOW CENTRAL",
+    "originTiploc": "GLGC"
   },
   {
     "originLocation": "EAST USK YARD (FHH)",
@@ -6720,6 +6852,66 @@
     "originTiploc": "SVNSSIT"
   },
   {
+    "originLocation": "HOO JUNCTION UP YARD",
+    "originTiploc": "HOOJUYD"
+  },
+  {
+    "originLocation": "SEVINGTON SIDINGS",
+    "originTiploc": "SVNGTNS"
+  },
+  {
+    "originLocation": "SHAP HARRISONS QRY GBRF",
+    "originTiploc": "SHAPHNQ"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "SHENFIELD",
+    "originTiploc": "SHENFLD"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "SHENFIELD",
+    "originTiploc": "SHENFLD"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "SHENFIELD",
+    "originTiploc": "SHENFLD"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "SHENFIELD",
+    "originTiploc": "SHENFLD"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "SHENFIELD",
+    "originTiploc": "SHENFLD"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "SHENFIELD",
+    "originTiploc": "SHENFLD"
+  },
+  {
     "originLocation": "MOSSEND DOWN YARD",
     "originTiploc": "MOSEDNY"
   },
@@ -6774,6 +6966,146 @@
   {
     "originLocation": "SMALL HEATH CEMEX GBRF",
     "originTiploc": "SMLHCMG"
+  },
+  {
+    "originLocation": "HINDLOW GBRF",
+    "originTiploc": "HNDLGBR"
+  },
+  {
+    "originLocation": "SOUTHAMPTON M.C.T.",
+    "originTiploc": "SOTOMCT"
+  },
+  {
+    "originLocation": "SOUTHAMPTON M.C.T.",
+    "originTiploc": "SOTOMCT"
+  },
+  {
+    "originLocation": "SOUTHAMPTON M.C.T.",
+    "originTiploc": "SOTOMCT"
+  },
+  {
+    "originLocation": "SOUTHAMPTON M.C.T.",
+    "originTiploc": "SOTOMCT"
+  },
+  {
+    "originLocation": "SOUTHALL T.C.",
+    "originTiploc": "STHATC"
+  },
+  {
+    "originLocation": "SOUTHAMPTON M.C.T.",
+    "originTiploc": "SOTOMCT"
+  },
+  {
+    "originLocation": "SOUTHAMPTON M.C.T.",
+    "originTiploc": "SOTOMCT"
+  },
+  {
+    "originLocation": "SOUTHALL T.C.",
+    "originTiploc": "STHATC"
+  },
+  {
+    "originLocation": "EASTLEIGH EAST YARD",
+    "originTiploc": "ELGHENY"
+  },
+  {
+    "originLocation": "WEMBLEY RECEPTIONS 1-7",
+    "originTiploc": "WMBYEFR"
+  },
+  {
+    "originLocation": "SOUTHALL T.C.",
+    "originTiploc": "STHATC"
+  },
+  {
+    "originLocation": "SOUTHALL T.C.",
+    "originTiploc": "STHATC"
+  },
+  {
+    "originLocation": "SOUTHAMPTON M.C.T.",
+    "originTiploc": "SOTOMCT"
+  },
+  {
+    "originLocation": "SOUTHALL T.C.",
+    "originTiploc": "STHATC"
+  },
+  {
+    "originLocation": "SOUTHALL T.C.",
+    "originTiploc": "STHATC"
+  },
+  {
+    "originLocation": "CREWE BAS HALL S.S.M.",
+    "originTiploc": "CREWBHM"
+  },
+  {
+    "originLocation": "LEEDS F.L.T.",
+    "originTiploc": "LEEDFLT"
+  },
+  {
+    "originLocation": "THEALE FOSTER YEO. (FLHH)",
+    "originTiploc": "THEAFYF"
+  },
+  {
+    "originLocation": "THEALE FOSTER YEO. (FLHH)",
+    "originTiploc": "THEAFYF"
+  },
+  {
+    "originLocation": "LAWLEY STREET F.L.T.",
+    "originTiploc": "LWLYSFT"
+  },
+  {
+    "originLocation": "EASTLEIGH TRSMD",
+    "originTiploc": "ELGHTMD"
+  },
+  {
+    "originLocation": "SOUTHAMPTON M.C.T.",
+    "originTiploc": "SOTOMCT"
+  },
+  {
+    "originLocation": "SOUTHAMPTON M.C.T.",
+    "originTiploc": "SOTOMCT"
+  },
+  {
+    "originLocation": "SOUTHAMPTON M.C.T.",
+    "originTiploc": "SOTOMCT"
+  },
+  {
+    "originLocation": "MORRIS COWLEY M.A.T.",
+    "originTiploc": "MORRMAT"
+  },
+  {
+    "originLocation": "CREWE BAS HALL S.S.M.",
+    "originTiploc": "CREWBHM"
+  },
+  {
+    "originLocation": "LAWLEY STREET F.L.T.",
+    "originTiploc": "LWLYSFT"
+  },
+  {
+    "originLocation": "BANBURY",
+    "originTiploc": "BNBR"
+  },
+  {
+    "originLocation": "WENTLOOG (FREIGHTLINERS)",
+    "originTiploc": "WENTLOG"
+  },
+  {
+    "originLocation": "TRAFFORD PARK F.L.T.",
+    "originTiploc": "TRFDFLT"
+  },
+  {
+    "originLocation": "LAWLEY STREET F.L.T.",
+    "originTiploc": "LWLYSFT"
+  },
+  {
+    "originLocation": "SOUTHAMPTON M.C.T.",
+    "originTiploc": "SOTOMCT"
+  },
+  {
+    "originLocation": "SOUTHAMPTON EASTERN DOCKS",
+    "originTiploc": "SOTDED"
+  },
+  {
+    "originLocation": "LEEDS F.L.T.",
+    "originTiploc": "LEEDFLT"
   },
   {
     "originLocation": "TEES N.Y.",
@@ -6900,6 +7232,26 @@
     "originTiploc": "STHBEXP"
   },
   {
+    "originLocation": "SOUTHAMPTON UP GOODS LOOP",
+    "originTiploc": "SOTOUGL"
+  },
+  {
+    "originLocation": "SOUTHAMPTON UP GOODS LOOP",
+    "originTiploc": "SOTOUGL"
+  },
+  {
+    "originLocation": "SOUTHAMPTON UP GOODS LOOP",
+    "originTiploc": "SOTOUGL"
+  },
+  {
+    "originLocation": "SOUTHAMPTON UP GOODS LOOP",
+    "originTiploc": "SOTOUGL"
+  },
+  {
+    "originLocation": "SOUTHAMPTON UP GOODS LOOP",
+    "originTiploc": "SOTOUGL"
+  },
+  {
     "originLocation": "MASBOROUGH F.D.",
     "originTiploc": "MBROSTY"
   },
@@ -6918,6 +7270,98 @@
   {
     "originLocation": "SOTON W DOCKS BERTH 109",
     "originTiploc": "SOTD107"
+  },
+  {
+    "originLocation": "MIDDLESBROUGH (FHH)",
+    "originTiploc": "MDLSFHH"
+  },
+  {
+    "originLocation": "ILFORD E.M.U.D.",
+    "originTiploc": "ILFEMUD"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "LEEDS F.L.T.",
+    "originTiploc": "LEEDFLT"
+  },
+  {
+    "originLocation": "WICKFORD",
+    "originTiploc": "WIKFORD"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "SHENFIELD",
+    "originTiploc": "SHENFLD"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "SHENFIELD",
+    "originTiploc": "SHENFLD"
+  },
+  {
+    "originLocation": "TEES DOCK (FLT)",
+    "originTiploc": "STHBFLT"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "TEES DOCK (FLT)",
+    "originTiploc": "STHBFLT"
+  },
+  {
+    "originLocation": "SHENFIELD",
+    "originTiploc": "SHENFLD"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "TEES DOCK (FLT)",
+    "originTiploc": "STHBFLT"
+  },
+  {
+    "originLocation": "SHENFIELD",
+    "originTiploc": "SHENFLD"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "WICKFORD",
+    "originTiploc": "WIKFORD"
+  },
+  {
+    "originLocation": "FELIXSTOWE NORTH F.L.T.",
+    "originTiploc": "FLXSNFL"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "SHENFIELD",
+    "originTiploc": "SHENFLD"
+  },
+  {
+    "originLocation": "SOUTHEND VICTORIA",
+    "originTiploc": "STHVIC"
+  },
+  {
+    "originLocation": "SHENFIELD",
+    "originTiploc": "SHENFLD"
   },
   {
     "originLocation": "CREWE T.M.D. (E)",
@@ -6958,6 +7402,10 @@
   {
     "originLocation": "CLIFFE HILL STUD FARM GBRF",
     "originTiploc": "CLIFGBR"
+  },
+  {
+    "originLocation": "STANTON GATE FLHH",
+    "originTiploc": "STNTFHH"
   },
   {
     "originLocation": "STEPNEY GREEN JUNCTION",
@@ -7102,1057 +7550,5 @@
   {
     "originLocation": "SUNDERLAND LONDONDERRY SDG",
     "originTiploc": "SNDRLS"
-  },
-  {
-    "originLocation": "SMALL HEATH CALEDONIA YARD",
-    "originTiploc": "SMLHCYD"
-  },
-  {
-    "originLocation": "SWINDON EMR  GBRF",
-    "originTiploc": "SDONEGB"
-  },
-  {
-    "originLocation": "LLANWERN EXCHANGE SDGS",
-    "originTiploc": "LWERXSG"
-  },
-  {
-    "originLocation": "NEWPORT (SOUTH WALES)",
-    "originTiploc": "NWPTRTG"
-  },
-  {
-    "originLocation": "SWINDON",
-    "originTiploc": "SDON"
-  },
-  {
-    "originLocation": "NEWPORT (SOUTH WALES)",
-    "originTiploc": "NWPTRTG"
-  },
-  {
-    "originLocation": "SWINDON",
-    "originTiploc": "SDON"
-  },
-  {
-    "originLocation": "SWINDON STORES",
-    "originTiploc": "SDONSTO"
-  },
-  {
-    "originLocation": "TEES N.Y.",
-    "originTiploc": "TEESY"
-  },
-  {
-    "originLocation": "TEES N.Y.",
-    "originTiploc": "TEESY"
-  },
-  {
-    "originLocation": "TEES N.Y.",
-    "originTiploc": "TEESY"
-  },
-  {
-    "originLocation": "TEES N.Y.",
-    "originTiploc": "TEESY"
-  },
-  {
-    "originLocation": "TEES N.Y.",
-    "originTiploc": "TEESY"
-  },
-  {
-    "originLocation": "MIDDLESBRO' DAWSON AYRTON",
-    "originTiploc": "MDLSAYR"
-  },
-  {
-    "originLocation": "MIDDLESBRO' DAWSON AYRTON",
-    "originTiploc": "MDLSAYR"
-  },
-  {
-    "originLocation": "SUNDERLAND LONDONDERRY SDG",
-    "originTiploc": "SNDRLS"
-  },
-  {
-    "originLocation": "TEES N.Y.",
-    "originTiploc": "TEESY"
-  },
-  {
-    "originLocation": "HARTLEPOOL BSC 20\" MILL",
-    "originTiploc": "HRTL20"
-  },
-  {
-    "originLocation": "TEES N.Y.",
-    "originTiploc": "TEESY"
-  },
-  {
-    "originLocation": "SKINNINGROVE B.S.C.",
-    "originTiploc": "SKNGRVW"
-  },
-  {
-    "originLocation": "TEES DOCK BSC EXPORT BERTH",
-    "originTiploc": "STHBEXP"
-  },
-  {
-    "originLocation": "TEES N.Y.",
-    "originTiploc": "TEESY"
-  },
-  {
-    "originLocation": "TEES N.Y.",
-    "originTiploc": "TEESY"
-  },
-  {
-    "originLocation": "SCUNTHORPE B.S.C.(ENT.C.)",
-    "originTiploc": "SCNTHEC"
-  },
-  {
-    "originLocation": "WEMBLEY RECEPTIONS 1-7",
-    "originTiploc": "WMBYEFR"
-  },
-  {
-    "originLocation": "LINCOLN",
-    "originTiploc": "LINCLNC"
-  },
-  {
-    "originLocation": "LINCOLN",
-    "originTiploc": "LINCLNC"
-  },
-  {
-    "originLocation": "WENTLOOG (FREIGHTLINERS)",
-    "originTiploc": "WENTLOG"
-  },
-  {
-    "originLocation": "LONDON GATEWAY FRGHTLINER",
-    "originTiploc": "THMSFLI"
-  },
-  {
-    "originLocation": "LINCOLN TERRACE C.H.S.",
-    "originTiploc": "TERCESL"
-  },
-  {
-    "originLocation": "LINCOLN TERRACE C.H.S.",
-    "originTiploc": "TERCESL"
-  },
-  {
-    "originLocation": "LINCOLN",
-    "originTiploc": "LINCLNC"
-  },
-  {
-    "originLocation": "LINCOLN",
-    "originTiploc": "LINCLNC"
-  },
-  {
-    "originLocation": "LAWLEY STREET F.L.T.",
-    "originTiploc": "LWLYSFT"
-  },
-  {
-    "originLocation": "LONDON GATEWAY FRGHTLINER",
-    "originTiploc": "THMSFLI"
-  },
-  {
-    "originLocation": "LINCOLN TERRACE C.H.S.",
-    "originTiploc": "TERCESL"
-  },
-  {
-    "originLocation": "LINCOLN TERRACE C.H.S.",
-    "originTiploc": "TERCESL"
-  },
-  {
-    "originLocation": "TRAFFORD PARK EURO TERM",
-    "originTiploc": "TRFDEUT"
-  },
-  {
-    "originLocation": "LINCOLN",
-    "originTiploc": "LINCLNC"
-  },
-  {
-    "originLocation": "LINCOLN",
-    "originTiploc": "LINCLNC"
-  },
-  {
-    "originLocation": "LINCOLN TERRACE C.H.S.",
-    "originTiploc": "TERCESL"
-  },
-  {
-    "originLocation": "LINCOLN TERRACE C.H.S.",
-    "originTiploc": "TERCESL"
-  },
-  {
-    "originLocation": "WAKEFIELD EUROPORT",
-    "originTiploc": "NORMPW"
-  },
-  {
-    "originLocation": "LINCOLN",
-    "originTiploc": "LINCLNC"
-  },
-  {
-    "originLocation": "LINCOLN",
-    "originTiploc": "LINCLNC"
-  },
-  {
-    "originLocation": "LINCOLN TERRACE C.H.S.",
-    "originTiploc": "TERCESL"
-  },
-  {
-    "originLocation": "LINCOLN TERRACE C.H.S.",
-    "originTiploc": "TERCESL"
-  },
-  {
-    "originLocation": "LONDON GATEWAY FRGHTLINER",
-    "originTiploc": "THMSFLI"
-  },
-  {
-    "originLocation": "LAWLEY STREET F.L.T.",
-    "originTiploc": "LWLYSFT"
-  },
-  {
-    "originLocation": "TRAFFORD PARK F.L.T.",
-    "originTiploc": "TRFDFLT"
-  },
-  {
-    "originLocation": "LONDON GATEWAY FRGHTLINER",
-    "originTiploc": "THMSFLI"
-  },
-  {
-    "originLocation": "LONDON GATEWAY FRGHTLINER",
-    "originTiploc": "THMSFLI"
-  },
-  {
-    "originLocation": "LONDON GATEWAY GBRF",
-    "originTiploc": "THMSLGB"
-  },
-  {
-    "originLocation": "LONDON GATEWAY GBRF",
-    "originTiploc": "THMSLGB"
-  },
-  {
-    "originLocation": "BIRCH COPPICE GBRF",
-    "originTiploc": "KNGSBCG"
-  },
-  {
-    "originLocation": "DONCASTER IPORT GBRF",
-    "originTiploc": "DONCIGB"
-  },
-  {
-    "originLocation": "LONDON GATEWAY GBRF",
-    "originTiploc": "THMSLGB"
-  },
-  {
-    "originLocation": "WHATLEY QUARRY F LINER HH",
-    "originTiploc": "WHATFHH"
-  },
-  {
-    "originLocation": "THEALE FOSTER YEO. (FLHH)",
-    "originTiploc": "THEAFYF"
-  },
-  {
-    "originLocation": "THEALE FOSTER YEO. (FLHH)",
-    "originTiploc": "THEAFYF"
-  },
-  {
-    "originLocation": "ACTON T.C.",
-    "originTiploc": "ACTONTC"
-  },
-  {
-    "originLocation": "THEALE HANSON AGGS (FLHH)",
-    "originTiploc": "THEAHFH"
-  },
-  {
-    "originLocation": "THEALE LAFARGE FHH",
-    "originTiploc": "THEALAF"
-  },
-  {
-    "originLocation": "DB CARGO FAN A AND B SDGS",
-    "originTiploc": "WMBYEFT"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "SOUTHALL T.C.",
-    "originTiploc": "STHATC"
-  },
-  {
-    "originLocation": "THORNEY MILL FHH",
-    "originTiploc": "THYMFHH"
-  },
-  {
-    "originLocation": "THORNEY MILL GBRF",
-    "originTiploc": "THYMGBR"
-  },
-  {
-    "originLocation": "THRISLINGTON GBRF",
-    "originTiploc": "THRIGBR"
-  },
-  {
-    "originLocation": "PETERBOROUGH NORTH YD GBRF",
-    "originTiploc": "PBROVGB"
-  },
-  {
-    "originLocation": "THRISLINGTON GBRF",
-    "originTiploc": "THRIGBR"
-  },
-  {
-    "originLocation": "THRISLINGTON GBRF",
-    "originTiploc": "THRIGBR"
-  },
-  {
-    "originLocation": "DITTON (OCONNOR) FLINER",
-    "originTiploc": "DITTFLR"
-  },
-  {
-    "originLocation": "TILBURY CONTAINER SRVS GB",
-    "originTiploc": "TLBYTCG"
-  },
-  {
-    "originLocation": "TOTON NORTH YARD",
-    "originTiploc": "TOTODSL"
-  },
-  {
-    "originLocation": "TILBURY CONTAINER SRVS GB",
-    "originTiploc": "TLBYTCG"
-  },
-  {
-    "originLocation": "WENTLOOG (FREIGHTLINERS)",
-    "originTiploc": "WENTLOG"
-  },
-  {
-    "originLocation": "IMMINGHAM DOCK NORDIC",
-    "originTiploc": "IMNGNOR"
-  },
-  {
-    "originLocation": "BARDON HILL GBRF",
-    "originTiploc": "BARDGBR"
-  },
-  {
-    "originLocation": "IMMINGHAM DOCK NORDIC",
-    "originTiploc": "IMNGNOR"
-  },
-  {
-    "originLocation": "TINSLEY YARD GBRF",
-    "originTiploc": "TINSGBR"
-  },
-  {
-    "originLocation": "BELMONT DOWN YARD",
-    "originTiploc": "DONCBDY"
-  },
-  {
-    "originLocation": "TINSLEY YARD GBRF",
-    "originTiploc": "TINSGBR"
-  },
-  {
-    "originLocation": "TINSLEY YARD GBRF",
-    "originTiploc": "TINSGBR"
-  },
-  {
-    "originLocation": "TINSLEY S.S.",
-    "originTiploc": "TINSLYY"
-  },
-  {
-    "originLocation": "FELIXSTOWE SOUTH GBRF",
-    "originTiploc": "FLXSSGB"
-  },
-  {
-    "originLocation": "DONCASTER ROBERT RDS SHED",
-    "originTiploc": "DONCRSG"
-  },
-  {
-    "originLocation": "TINSLEY S.S.",
-    "originTiploc": "TINSLYY"
-  },
-  {
-    "originLocation": "TINSLEY YARD GBRF",
-    "originTiploc": "TINSGBR"
-  },
-  {
-    "originLocation": "BELMONT DOWN YARD",
-    "originTiploc": "DONCBDY"
-  },
-  {
-    "originLocation": "TINSLEY S.S.",
-    "originTiploc": "TINSLYY"
-  },
-  {
-    "originLocation": "TINSLEY S.S.",
-    "originTiploc": "TINSLYY"
-  },
-  {
-    "originLocation": "HOO JUNCTION DOWN YARD",
-    "originTiploc": "HOOJDYD"
-  },
-  {
-    "originLocation": "TOLWORTH SDGS",
-    "originTiploc": "TOLWTHS"
-  },
-  {
-    "originLocation": "ACTON T.C.",
-    "originTiploc": "ACTONTC"
-  },
-  {
-    "originLocation": "TOLWORTH DAY AGGS (FLHH)",
-    "originTiploc": "TOLWDFH"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "WEMBLEY RECEPTIONS 1-7",
-    "originTiploc": "WMBYEFR"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "GRAIN FOSTER YEOMAN GBRF",
-    "originTiploc": "GRAINFG"
-  },
-  {
-    "originLocation": "HOO JUNCTION UP YARD",
-    "originTiploc": "HOOJUYD"
-  },
-  {
-    "originLocation": "BOW DEPOT GBRF",
-    "originTiploc": "BOWDGBR"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "ACTON YARD GBRF",
-    "originTiploc": "ACTOGBR"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "EAST PECKHAM TIP GBRF",
-    "originTiploc": "EPCKGBF"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "ST LEONARDS ENG.LTD (GBRF)",
-    "originTiploc": "STLNGBR"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "TONBRIDGE WEST YARD GBRF",
-    "originTiploc": "TONBDWG"
-  },
-  {
-    "originLocation": "GRAIN FOSTER YEOMAN GBRF",
-    "originTiploc": "GRAINFG"
-  },
-  {
-    "originLocation": "TOTON NORTH YARD",
-    "originTiploc": "TOTODSL"
-  },
-  {
-    "originLocation": "TOTON NORTH YARD",
-    "originTiploc": "TOTODSL"
-  },
-  {
-    "originLocation": "TOTON T.M.D.",
-    "originTiploc": "TOTOTMD"
-  },
-  {
-    "originLocation": "TOTON NORTH YARD",
-    "originTiploc": "TOTODSL"
-  },
-  {
-    "originLocation": "KILBY BRIDGE JN",
-    "originTiploc": "KLBYBDG"
-  },
-  {
-    "originLocation": "TOTON NORTH YARD",
-    "originTiploc": "TOTODSL"
-  },
-  {
-    "originLocation": "THRISLINGTON GBRF",
-    "originTiploc": "THRIGBR"
-  },
-  {
-    "originLocation": "TOTON NORTH YARD",
-    "originTiploc": "TOTODSL"
-  },
-  {
-    "originLocation": "TOTON NORTH YARD",
-    "originTiploc": "TOTODSL"
-  },
-  {
-    "originLocation": "DONCASTER UP DECOY",
-    "originTiploc": "DONCUDY"
-  },
-  {
-    "originLocation": "THRISLINGTON GBRF",
-    "originTiploc": "THRIGBR"
-  },
-  {
-    "originLocation": "TOTON T.M.D.",
-    "originTiploc": "TOTOTMD"
-  },
-  {
-    "originLocation": "TOTON T.M.D.",
-    "originTiploc": "TOTOTMD"
-  },
-  {
-    "originLocation": "WHITEMOOR YARD L.D.C GBRF",
-    "originTiploc": "WHTMLDC"
-  },
-  {
-    "originLocation": "DONCASTER UP DECOY",
-    "originTiploc": "DONCUDY"
-  },
-  {
-    "originLocation": "BESCOT UP ENGINEERS SDGS",
-    "originTiploc": "BSCTESD"
-  },
-  {
-    "originLocation": "WEST HAMPSTEAD THAMESLINK",
-    "originTiploc": "WHMPSTM"
-  },
-  {
-    "originLocation": "BELMONT DOWN YARD",
-    "originTiploc": "DONCBDY"
-  },
-  {
-    "originLocation": "TOTON NORTH YARD",
-    "originTiploc": "TOTODSL"
-  },
-  {
-    "originLocation": "TOTON NORTH YARD",
-    "originTiploc": "TOTODSL"
-  },
-  {
-    "originLocation": "BELMONT DOWN YARD",
-    "originTiploc": "DONCBDY"
-  },
-  {
-    "originLocation": "WEST HAMPSTEAD THAMESLINK",
-    "originTiploc": "WHMPSTM"
-  },
-  {
-    "originLocation": "BEESTON SIDINGS",
-    "originTiploc": "BESTONS"
-  },
-  {
-    "originLocation": "CHESTERTON REDLAND SIDING",
-    "originTiploc": "CESTRTR"
-  },
-  {
-    "originLocation": "TOTON NORTH YARD",
-    "originTiploc": "TOTODSL"
-  },
-  {
-    "originLocation": "WASHWOOD HEATH UP SDG GBRF",
-    "originTiploc": "WSHWHUG"
-  },
-  {
-    "originLocation": "TOTON NORTH YARD",
-    "originTiploc": "TOTODSL"
-  },
-  {
-    "originLocation": "TOTON T.M.D.",
-    "originTiploc": "TOTOTMD"
-  },
-  {
-    "originLocation": "TOTON NORTH YARD",
-    "originTiploc": "TOTODSL"
-  },
-  {
-    "originLocation": "TOTTON YARD",
-    "originTiploc": "TOTTYD"
-  },
-  {
-    "originLocation": "BOSTON SLEAFORD SIDINGS",
-    "originTiploc": "BOSTSLS"
-  },
-  {
-    "originLocation": "SOUTHAMPTON M.C.T.",
-    "originTiploc": "SOTOMCT"
-  },
-  {
-    "originLocation": "CREWE T.M.D. (E)",
-    "originTiploc": "CREWEMD"
-  },
-  {
-    "originLocation": "CREWE BAS HALL S.S.N.",
-    "originTiploc": "CREWBHN"
-  },
-  {
-    "originLocation": "CREWE BAS HALL S.S.N.",
-    "originTiploc": "CREWBHN"
-  },
-  {
-    "originLocation": "FELIXSTOWE NORTH F.L.T.",
-    "originTiploc": "FLXSNFL"
-  },
-  {
-    "originLocation": "TRAFFORD PARK EURO TERM",
-    "originTiploc": "TRFDEUT"
-  },
-  {
-    "originLocation": "TRAFFORD PARK F.L.T.",
-    "originTiploc": "TRFDFLT"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "FELIXSTOWE NORTH F.L.T.",
-    "originTiploc": "FLXSNFL"
-  },
-  {
-    "originLocation": "TRAFFORD PARK EURO TERM",
-    "originTiploc": "TRFDEUT"
-  },
-  {
-    "originLocation": "TRAFFORD PK EURO TML GBRF",
-    "originTiploc": "TRFDEUG"
-  },
-  {
-    "originLocation": "SOUTHAMPTON W DOCKS (GBRF)",
-    "originTiploc": "SOTDWGB"
-  },
-  {
-    "originLocation": "DB CARGO FAN A AND B SDGS",
-    "originTiploc": "WMBYEFT"
-  },
-  {
-    "originLocation": "CREWE BAS HALL S.S.N.",
-    "originTiploc": "CREWBHN"
-  },
-  {
-    "originLocation": "TRAFFORD PARK F.L.T.",
-    "originTiploc": "TRFDFLT"
-  },
-  {
-    "originLocation": "SOUTHAMPTON M.C.T.",
-    "originTiploc": "SOTOMCT"
-  },
-  {
-    "originLocation": "TRAFFORD PARK F.L.T.",
-    "originTiploc": "TRFDFLT"
-  },
-  {
-    "originLocation": "TRAFFORD PARK F.L.T.",
-    "originTiploc": "TRFDFLT"
-  },
-  {
-    "originLocation": "FELIXSTOWE NORTH F.L.T.",
-    "originTiploc": "FLXSNFL"
-  },
-  {
-    "originLocation": "LONDON GATEWAY FRGHTLINER",
-    "originTiploc": "THMSFLI"
-  },
-  {
-    "originLocation": "SOTON W DOCKS BERTH 109",
-    "originTiploc": "SOTD107"
-  },
-  {
-    "originLocation": "TROSTRE WORKS",
-    "originTiploc": "TROSTRW"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "DRAX AES (GBRF)",
-    "originTiploc": "DRAXGBR"
-  },
-  {
-    "originLocation": "SHAP HARRISONS QRY GBRF",
-    "originTiploc": "SHAPHNQ"
-  },
-  {
-    "originLocation": "DRAX AES (GBRF)",
-    "originTiploc": "DRAXGBR"
-  },
-  {
-    "originLocation": "DRAX AES (GBRF)",
-    "originTiploc": "DRAXGBR"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "DRAX AES (GBRF)",
-    "originTiploc": "DRAXGBR"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "PENMAENMAWR QUARRY GBRF",
-    "originTiploc": "PNMNGBF"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "ASHTON IN MAKERFLD KS GBRF",
-    "originTiploc": "ASHIMGB"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "ASHTON IN MAKERFLD KS GBRF",
-    "originTiploc": "ASHIMGB"
-  },
-  {
-    "originLocation": "TUEBROOK SDGS GBRF",
-    "originTiploc": "TUEBGBF"
-  },
-  {
-    "originLocation": "HUNSLET YARD (FLHH)",
-    "originTiploc": "HNSLFHH"
-  },
-  {
-    "originLocation": "HOPE (EARLES SIDINGS) FHH",
-    "originTiploc": "ERLEFHH"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS",
-    "originTiploc": "TUNSTDS"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS",
-    "originTiploc": "TUNSTDS"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS",
-    "originTiploc": "TUNSTDS"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS",
-    "originTiploc": "TUNSTDS"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS",
-    "originTiploc": "TUNSTDS"
-  },
-  {
-    "originLocation": "WASHWOOD HEATH UP SDG GBRF",
-    "originTiploc": "WSHWHUG"
-  },
-  {
-    "originLocation": "WELLINGBOROUGH UP TC GBRF",
-    "originTiploc": "WLNGUSG"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS GBRF",
-    "originTiploc": "TUNSGBF"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS",
-    "originTiploc": "TUNSTDS"
-  },
-  {
-    "originLocation": "GUIDE BRIDGE YARD (FLHH)",
-    "originTiploc": "GIDBFHH"
-  },
-  {
-    "originLocation": "BARROW HILL UP SDGS NO 2-3",
-    "originTiploc": "BRHLFHH"
-  },
-  {
-    "originLocation": "GUIDE BRIDGE YARD (FLHH)",
-    "originTiploc": "GIDBFHH"
-  },
-  {
-    "originLocation": "PENDLETON (BRINDLE HEATH)",
-    "originTiploc": "PENDLAS"
-  },
-  {
-    "originLocation": "ARPLEY SIDINGS",
-    "originTiploc": "ARPLEYS"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS",
-    "originTiploc": "TUNSTDS"
-  },
-  {
-    "originLocation": "RATCLIFFE HEAVY HAUL",
-    "originTiploc": "RATCFHH"
-  },
-  {
-    "originLocation": "HARDENDALE QRY SHAP (FHH)",
-    "originTiploc": "HRDQFHH"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS",
-    "originTiploc": "TUNSTDS"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS",
-    "originTiploc": "TUNSTDS"
-  },
-  {
-    "originLocation": "WILLESDEN UP & DOWN RELIEF",
-    "originTiploc": "WLSDUDR"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS GBRF",
-    "originTiploc": "TUNSGBF"
-  },
-  {
-    "originLocation": "BARROW HILL UP SDGS NO 2-3",
-    "originTiploc": "BRHLFHH"
-  },
-  {
-    "originLocation": "WEST THURROCK SIDINGS FHH",
-    "originTiploc": "WTHRFHH"
-  },
-  {
-    "originLocation": "PEAK FOREST UP SIDINGS",
-    "originTiploc": "PEAKUSG"
-  },
-  {
-    "originLocation": "PETERBOROUGH WEST YARD",
-    "originTiploc": "PBROWY"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS",
-    "originTiploc": "TUNSTDS"
-  },
-  {
-    "originLocation": "KENNETT (FHH)",
-    "originTiploc": "KENNFHH"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS",
-    "originTiploc": "TUNSTDS"
-  },
-  {
-    "originLocation": "GUIDE BRIDGE YARD (FLHH)",
-    "originTiploc": "GIDBFHH"
-  },
-  {
-    "originLocation": "TUNSTEAD SDGS GBRF",
-    "originTiploc": "TUNSGBF"
-  },
-  {
-    "originLocation": "TYNE S.S.",
-    "originTiploc": "TYNEY"
-  },
-  {
-    "originLocation": "WESTBURY DOWN T.C.",
-    "originTiploc": "WSTBRDY"
-  },
-  {
-    "originLocation": "TYTHERINGTON",
-    "originTiploc": "TYTHRNG"
-  },
-  {
-    "originLocation": "LEEDS BALM RD LOCO (FHH)",
-    "originTiploc": "LEEDFHH"
-  },
-  {
-    "originLocation": "CARLISLE N.Y.",
-    "originTiploc": "CARLILY"
-  },
-  {
-    "originLocation": "DONCASTER UP DECOY",
-    "originTiploc": "DONCUDY"
-  },
-  {
-    "originLocation": "TYNE S.S.",
-    "originTiploc": "TYNEY"
-  },
-  {
-    "originLocation": "TYNE S.S.",
-    "originTiploc": "TYNEY"
-  },
-  {
-    "originLocation": "ACTON T.C.",
-    "originTiploc": "ACTONTC"
-  },
-  {
-    "originLocation": "TYNE S.S.",
-    "originTiploc": "TYNEY"
-  },
-  {
-    "originLocation": "ACTON T.C.",
-    "originTiploc": "ACTONTC"
-  },
-  {
-    "originLocation": "TYTHERINGTON",
-    "originTiploc": "TYTHRNG"
-  },
-  {
-    "originLocation": "VOLTAIRE ROAD JN.",
-    "originTiploc": "VOLTRDJ"
-  },
-  {
-    "originLocation": "YORK",
-    "originTiploc": "YORK"
-  },
-  {
-    "originLocation": "YORK",
-    "originTiploc": "YORK"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "YORK",
-    "originTiploc": "YORK"
-  },
-  {
-    "originLocation": "YORK",
-    "originTiploc": "YORK"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "YORK",
-    "originTiploc": "YORK"
-  },
-  {
-    "originLocation": "YORK",
-    "originTiploc": "YORK"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "YORK",
-    "originTiploc": "YORK"
-  },
-  {
-    "originLocation": "YORK",
-    "originTiploc": "YORK"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "YORK",
-    "originTiploc": "YORK"
-  },
-  {
-    "originLocation": "YORK",
-    "originTiploc": "YORK"
-  },
-  {
-    "originLocation": "HUNSLET TILCON GBRF",
-    "originTiploc": "HNSLTGB"
-  },
-  {
-    "originLocation": "HOPE (EARLES SIDINGS) FHH",
-    "originTiploc": "ERLEFHH"
-  },
-  {
-    "originLocation": "YORK YARD SOUTH (FHH)",
-    "originTiploc": "YORKYSF"
   }
 ]
