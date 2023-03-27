@@ -63,6 +63,7 @@ io.on('connection', async (socket) => {
                   workingTiplocs = data;
               }
               else {
+                  console.log('add')
                   workingTiplocs = workingTiplocs.concat(data);
               }
               fs.writeFileSync('../frontend/tiplocs.json', JSON.stringify(workingTiplocs, null, 2), {encoding:'utf8',flag:'w'})

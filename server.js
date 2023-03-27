@@ -58,7 +58,8 @@ io.on('connection', async (socket) => {
               else {
                   workingTiplocs = workingTiplocs.concat(data);
               }
-              fs.writeFileSync('../frontend/tiplocs.json', JSON.stringify(workingTiplocs, null, 2), {encoding:'utf8',flag:'w'})
+              console.log('add')
+              fs.writeFileSync('../public/tiplocs.json', JSON.stringify(workingTiplocs, null, 2), {encoding:'utf8',flag:'w'})
           }
           })
           .catch(error => {

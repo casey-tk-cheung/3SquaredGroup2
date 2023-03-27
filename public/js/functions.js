@@ -5,9 +5,6 @@ function expandMenu(e) {
     closeSecondMenu();
     var secondMenu = document.getElementById('secondMenu');
     secondMenu.style.display = 'inline';
-    const headers = new Headers();
-    headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
-    headers.append('X-ApiVersion', '1');
     var tiploc = e.currentTarget.id;
     var date = new Date().toISOString();
     date = date.substring(0, date.length - 14);
