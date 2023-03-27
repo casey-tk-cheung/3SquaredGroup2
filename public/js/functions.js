@@ -109,13 +109,13 @@ function filterTiplocs(){
 function toggleKey(){
     var b = document.getElementById("keyBtn");
     var s = document.getElementById("markersInfo");
-    if(s.style.opacity != 0){
-        b.innerHTML = "Show Key";
-        s.style.opacity = 0;
+    if(b.innerHTML == 'Show Key'){
+        s.style.visibility = 'visible';
+        b.innerHTML = 'Hide Key'
     }
     else{
-        b.innerHTML = "Hide Key";
-        s.style.opacity = 100;
+        s.style.visibility = 'hidden';
+        b.innerHTML = 'Show Key';
     }
 }
 function tiplocBtnClick(){
