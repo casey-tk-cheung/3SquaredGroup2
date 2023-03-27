@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Live Trains</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<script src = "/socket.io/socket.io.js"></script>
+<script>
+   const socket = io();
+</script>
+<body>
+    <div id="dateTime"></div>
+    <div id="markersInfo">
+        <img src="assets/destinationMarker.png" style="height: 40px;">
+        Origin / Destination
+        <img src="assets/station.png" style="height: 35px; width: 35px;">
+        Stations
+    </div>
+    <div class='flex-row' style="height: 100vh; width:100%; position:absolute">
+        <div id="menu" class="floatingGroup">
+            <div style="display: flex; justify-content: center;">
+                <input type="text" id="tiplocSearch" placeholder="Search locations...">
+            </div>
+            <div id="menuItems"></div>
+        </div>
+        <div class="floatingGroup" id="secondMenu" style="margin: 15px; display: none; ">
+            <p class="menuOptions" onclick="closeSecondMenu()" style="font-size: 12px; color: gray">Close</p>
+            <div id="secondMenuItems">
+
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+</body>
+
+</html>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet-ant-path" type="text/javascript"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/route.js"></script>
+<script type="text/javascript" src="js/gettiplocs.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<!-- <script type="text/javascript" src="js/livetrain.js"></script> -->
+<script type='text/javascript' src='js/clock.js'></script>
+<script type="text/javascript" src="js/movingMarker.js"></script> 
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
