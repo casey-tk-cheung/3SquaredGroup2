@@ -11,6 +11,7 @@ function getJourneys(e) {
     fetch(`API/Tiplocs/${tiploc}`)
         .then(res => res.json())
         .then(data => {
+            data = data.data;
             var container = document.getElementById('journeyMenu');
             var resultsCount = document.createElement('p');
             resultsCount.innerHTML = `${data.length} trains today`;
@@ -42,6 +43,8 @@ function resetSidebar(){
     clearSidebar();
     tiplocMenu.style.display = 'inline';
     // tiplocSearch.value = "";
+    var b = document.getElementById("tiplocBtn");
+    b.style.visibility = 'hidden';
 }
 
 function journeyClicked(e) {
@@ -54,7 +57,7 @@ function journeyClicked(e) {
     addTileLayer();
     route(e);
     var b = document.getElementById("tiplocBtn");
-    b.style.opacity = 100;
+    b.style.visibility = 'visible';
 }
 
 function filterTiplocs(){
