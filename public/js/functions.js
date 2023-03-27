@@ -11,9 +11,10 @@ function expandMenu(e) {
     var tiploc = e.currentTarget.id;
     var date = new Date().toISOString();
     date = date.substring(0, date.length - 14);
-    fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${tiploc}/${date} 00:00:00/${date} 23:59:59`, { headers: headers })
+    fetch(`API/Tiplocs/${tiploc}`)
         .then(res => res.json())
         .then(data => {
+            data = data.data
             var container = document.getElementById('secondMenuItems');
             var resultsCount = document.createElement('p');
             resultsCount.innerHTML = `${data.length} trains today`;
@@ -57,20 +58,18 @@ function filterTiplocs(){
     var container = document.getElementById('menuItems').replaceChildren();
     var container = document.getElementById('menuItems');
     if (query != ''){
-        let gettiplocs = fetch("tiplocs.json")
+        let gettiplocs = fetch("3SQUARED_Project/frontend/tiplocs.json")
             .then(r => r.json())
             .then(data => {
                 for (const item of data) {
-                    if (item.originLocation){
-                        if (item.originLocation.toLowerCase().includes(query.toLowerCase()))
-                        {
-                            var p = document.createElement('p');
-                            p.innerHTML = item.originLocation;
-                            p.id = item.originTiploc;
-                            p.addEventListener("click", expandMenu);
-                            p.classList.add('menuOptions');
-                            container.append(p);
-                        }
+                    if (item.originLocation.toLowerCase().includes(query.toLowerCase()))
+                    {
+                    var p = document.createElement('p');
+                    p.innerHTML = item.originLocation;
+                    p.id = item.originTiploc;
+                    p.addEventListener("click", expandMenu);
+                    p.classList.add('menuOptions');
+                    container.append(p);
                     }
                 }
             }

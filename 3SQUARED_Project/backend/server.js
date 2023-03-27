@@ -1,7 +1,7 @@
 const express = require ('express');
 const app = express(); //initialise the server
 const path = require('path');
-const port = 12345;
+const port = process.env.PORT || 3000;
 //const jsonFile = require("./allTiplocs.json");
 const fs = require('fs');
 const tiplocArray = require("./allTiplocs.json");
@@ -12,8 +12,7 @@ const io = new Server(server);
 
 
 //static asset directories
-app.use(express.static(__dirname + '/..' + '/frontend'))
-app.use(express.static(__dirname + '/..' + '/backend'))
+app.use(express.static("./public"));
 
 //router for API calls
 const APIRouter = require('./APIrouter');
@@ -26,36 +25,19 @@ app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '..', 'frontend', 'index.html'));
 })
 
-server.listen(3000, () => {
+server.listen(`${port}`, () => {
   console.log('listening on :3000');
 });
-
-
-
-
-
-
-//socket connection
-
-
-const headers = new Headers();
-headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
-headers.append('X-ApiVersion', '1');
-
-dateStart = "2023-03-27"
-dateEnd = "2023-03-27"
-tiplocsAtOnce = 25
-
 
 //need error handling for if the connection times out;
 //in general, too many requests and the webpage 'freezes'
 
 io.on('connection', async (socket) => {
+    
+  let tiplocsAtOnce = 25
   let createNew = true;
   let temp;
   let workingTiplocs;
-  const controller = new AbortController()
-  const timeoutId = setTimeout(() => controller.abort(), 5000)
   //console.log(tiplocArray)
   // loops through the list of tiplocs
   for (let i = 0; i < tiplocArray.length; i += tiplocsAtOnce) {
@@ -64,7 +46,7 @@ io.on('connection', async (socket) => {
       } else {
           temp = (tiplocArray.slice(i, tiplocArray.length)).toString(); // gets the remaining tiplocs
       }
-      await fetch(`https://traindata-stag-api.railsmart.io/api/trains/tiploc/${temp}/${dateStart} 00:00:00/${dateEnd} 23:59:59`, { headers: headers }, {signal: controller.signal})
+      await fetch(`API/Tiplocs/${temp}`)
       .then(res => res.json())
       .then(data => {
           // checks if data is empty
