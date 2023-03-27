@@ -53,6 +53,16 @@ function journeyClicked(e) {
     })
     addTileLayer();
     route(e);
+    var b = document.getElementById("tiplocBtn");
+    if(s.style.opacity != 0){
+        b.innerHTML = "Show all Tiplocs";
+        s.style.opacity = 0;
+    }
+    else{
+        b.innerHTML = "Hide all Tiplocs";
+        s.style.opacity = 100;
+    }
+
 }
 
 function filterTiplocs(){
