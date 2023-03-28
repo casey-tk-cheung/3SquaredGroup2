@@ -1,6 +1,9 @@
 async function route(e) {
     var activationId = e.currentTarget.activationId;
     var scheduleId = e.currentTarget.scheduleId;
+    var headCode = e.currentTarget.headCode;
+    var destinationLocation = e.currentTarget.destinationLocation;
+    var originLocation = e.currentTarget.originLocation;
     var route = [];
     var left = [];
     const headers = new Headers();
@@ -50,7 +53,7 @@ async function route(e) {
             //     [5000]).addTo(map);
             // movingMarker.start();
             new L.marker(route[0]).bindPopup(data[0].location).addTo(map);
-            new L.marker(left[0], {icon: train}).bindPopup('Last updated location').addTo(map);
+            new L.marker(left[0], {icon: train}).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map);
             new L.marker(left[left.length - 1]).bindPopup(data[data.length - 1].location).addTo(map);
             if (route.length != 0){
                 const path = L.polyline.antPath(route, { // completed journey

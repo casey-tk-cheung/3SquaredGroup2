@@ -25,6 +25,8 @@ function getJourneys(e) {
                 p.activationId = item.activationId;
                 p.scheduleId = item.scheduleId;
                 p.headCode = item.headCode;
+                p.destinationLocation = item.destinationLocation;
+                p.originLocation = item.originLocation;
                 p.style.fontSize = '14px';
                 if (item.cancelled == true) {p.style.color = 'red';}
                 p.addEventListener("click", journeyClicked);
