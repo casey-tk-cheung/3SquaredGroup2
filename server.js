@@ -82,3 +82,12 @@ io.on('connection', async (socket) => {
           });
   }
 });
+
+let file = './movements.json'
+
+fs.watchFile(file, (curr, prev) => {
+    if (curr.mtimeMs !== prev.mtimeMs) {
+      //io.emit('jsonFileChanged', { message: 'JSON file has changed' });
+      console.log('file changed')
+    }
+  });

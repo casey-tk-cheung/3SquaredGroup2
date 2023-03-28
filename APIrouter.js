@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
+const fs = require('fs');
 
 const headers = new Headers();
 headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
@@ -81,6 +82,22 @@ router.get('/Movements/:activation/:schedule', async (req, res) =>
     }
     
 
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+})
+
+router.get('/Movements_updates/:activation/:schedule', async (req, res) => 
+{
+  var activation =(req.params.activation);
+  var schedule =(req.params.schedule);
+  console.log(`${activation} and ${schedule}`)
+  await fetch(`https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/${activation}/${schedule}`, { headers: headers })
+  .then(res => res.json())
+  .then(data => {
+        //console.log('in movements:' + data)
+        fs.writeFileSync(`./movements.json`, JSON.stringify(data, null, 2), 'utf-8');
   })
   .catch(error => {
     console.error('Error fetching data:', error);

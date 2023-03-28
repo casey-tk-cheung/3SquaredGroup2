@@ -1,0 +1,30 @@
+[
+  {
+    "location": "ABERDEEN",
+    "tiploc": "ABRDEEN",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-27T23:25:00",
+    "actual": "2023-03-27T23:25:00",
+    "variation": 0,
+    "plannedDeparture": "2023-03-27T23:25:00",
+    "actualDeparture": "2023-03-27T23:25:00",
+    "latLong": {
+      "latitude": 57.143282,
+      "longitude": -2.098425
+    }
+  },
+  {
+    "location": "ABERDEEN CLAYHILLS CAR.M.D",
+    "tiploc": "ABRDCH",
+    "eventType": "DESTINATION",
+    "planned": "2023-03-27T23:43:00",
+    "actual": "2023-03-27T23:43:00",
+    "variation": 0,
+    "actualArrival": "2023-03-27T23:43:00",
+    "plannedArrival": "2023-03-27T23:43:00",
+    "latLong": {
+      "latitude": 57.142555,
+      "longitude": -2.099102
+    }
+  }
+]
