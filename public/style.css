@@ -129,32 +129,4 @@ p.menuOptions:hover {
     left: 5px;
     z-index: 1000;
     visibility: hidden;
-<<<<<<< HEAD
 }
-.grid {
-    display: grid;
-    width: 100%;
-}
-
-.grid-container {
-    grid-template-columns: 30% 70%;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    margin-left: 2px;
-  }
-
-  .grid-container span{
-    justify-self: center;
-    margin-top: -20px;
-  }
-  
-  .text-container {
-    grid-area: auto;
-    grid-column: 2;
-    font: 1em sans-serif;
-    margin-top: -22px;
-  }
-=======
-}
->>>>>>> 233dd6bfc1d3a3c2bfddfa2eba41089fa84c82d5
