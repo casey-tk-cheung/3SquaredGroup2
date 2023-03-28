@@ -76,18 +76,6 @@
     "originTiploc": "ABRDEEN"
   },
   {
-    "originLocation": "ACTON T.C.",
-    "originTiploc": "ACTONTC"
-  },
-  {
-    "originLocation": "ACTON T.C.",
-    "originTiploc": "ACTONTC"
-  },
-  {
-    "originLocation": "ACTON T.C.",
-    "originTiploc": "ACTONTC"
-  },
-  {
     "originLocation": "NORTHOLT SIDINGS",
     "originTiploc": "NTHOLTS"
   },
@@ -388,20 +376,12 @@
     "originTiploc": "AVONHGB"
   },
   {
-    "originLocation": "BANBURY",
-    "originTiploc": "BNBR"
-  },
-  {
     "originLocation": "MOUNTSORREL SDGS",
     "originTiploc": "MOUNTSS"
   },
   {
     "originLocation": "ACTON YARD GBRF",
     "originTiploc": "ACTOGBR"
-  },
-  {
-    "originLocation": "TINSLEY YARD GBRF",
-    "originTiploc": "TINSGBR"
   },
   {
     "originLocation": "TINSLEY YARD GBRF",
@@ -708,10 +688,6 @@
     "originTiploc": "BRADFS"
   },
   {
-    "originLocation": "TUNSTEAD SDGS",
-    "originTiploc": "TUNSTDS"
-  },
-  {
     "originLocation": "ARCOW QUARRY GBRF",
     "originTiploc": "ARCQGBF"
   },
@@ -1006,10 +982,6 @@
   {
     "originLocation": "FELIXSTOWE NORTH F.L.T.",
     "originTiploc": "FLXSNFL"
-  },
-  {
-    "originLocation": "ACTON T.C.",
-    "originTiploc": "ACTONTC"
   },
   {
     "originLocation": "MEREHEAD QUARRY (FHH)",
@@ -1492,10 +1464,6 @@
     "originTiploc": "DONCDDG"
   },
   {
-    "originLocation": "DONCASTER DOWN DECOY GBRF",
-    "originTiploc": "DONCDDG"
-  },
-  {
     "originLocation": "LONDON GATEWAY GBRF",
     "originTiploc": "THMSLGB"
   },
@@ -1562,10 +1530,6 @@
   {
     "originLocation": "DONCASTER EPT (F'LINERS)",
     "originTiploc": "DONCRPF"
-  },
-  {
-    "originLocation": "RATCLIFFE PS GBRF",
-    "originTiploc": "RATCGBR"
   },
   {
     "originLocation": "SCUNTHORPE ROXBY GULLET GB",
@@ -2224,36 +2188,12 @@
     "originTiploc": "KNGX"
   },
   {
-    "originLocation": "EDINBURGH",
-    "originTiploc": "EDINBUR"
-  },
-  {
-    "originLocation": "EDINBURGH",
-    "originTiploc": "EDINBUR"
-  },
-  {
     "originLocation": "LONDON KINGS CROSS",
     "originTiploc": "KNGX"
   },
   {
     "originLocation": "LONDON KINGS CROSS",
     "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "EDINBURGH",
-    "originTiploc": "EDINBUR"
-  },
-  {
-    "originLocation": "EDINBURGH",
-    "originTiploc": "EDINBUR"
   },
   {
     "originLocation": "EDINBURGH",
@@ -2278,14 +2218,6 @@
   {
     "originLocation": "EDINBURGH",
     "originTiploc": "EDINBUR"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
   },
   {
     "originLocation": "EDINBURGH",
@@ -2358,6 +2290,22 @@
   {
     "originLocation": "LONDON KINGS CROSS",
     "originTiploc": "KNGX"
+  },
+  {
+    "originLocation": "LONDON KINGS CROSS",
+    "originTiploc": "KNGX"
+  },
+  {
+    "originLocation": "LONDON KINGS CROSS",
+    "originTiploc": "KNGX"
+  },
+  {
+    "originLocation": "EDINBURGH",
+    "originTiploc": "EDINBUR"
+  },
+  {
+    "originLocation": "EDINBURGH",
+    "originTiploc": "EDINBUR"
   },
   {
     "originLocation": "LONDON KINGS CROSS",
@@ -2618,10 +2566,6 @@
   {
     "originLocation": "MALTON",
     "originTiploc": "MALTON"
-  },
-  {
-    "originLocation": "GASCOIGNE WOOD SIDINGS",
-    "originTiploc": "GWSYBKR"
   },
   {
     "originLocation": "POLMADIE CAR M.D.",
@@ -3034,10 +2978,6 @@
     "originTiploc": "IPSWCHS"
   },
   {
-    "originLocation": "FELIXSTOWE NORTH F.L.T.",
-    "originTiploc": "FLXSNFL"
-  },
-  {
     "originLocation": "LYNEMOUTH POWER STN (GBRF)",
     "originTiploc": "LYNMGBF"
   },
@@ -3106,12 +3046,12 @@
     "originTiploc": "STPXCYG"
   },
   {
-    "originLocation": "KETTERING STABLING SIDINGS",
-    "originTiploc": "KETRSSD"
-  },
-  {
     "originLocation": "NORTHAMPTON EMD",
     "originTiploc": "NMPTEMD"
+  },
+  {
+    "originLocation": "KETTERING STABLING SIDINGS",
+    "originTiploc": "KETRSSD"
   },
   {
     "originLocation": "KETTON WARD SDG GBRF",
@@ -3206,22 +3146,6 @@
     "originTiploc": "FLXSNGB"
   },
   {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "EDINBURGH",
-    "originTiploc": "EDINBUR"
-  },
-  {
-    "originLocation": "EDINBURGH",
-    "originTiploc": "EDINBUR"
-  },
-  {
     "originLocation": "KINGSBURY OIL SDGS",
     "originTiploc": "KNGSBOS"
   },
@@ -3378,16 +3302,16 @@
     "originTiploc": "KNGX"
   },
   {
+    "originLocation": "LONDON KINGS CROSS",
+    "originTiploc": "KNGX"
+  },
+  {
+    "originLocation": "LONDON KINGS CROSS",
+    "originTiploc": "KNGX"
+  },
+  {
     "originLocation": "HUMBER OIL REFINERY",
     "originTiploc": "IMNGHOR"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
   },
   {
     "originLocation": "EDINBURGH",
@@ -3434,20 +3358,20 @@
     "originTiploc": "ABRDEEN"
   },
   {
-    "originLocation": "EDINBURGH",
-    "originTiploc": "EDINBUR"
-  },
-  {
-    "originLocation": "EDINBURGH",
-    "originTiploc": "EDINBUR"
-  },
-  {
     "originLocation": "LONDON KINGS CROSS",
     "originTiploc": "KNGX"
   },
   {
     "originLocation": "LONDON KINGS CROSS",
     "originTiploc": "KNGX"
+  },
+  {
+    "originLocation": "EDINBURGH",
+    "originTiploc": "EDINBUR"
+  },
+  {
+    "originLocation": "EDINBURGH",
+    "originTiploc": "EDINBUR"
   },
   {
     "originLocation": "LONDON KINGS CROSS",
@@ -3490,20 +3414,20 @@
     "originTiploc": "LINCLNC"
   },
   {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
-    "originLocation": "LONDON KINGS CROSS",
-    "originTiploc": "KNGX"
-  },
-  {
     "originLocation": "EDINBURGH",
     "originTiploc": "EDINBUR"
   },
   {
     "originLocation": "EDINBURGH",
     "originTiploc": "EDINBUR"
+  },
+  {
+    "originLocation": "LONDON KINGS CROSS",
+    "originTiploc": "KNGX"
+  },
+  {
+    "originLocation": "LONDON KINGS CROSS",
+    "originTiploc": "KNGX"
   },
   {
     "originLocation": "LONDON KINGS CROSS",
@@ -4006,10 +3930,6 @@
     "originTiploc": "KNGX"
   },
   {
-    "originLocation": "GASCOIGNE WOOD SIDINGS",
-    "originTiploc": "GWSYBKR"
-  },
-  {
     "originLocation": "MILFORD WEST SIDINGS",
     "originTiploc": "MILFDWS"
   },
@@ -4226,10 +4146,6 @@
   {
     "originLocation": "LONDON GATEWAY GBRF",
     "originTiploc": "THMSLGB"
-  },
-  {
-    "originLocation": "ACTON T.C.",
-    "originTiploc": "ACTONTC"
   },
   {
     "originLocation": "WHATLEY QUARRY F LINER HH",
