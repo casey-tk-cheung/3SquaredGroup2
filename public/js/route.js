@@ -1,3 +1,6 @@
+//const toggleTiplocs = document.getElementById(tiplocBtnClick);
+//toggleTiplocs.addEventListener('onclick', route());
+
 async function route(e) {
     var activationId = e.currentTarget.activationId;
     var scheduleId = e.currentTarget.scheduleId;
@@ -6,6 +9,10 @@ async function route(e) {
     var originLocation = e.currentTarget.originLocation;
     var route = [];
     var left = [];
+    var passes = [];
+    var departures = [];
+    var passGroup = new L.layerGroup();
+    var departureGroup = new L.layerGroup();
     const headers = new Headers();
     headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
     headers.append('X-ApiVersion', '1');
@@ -41,20 +48,29 @@ async function route(e) {
                         left.push(latlng);
                     }
                 }
-                if (item.hasOwnProperty('latLong') && item.hasOwnProperty('departure') && (item != data[0] && item != data[data.length[-1]])) {
+                var btn = document.getElementById("tiplocBtn");
+                if (item.hasOwnProperty('latLong') && item.hasOwnProperty('pass') && btn.innerHTML == "Show all Tiplocs" &&
+                 (item != data[0] && item != data[data.length[-1]])) {
+                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: train})
+                        .addTo(passGroup)
+                        .bindPopup(item.location);
+                    //var itemLatLng = [item.latLong.latitude, item.latLong.longitude];
+                    //passes.add(itemLatLng);
+                }
+                if (item.hasOwnProperty('latLong') && item.hasOwnProperty('departure') && btn.innerHTML == "Hide all Tiplocs" &&
+                (item != data[0] && item != data[data.length[-1]])) {
                     var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: station })
                         .addTo(map)
                         .bindPopup(item.location);
                 }
-
             }
             var fullRoute = route.concat(left);
             // var movingMarker = L.Marker.movingMarker([route[0], left[left.length - 1]],
             //     [5000]).addTo(map);
             // movingMarker.start();
             new L.marker(route[0]).bindPopup(data[0].location).addTo(map);
-            new L.marker(left[0], {icon: train}).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map);
             new L.marker(left[left.length - 1]).bindPopup(data[data.length - 1].location).addTo(map);
+            new L.marker(left[0], {icon: train}).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map);
             if (route.length != 0){
                 const path = L.polyline.antPath(route, { // completed journey
                     "delay": 800,
@@ -86,7 +102,18 @@ async function route(e) {
                     "hardwareAccelerated": true
                 });
                 map.addLayer(path2);
+                /*for(i in passes){
+                    passGroup.add(passes[i]);
+                }
+                for(i in departures){
+                    departureGroup.add(departures[i]);
+                }*/
+                
+                //passGroup.bringToFront();
+                //map.addLayer(departureGroup);
+                //departureGroup.bringToFront();
             }
+            map.addLayer(passGroup);
         })
 
     var station = L.icon({

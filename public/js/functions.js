@@ -1,6 +1,9 @@
 var tiplocSearch = document.getElementById('tiplocSearch');
 tiplocSearch.addEventListener('input', filterTiplocs);
 
+var toggleTiploc = document.getElementById('tiplocBtn');
+toggleTiploc.addEventListener('click', journeyClicked);
+
 function getJourneys(e) {
     clearSidebar();
     var secondMenu = document.getElementById('journeyMenu');
@@ -114,13 +117,18 @@ function toggleKey(){
         b.innerHTML = 'Show Key';
     }
 }
+
 function tiplocBtnClick(){
-    
     var b = document.getElementById("tiplocBtn")
     if(b.innerHTML == "Show all Tiplocs"){
+        filterTiplocs();
         b.innerHTML = "Hide all Tiplocs";
+        map.clearLayers();
     }
     else{
         b.innerHTML = "Show all Tiplocs";
+        filterTiplocs();
+        
+        //map.removeLayer(passGroup);
     }
 }

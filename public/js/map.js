@@ -10,4 +10,4 @@ function addTileLayer(){
     }).addTo(map);
 }
 
-addTileLayer();
+map.addLayer(addTileLayer());
