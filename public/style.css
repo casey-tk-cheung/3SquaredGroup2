@@ -130,3 +130,27 @@ p.menuOptions:hover {
     z-index: 1000;
     visibility: hidden;
 }
+.grid {
+    display: grid;
+    width: 100%;
+}
+
+.grid-container {
+    grid-template-columns: 30% 70%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    margin-left: 2px;
+  }
+
+  .grid-container span{
+    justify-self: center;
+    margin-top: -20px;
+  }
+  
+  .text-container {
+    grid-area: auto;
+    grid-column: 2;
+    font: 1em sans-serif;
+    margin-top: -22px;
+  }
