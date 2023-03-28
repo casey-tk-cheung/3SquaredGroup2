@@ -26,6 +26,7 @@ function getJourneys(e) {
                 p.scheduleId = item.scheduleId;
                 p.headCode = item.headCode;
                 p.style.fontSize = '14px';
+                if (item.cancelled == true) {p.style.color = 'red';}
                 p.addEventListener("click", journeyClicked);
                 p.classList.add('menuOptions');
                 container.append(p);
@@ -62,8 +63,8 @@ function journeyClicked(e) {
 }
 
 function filterTiplocs(){
+    var alltiplocs = []
     var query = tiplocSearch.value;
-    console.log(query);
     var container = document.getElementById('tiplocMenu').replaceChildren();
     var container = document.getElementById('tiplocMenu');  
     if (query != ''){
@@ -71,35 +72,27 @@ function filterTiplocs(){
             .then(r => r.json())
             .then(data => {
                 for (const item of data) {
-                    if (item.originLocation){
-                        if (item.originLocation.toLowerCase().includes(query.toLowerCase()))
-                        {
-                            var p = document.createElement('p');
-                            p.innerHTML = item.originLocation;
-                            p.id = item.originTiploc;
-                            p.addEventListener("click", getJourneys);
-                            p.classList.add('menuOptions');
-                            container.append(p);
+                    if (!alltiplocs.includes(item.originTiploc))
+                    {
+                        if (item.originLocation){
+                            if (item.originLocation.toLowerCase().includes(query.toLowerCase()))
+                            {
+                                var p = document.createElement('p');
+                                p.innerHTML = item.originLocation;
+                                p.id = item.originTiploc;
+                                p.addEventListener("click", getJourneys);
+                                p.classList.add('menuOptions');
+                                container.append(p);
+                            }
                         }
+                        alltiplocs.push(item.originTiploc);
                     }
                 }
             }
         )
     }
     else {
-        let gettiplocs = fetch("tiplocs.json")
-            .then(r => r.json())
-            .then(data => {
-                for (const item of data) {
-                    var p = document.createElement('p');
-                    p.innerHTML = item.originLocation;
-                    p.id = item.originTiploc;
-                    p.addEventListener("click", journeyClicked);
-                    p.classList.add('menuOptions');
-                    container.append(p);
-                }
-            }
-            )
+        getTiplocs();
     }
 }
 // var keyBtn = L.DonUtil.get('keyBtn');
