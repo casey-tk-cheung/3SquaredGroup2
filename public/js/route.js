@@ -42,7 +42,7 @@ async function route(e) {
                     }
                 }
                 if (item.hasOwnProperty('latLong') && item.hasOwnProperty('departure') && (item != data[0] && item != data[data.length[-1]])) {
-                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: station })
+                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: station})
                         .addTo(map)
                         .bindPopup(item.location);
                 }
@@ -52,9 +52,10 @@ async function route(e) {
             // var movingMarker = L.Marker.movingMarker([route[0], left[left.length - 1]],
             //     [5000]).addTo(map);
             // movingMarker.start();
-            new L.marker(route[0]).bindPopup(data[0].location).addTo(map);
-            new L.marker(left[0], {icon: train}).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map);
-            new L.marker(left[left.length - 1]).bindPopup(data[data.length - 1].location).addTo(map);
+            var marker1 = new L.marker(left[0], {icon: train}).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map);
+            marker1.setZIndexOffset(1000);
+            new L.marker(route[0], {icon: locationIcon}).bindPopup(data[0].location).addTo(map);
+            new L.marker(left[left.length - 1],{icon: locationIcon}).bindPopup(data[data.length - 1].location).addTo(map);
             if (route.length != 0){
                 const path = L.polyline.antPath(route, { // completed journey
                     "delay": 800,
@@ -93,23 +94,28 @@ async function route(e) {
         iconUrl: '../assets/station.png',
         shadowUrl: '../assets/station.png',
 
-        iconSize: [20, 13], // size of the icon
+        iconSize: [15, 10], // size of the icon
         shadowSize: [0, 0], // size of the shadow
         iconAnchor: [10, 5], // point of the icon which will correspond to marker's location
         shadowAnchor: [0, 0],  // the same for the shadow
         popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
     });
-
     var train = L.icon({
         iconUrl: '../assets/train.png',
         shadowUrl: '../assets/train.png',
-
         iconSize: [24, 24], // size of the icon
         shadowSize: [0, 0], // size of the shadow
-        iconAnchor: [10, 25], // point of the icon which will correspond to marker's location
+        iconAnchor: [12, 22], // point of the icon which will correspond to marker's location
         shadowAnchor: [0, 0],  // the same for the shadow
-        popupAnchor: [2, -20],
-        forceZIndex: [400]
+        popupAnchor: [2, -20]
     })
-    // map.fitBounds(path);
+    var locationIcon = L.icon({
+        iconUrl: '../assets/location.png',
+        shadowUrl: '../assets/location.png',
+        iconSize: [24, 24], // size of the icon
+        shadowSize: [0, 0], // size of the shadow
+        iconAnchor: [12, 22], // point of the icon which will correspond to marker's location
+        shadowAnchor: [0, 0],  // the same for the shadow
+        popupAnchor: [2, -20]
+    })
 }
