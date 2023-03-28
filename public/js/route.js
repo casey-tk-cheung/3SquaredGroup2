@@ -94,7 +94,7 @@ async function route(e) {
         iconUrl: '../assets/station.png',
         shadowUrl: '../assets/station.png',
 
-        iconSize: [20, 13], // size of the icon
+        iconSize: [15, 10], // size of the icon
         shadowSize: [0, 0], // size of the shadow
         iconAnchor: [10, 5], // point of the icon which will correspond to marker's location
         shadowAnchor: [0, 0],  // the same for the shadow
