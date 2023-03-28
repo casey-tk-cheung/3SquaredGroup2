@@ -115,6 +115,7 @@ function toggleKey(){
     }
 }
 function tiplocBtnClick(){
+    
     var b = document.getElementById("tiplocBtn")
     if(b.innerHTML == "Show all Tiplocs"){
         b.innerHTML = "Hide all Tiplocs";
