@@ -131,3 +131,22 @@ p.menuOptions:hover {
     z-index: 1000;
     visibility: hidden;
 }
+.grid-container {
+    display: grid;
+  }
+  
+  .image-container {
+    width: 100px;
+    grid-row: 1;
+    display: grid;
+    align-items: center;
+    margin-left: 2px;
+    margin-top: -2px;
+  }
+  
+  .text-container {
+    grid-area: auto;
+    grid-column: 2;
+    justify-self: end;
+    font: 1em sans-serif;
+  }
