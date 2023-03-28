@@ -129,6 +129,7 @@ p.menuOptions:hover {
     left: 5px;
     z-index: 1000;
     visibility: hidden;
+<<<<<<< HEAD
 }
 .grid {
     display: grid;
@@ -154,3 +155,6 @@ p.menuOptions:hover {
     font: 1em sans-serif;
     margin-top: -22px;
   }
+=======
+}
+>>>>>>> 233dd6bfc1d3a3c2bfddfa2eba41089fa84c82d5
