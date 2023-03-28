@@ -65,14 +65,17 @@ function journeyClicked(e) {
 
 async function getMovementUpdates(e)
 {
-    await fetch(`API/Movements_updates/` + e.currentTarget.activationId + `/` + e.currentTarget.scheduleId )
-    .then(response => response.json())
-    .then(data => {
-        //console.log(data)
-        data = data.data
-       // fs.writeFileSync('./public/tiplocs.json', JSON.stringify(workingTiplocs, null, 2), {encoding:'utf8',flag:'w'})
-        console.log('run')
-    })
+    //setInterval( async() => {
+        await fetch(`API/Movements_updates/` + e.currentTarget.activationId + `/` + e.currentTarget.scheduleId )
+        .then(response => response.json())
+        .then(data => {
+            //console.log(data)
+            data = data.data
+           // fs.writeFileSync('./public/tiplocs.json', JSON.stringify(workingTiplocs, null, 2), {encoding:'utf8',flag:'w'})
+            console.log('run')
+        })
+    //})
+
 }
 
 function filterTiplocs(){
