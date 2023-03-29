@@ -2,7 +2,8 @@
 //toggleTiplocs.addEventListener('click', route);
 
 async function route(e) {
-    console.log(e.explicitOriginalTarget);
+    //changed instances of 'e.currentTarget' to 'e.explicitOriginalTarget' to facilitate reloading
+    console.log(e.explicitOriginalTarget); 
     var activationId = e.explicitOriginalTarget.activationId;
     var scheduleId = e.explicitOriginalTarget.scheduleId;
     var headCode = e.explicitOriginalTarget.headCode;
@@ -47,6 +48,7 @@ async function route(e) {
                         left.push(latlng);
                     }
                 }
+                //Create departure markers
                 var btn = document.getElementById("tiplocBtn");
                 if (item.hasOwnProperty('latLong') && item.hasOwnProperty('departure') &&
                 (item != data[0] && item != data[data.length[-1]])) {
@@ -54,23 +56,19 @@ async function route(e) {
                         .addTo(map)
                         .bindPopup(item.location);
                 }
+                //Create all other markers, if showing all station passes is enabled via button
                 if (item.hasOwnProperty('latLong') && item.hasOwnProperty('pass') && btn.innerHTML == "Hide Station Passes" &&
                  (item != data[0] && item != data[data.length[-1]])) {
                     var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: dot})
                         .addTo(passGroup)
                         .bindPopup(item.location);
-                    //var itemLatLng = [item.latLong.latitude, item.latLong.longitude];
-                    //passes.add(itemLatLng);
                 }
             }
-            map.addLayer(passGroup);
+            map.addLayer(passGroup); //Add pass markers to layer group
             var fullRoute = route.concat(left);
-            // var movingMarker = L.Marker.movingMarker([route[0], left[left.length - 1]],
-            //     [5000]).addTo(map);
-            // movingMarker.start();
-            new L.marker(route[0]).bindPopup(data[0].location).addTo(map);
-            new L.marker(left[left.length - 1]).bindPopup(data[data.length - 1].location).addTo(map);
-            new L.marker(left[0], {icon: train}).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map);
+            new L.marker(route[0]).bindPopup(data[0].location).addTo(map);  //Journey starting marker
+            new L.marker(left[left.length - 1]).bindPopup(data[data.length - 1].location).addTo(map); //Journey termination marker
+            new L.marker(left[0], {icon: train}).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map); //Train marker
             if (route.length != 0){
                 const path = L.polyline.antPath(route, { // completed journey
                     "delay": 800,
@@ -103,13 +101,9 @@ async function route(e) {
                 });
                 map.addLayer(path2);
             }
-            var corner1 = L.latLng(56.5, -1.5);
-            var corner2 = L.latLng(51.5, -1.5);
-            var bounds = L.latLngBounds(corner1, corner2);
-            //map.fitBounds(bounds);
-
         })
 
+    //Icon definitions
     var station = L.icon({
         iconUrl: '../assets/station.png',
         shadowUrl: '../assets/station.png',
@@ -124,7 +118,6 @@ async function route(e) {
     var dot = L.icon({
         iconUrl: '../assets/dot.png',
         shadowUrl: '../assets/dot.png',
-
         iconSize: [7, 7], // size of the icon
         shadowSize: [0, 0], // size of the shadow
         iconAnchor: [3, 3], // point of the icon which will correspond to marker's location
@@ -143,5 +136,4 @@ async function route(e) {
         popupAnchor: [2, -20],
         forceZIndex: [400]
     })
-    // map.fitBounds(path);
 }
