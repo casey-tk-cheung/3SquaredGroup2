@@ -57,6 +57,7 @@ function journeyClicked(e) {
     })
     addTileLayer();
     route(e);
+    setInterval(route(e), 1000);
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'visible';
 }
