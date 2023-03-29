@@ -1,24 +1,23 @@
-//const toggleTiplocs = document.getElementById(tiplocBtnClick);
-//toggleTiplocs.addEventListener('onclick', route());
+//var toggleTiplocs = document.getElementById('tiplocBtn');
+//toggleTiplocs.addEventListener('click', route);
 
 async function route(e) {
-    var activationId = e.currentTarget.activationId;
-    var scheduleId = e.currentTarget.scheduleId;
-    var headCode = e.currentTarget.headCode;
-    var destinationLocation = e.currentTarget.destinationLocation;
-    var originLocation = e.currentTarget.originLocation;
+    console.log(e.explicitOriginalTarget);
+    var activationId = e.explicitOriginalTarget.activationId;
+    var scheduleId = e.explicitOriginalTarget.scheduleId;
+    var headCode = e.explicitOriginalTarget.headCode;
+    var destinationLocation = e.explicitOriginalTarget.destinationLocation;
+    var originLocation = e.explicitOriginalTarget.originLocation;
     var route = [];
     var left = [];
-    var passes = [];
-    var departures = [];
     var passGroup = new L.layerGroup();
-    var departureGroup = new L.layerGroup();
     const headers = new Headers();
     headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
     headers.append('X-ApiVersion', '1');
 
     var lastVisitedTiploc;
-    await fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/' + e.currentTarget.activationId + '/' + e.currentTarget.scheduleId, { headers: headers })
+    await fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/' 
+    + activationId + '/' + scheduleId, { headers: headers })
         .then(response => response.json())
         .then(data => {
             if (data.length != 0)
@@ -49,21 +48,22 @@ async function route(e) {
                     }
                 }
                 var btn = document.getElementById("tiplocBtn");
-                if (item.hasOwnProperty('latLong') && item.hasOwnProperty('pass') && btn.innerHTML == "Show all Tiplocs" &&
-                 (item != data[0] && item != data[data.length[-1]])) {
-                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: train})
-                        .addTo(passGroup)
-                        .bindPopup(item.location);
-                    //var itemLatLng = [item.latLong.latitude, item.latLong.longitude];
-                    //passes.add(itemLatLng);
-                }
-                if (item.hasOwnProperty('latLong') && item.hasOwnProperty('departure') && btn.innerHTML == "Hide all Tiplocs" &&
+                if (item.hasOwnProperty('latLong') && item.hasOwnProperty('departure') &&
                 (item != data[0] && item != data[data.length[-1]])) {
                     var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: station })
                         .addTo(map)
                         .bindPopup(item.location);
                 }
+                if (item.hasOwnProperty('latLong') && item.hasOwnProperty('pass') && btn.innerHTML == "Hide Station Passes" &&
+                 (item != data[0] && item != data[data.length[-1]])) {
+                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: dot})
+                        .addTo(passGroup)
+                        .bindPopup(item.location);
+                    //var itemLatLng = [item.latLong.latitude, item.latLong.longitude];
+                    //passes.add(itemLatLng);
+                }
             }
+            map.addLayer(passGroup);
             var fullRoute = route.concat(left);
             // var movingMarker = L.Marker.movingMarker([route[0], left[left.length - 1]],
             //     [5000]).addTo(map);
@@ -102,18 +102,12 @@ async function route(e) {
                     "hardwareAccelerated": true
                 });
                 map.addLayer(path2);
-                /*for(i in passes){
-                    passGroup.add(passes[i]);
-                }
-                for(i in departures){
-                    departureGroup.add(departures[i]);
-                }*/
-                
-                //passGroup.bringToFront();
-                //map.addLayer(departureGroup);
-                //departureGroup.bringToFront();
             }
-            map.addLayer(passGroup);
+            var corner1 = L.latLng(56.5, -1.5);
+            var corner2 = L.latLng(51.5, -1.5);
+            var bounds = L.latLngBounds(corner1, corner2);
+            //map.fitBounds(bounds);
+
         })
 
     var station = L.icon({
@@ -123,6 +117,17 @@ async function route(e) {
         iconSize: [20, 13], // size of the icon
         shadowSize: [0, 0], // size of the shadow
         iconAnchor: [10, 5], // point of the icon which will correspond to marker's location
+        shadowAnchor: [0, 0],  // the same for the shadow
+        popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
+    });
+
+    var dot = L.icon({
+        iconUrl: '../assets/dot.png',
+        shadowUrl: '../assets/dot.png',
+
+        iconSize: [7, 7], // size of the icon
+        shadowSize: [0, 0], // size of the shadow
+        iconAnchor: [3, 3], // point of the icon which will correspond to marker's location
         shadowAnchor: [0, 0],  // the same for the shadow
         popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
     });

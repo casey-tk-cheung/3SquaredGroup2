@@ -4,7 +4,10 @@ tiplocSearch.addEventListener('input', filterTiplocs);
 var toggleTiploc = document.getElementById('tiplocBtn');
 toggleTiploc.addEventListener('click', journeyClicked);
 
+var storedJourney = [];
+
 function getJourneys(e) {
+    //if(storedJourney.length > 1){storedJourney.shift();}
     clearSidebar();
     var secondMenu = document.getElementById('journeyMenu');
     secondMenu.style.display = 'inline';
@@ -31,7 +34,7 @@ function getJourneys(e) {
                 p.destinationLocation = item.destinationLocation;
                 p.originLocation = item.originLocation;
                 p.style.fontSize = '14px';
-                if (item.cancelled == true) {p.style.color = 'red';}
+                if (item.cancelled == true) {p.style.color = 'red'}
                 p.addEventListener("click", journeyClicked);
                 p.classList.add('menuOptions');
                 container.append(p);
@@ -62,9 +65,14 @@ function journeyClicked(e) {
         }
     })
     addTileLayer();
-    route(e);
+    storedJourney.push(e);
+    route(storedJourney[0]);
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'visible';
+    for(i in storedJourney){
+        console.log(storedJourney[i]);
+    }
+    //b.innerHTML = e.currentTarget.activationId;
 }
 
 function filterTiplocs(){
@@ -120,15 +128,13 @@ function toggleKey(){
 
 function tiplocBtnClick(){
     var b = document.getElementById("tiplocBtn")
-    if(b.innerHTML == "Show all Tiplocs"){
+    if(b.innerHTML == "Show all TIPLOCs"){
         filterTiplocs();
-        b.innerHTML = "Hide all Tiplocs";
-        map.clearLayers();
+        b.innerHTML = "Hide Station Passes";
+        //map.clearLayers();
     }
     else{
-        b.innerHTML = "Show all Tiplocs";
+        b.innerHTML = "Show all TIPLOCs";
         filterTiplocs();
-        
-        //map.removeLayer(passGroup);
     }
 }
