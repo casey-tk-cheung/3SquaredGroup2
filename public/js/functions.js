@@ -33,6 +33,7 @@ function getJourneys(e) {
                 p.headCode = item.headCode;
                 p.destinationLocation = item.destinationLocation;
                 p.originLocation = item.originLocation;
+                p.scheduledDeparture = item.scheduledDeparture;
                 p.style.fontSize = '14px';
                 if (item.cancelled == true) {p.style.color = 'red'}
                 p.addEventListener("click", journeyClicked);
@@ -60,6 +61,8 @@ function resetSidebar(){
 
 function journeyClicked(e) {
     clearSidebar();
+    var journeyInfo = document.getElementById('journeyInfo');
+    journeyInfo.style.visibility = 'visible';
     map.eachLayer(function (layer) {
         if (layer != Location.tileLayer) {
             map.removeLayer(layer);

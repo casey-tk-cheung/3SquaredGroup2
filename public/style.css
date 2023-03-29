@@ -23,7 +23,7 @@ body {
     box-shadow: 0px 5px 18px #888888;
     position: relative;
     overflow-y: hidden;
-    border-radius: 20px;
+    border-radius: 0px 20px 20px 0px;
 }
 
 /* #sidebar div{
@@ -116,14 +116,12 @@ p.menuOptions:hover {
     margin-top: 5px;
     width: 80%;
 }
-
 #keyBtn {
     position: absolute;
     bottom: 5px;
     right: 5px;
     z-index: 1000;
 }
-
 #tiplocBtn {
     position: absolute;
     bottom: 5px;
@@ -131,21 +129,36 @@ p.menuOptions:hover {
     z-index: 1000;
     visibility: hidden;
 }
-.grid-container {
+
+#journeyInfo{
+    visibility: hidden;
+}
+
+.grid {
     display: grid;
+
     grid-template-columns: 20% 20% 60%;
     align-items: center;
     margin-left: 2px;
     width: 100%;
   }
-  
   .image-container {
     width: 100px;
     grid-row: 1;
+    width: 100%;
+}
+
+.grid-container {
+    grid-template-columns: 20% 20% 60%;
+    width: 100%;
     display: grid;
     align-items: center;
     margin-left: 2px;
-    margin-top: -2px;
+  }
+
+  .grid-container span{
+    justify-self: center;
+    margin-top: -20px;
   }
   
   .text-container {
@@ -177,6 +190,19 @@ p.menuOptions:hover {
 }
 
 .timeContainer {
+  .iconWrapper{
+    margin-top: -22px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+  }
+
+  .passed{
+    color: green;
+  }
+
+  .timeContainer{
     grid-area: auto;
     grid-column: 1;
     font: 1em sans-serif;
@@ -189,3 +215,11 @@ p.menuOptions:hover {
     text-align: center;
     font-weight: bold;
 }
+    color: gray;
+    text-align: center;
+  }
+  .headCodeContainer{
+    font: 1em sans-serif;
+    text-align: center;
+    font-weight: bold;
+  }

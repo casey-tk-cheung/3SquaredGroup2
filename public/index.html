@@ -10,10 +10,11 @@
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <link rel="stylesheet" href="style.css" />
 </head>
-<script src = "/socket.io/socket.io.js"></script>
+<script src="/socket.io/socket.io.js"></script>
 <script>
-   const socket = io();
+    const socket = io();
 </script>
+
 <body>
     <div id="dateTime"></div>
     <button id="tiplocBtn" onclick="tiplocBtnClick()">Show all TIPLOCs</button>
@@ -28,8 +29,8 @@
         <img src="assets/antpathBlue.png" style="height: 35px; width: 5px;">
         Route Ahead
         <img src="assets/antpathGreen.png" style="height: 35px; width: 5px;">
-        Route Completed 
-    </div>  
+        Route Completed
+    </div>
     <div class='flex-row' style="height: 100vh; width:100%; position:absolute">
         <div id="sidebar">
             <div style="position: fixed; width: 350px; height: 45px; background-color: white; display: flex; align-items: center; justify-content: space-around; margin-top: 0px; border-radius: 20px;">
@@ -85,11 +86,10 @@
                             Station 5
                         </div>
                     </div>
-                
+               
             </div>
         </div>
-    </div>
-    <div id="map"></div>
+        <div id="map"></div>
 </body>
 
 </html>
