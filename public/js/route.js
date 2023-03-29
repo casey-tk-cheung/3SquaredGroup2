@@ -1,6 +1,5 @@
 async function route(e) {
     //changed instances of 'e.currentTarget' to 'e.explicitOriginalTarget' to facilitate reloading
-    console.log(e); 
     var activationId = e.explicitOriginalTarget.activationId;
     var scheduleId = e.explicitOriginalTarget.scheduleId;
     var headCode = e.explicitOriginalTarget.headCode;
@@ -106,10 +105,11 @@ async function route(e) {
             var grid = document.getElementById('journeyInfo-grid');
             var hc = document.getElementById('headCode');
             if(hc != 0){
-                 hc.innerHTML = ("Head Code: " + headCode);
+                hc.innerHTML = ("Head Code: " + headCode);
             }
             var firstStation = document.getElementById('originStation');
             console.log(allMovementData[0]);
+            console.log(allMovementData[allMovementData.length-1].plannedArrival);
 
             if( firstStation !=0){
                 firstStation.innerHTML = (originLocation);
@@ -120,10 +120,10 @@ async function route(e) {
                 }
             }
             var lastStation = document.getElementById('destinationStation')
-            if( lastStation != 0){
+            if(lastStation != 0){
                 lastStation.innerHTML = (destinationLocation);
-                if(allMovementData[0].plannedArrival != 0){
-                    var arv = new Date(allMovementData[0].plannedArrival);
+                if(allMovementData[allMovementData.length-1].plannedArrival != 0){
+                    var arv = new Date(allMovementData[allMovementData.length-1].plannedArrval);
                     arv = arv.toLocaleTimeString();
                     lastStation.innerHTML = (destinationLocation + "\nExp Arrival: " +arv);
                 }
@@ -135,6 +135,7 @@ async function route(e) {
                 elementDiv.classList.add('timeContainer');
                 var element = document.createElement('p');
                 const planned = new Date(item.plannedArrival);
+                //console.log(item);
                 element.innerHTML = planned.toLocaleTimeString();
                 elementDiv.append(element);
                 grid.append(elementDiv);
@@ -152,9 +153,6 @@ async function route(e) {
             })
         })
     
-
-
-
     //Icon definitions
     var station = L.icon({
         iconUrl: '../assets/station.png',
