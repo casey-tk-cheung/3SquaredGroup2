@@ -4,23 +4,28 @@ async function route(e) {
     var headCode = e.currentTarget.headCode;
     var destinationLocation = e.currentTarget.destinationLocation;
     var originLocation = e.currentTarget.originLocation;
+    var scheduledDeparture = e.currentTarget.scheduledDeparture;
     var route = [];
     var left = [];
     const headers = new Headers();
     headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
     headers.append('X-ApiVersion', '1');
 
+    var allMovementData;
     var lastVisitedTiploc;
     await fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/' + e.currentTarget.activationId + '/' + e.currentTarget.scheduleId, { headers: headers })
         .then(response => response.json())
         .then(data => {
+            allMovementData = data;
             if (data.length != 0)
             lastVisitedTiploc = data[data.length - 1].tiploc;
             else lastVisitedTiploc = 0;
         })
+
     fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/' + activationId + '/' + scheduleId, {headers: headers})
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             while (!data[data.length - 1].hasOwnProperty('latLong')) data.pop()
             var completedJourney = true;
             for (const item of data) {
@@ -49,9 +54,57 @@ async function route(e) {
 
             }
             var fullRoute = route.concat(left);
-            // var movingMarker = L.Marker.movingMarker([route[0], left[left.length - 1]],
-            //     [5000]).addTo(map);
-            // movingMarker.start();
+            var grid = document.getElementById('journeyInfo-grid');
+            var hc = document.getElementById('headCode');
+            if(hc != 0){
+                 hc.innerHTML = ("Head Code: " + headCode);
+            }
+            var firstStation = document.getElementById('originStation');
+            console.log(allMovementData[0]);
+
+            
+
+            if( firstStation !=0){
+                firstStation.innerHTML = (originLocation);
+                if (allMovementData[0].actualDeparture != 0){
+                    var dep = new Date(allMovementData[0].actualDeparture);
+                    dep = dep.toLocaleTimeString();
+                    firstStation.innerHTML = (originLocation + "\nDeparted: " + dep);
+                }
+            }
+            var lastStation = document.getElementById('destinationStation')
+            if( lastStation != 0){
+                lastStation.innerHTML = (destinationLocation);
+                if(allMovementData[0].plannedArrival != 0){
+                    var arv = new Date(allMovementData[0].plannedArrival);
+                    arv = arv.toLocaleTimeString();
+                    lastStation.innerHTML = (destinationLocation + "\nExp Arrival: " +arv);
+                }
+            }
+            allMovementData.forEach(item => {
+                // route diagram code here
+
+                var elementDiv = document.createElement('div');
+                elementDiv.classList.add('timeContainer');
+                var element = document.createElement('p');
+                const planned = new Date(item.plannedArrival);
+                element.innerHTML = planned.toLocaleTimeString();
+                elementDiv.append(element);
+                grid.append(elementDiv);
+
+                var elementDiv = document.createElement('div');
+                elementDiv.classList.add('iconWrapper');
+                var element = document.createElement('span');
+                element.classList.add('iconify');
+                element.dataset.icon = 'material-symbols:line-end';
+                element.dataset.width = '75';
+                element.dataset.height = '75';
+                element.dataset.rotate = '270deg';
+                elementDiv.append(element);
+                grid.append(elementDiv);
+            })
+
+            
             var marker1 = new L.marker(left[0], {icon: train}).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map);
             marker1.setZIndexOffset(1000);
             new L.marker(route[0], {icon: locationIcon}).bindPopup(data[0].location).addTo(map);
