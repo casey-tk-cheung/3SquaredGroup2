@@ -21,12 +21,11 @@ router.get('/Tiplocs/:tiploc', async (req, res) =>
   .then(data => {
     if (data.length == 0)
     {
-        console.log(`${tiploc} is empty`)
+      console.log(`${tiploc} is empty`)
     }
     else
     {
-      console.log('here in tiplocs')
-        res.json({"data" : data})
+      res.json({"data" : data})
     }
     
 
@@ -76,7 +75,6 @@ router.get('/Movements/:activation/:schedule', async (req, res) =>
     }
     else
     {
-      console.log('in movements')
         res.json({"data" : data})
     }
     
