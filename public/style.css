@@ -211,14 +211,18 @@ p.menuOptions:hover {
 
 .headCodeContainer {
     font: 1em sans-serif;
-    text-align: center;
-    font-weight: bold;
+    font-weight: bolder;
+    display: grid;
 }
-    color: gray;
-    text-align: center;
-  }
-  .headCodeContainer{
-    font: 1em sans-serif;
-    text-align: center;
-    font-weight: bold;
-  }
+#schedule{
+    grid-row: 1;
+    grid-column: 1;
+    column-width: auto;
+    font-weight: bolder;
+}
+#headCode{
+    grid-row: 1;
+    grid-column: 2;
+    column-width: auto;
+    font-weight: bolder;
+}
