@@ -8,7 +8,6 @@ var storedJourney = [];
 
 function getJourneys(e) {
     storedJourney = [];
-    //if(storedJourney.length > 1){storedJourney.shift();}
     clearSidebar();
     var secondMenu = document.getElementById('journeyMenu');
     secondMenu.style.display = 'inline';
@@ -73,7 +72,6 @@ function journeyClicked(e) {
     for(i in storedJourney){
         console.log(storedJourney[i]);
     }
-    //b.innerHTML = e.currentTarget.activationId;
 }
 
 function filterTiplocs(){
@@ -109,11 +107,7 @@ function filterTiplocs(){
         getTiplocs();
     }
 }
-// var keyBtn = L.DonUtil.get('keyBtn');
 
-// L.DomEvent.on(keyBtn, 'click', function(){
-    
-// });
 function toggleKey(){
     var b = document.getElementById("keyBtn");
     var s = document.getElementById("markersInfo");
@@ -132,7 +126,6 @@ function tiplocBtnClick(){
     if(b.innerHTML == "Show all TIPLOCs"){
         filterTiplocs();
         b.innerHTML = "Hide Station Passes";
-        //map.clearLayers();
     }
     else{
         b.innerHTML = "Show all TIPLOCs";
