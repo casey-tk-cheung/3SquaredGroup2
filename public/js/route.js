@@ -72,27 +72,6 @@ async function route(e) {
             if(hc != 0){
                  hc.innerHTML = ("Head Code: " + headCode);
             }
-            var firstStation = document.getElementById('originStation');
-
-            
-
-            if( firstStation !=0){
-                firstStation.innerHTML = (originLocation);
-                if (allMovementData[0].hasOwnProperty('actualDeparture')){
-                    var dep = new Date(allMovementData[0].actualDeparture);
-                    dep = dep.toLocaleTimeString(); 
-                    firstStation.innerHTML = (originLocation + "\nDeparted: " + dep);
-                }
-            }
-            // var lastStation = document.getElementById('destinationStation')
-            // if( lastStation != 0){
-            //     lastStation.innerHTML = (destinationLocation);
-            //     if(allMovementData[0].plannedArrival != 0){
-            //         var arv = new Date(allMovementData[0].plannedArrival);
-            //         arv = arv.toLocaleTimeString();
-            //         lastStation.innerHTML = (destinationLocation + "\nExp Arrival: " +arv);
-            //     }
-            // }
 
             
             var marker1 = new L.marker(left[0], {icon: train}).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map);
@@ -138,31 +117,11 @@ async function route(e) {
             if(hc != 0){
                 hc.innerHTML = ("Head Code: " + headCode);
             }
-            var firstStation = document.getElementById('originStation');
-
-            if( firstStation !=0){
-                firstStation.innerHTML = (originLocation);
-                if (allMovementData[0].actualDeparture != 0){
-                    var dep = new Date(allMovementData[0].actualDeparture);
-                    dep = dep.toLocaleTimeString();
-                    firstStation.innerHTML = (originLocation + "\nDeparted: " + dep);
-                }
-            }
-            var lastStation = document.getElementById('destinationStation')
-            // if(lastStation != 0){
-            //     lastStation.innerHTML = (destinationLocation);
-            //     if(allMovementData[allMovementData.length-1].plannedArrival != 0){
-            //         var arv = new Date(allMovementData[allMovementData.length-1].plannedArrival);
-            //         arv = arv.toLocaleTimeString();
-            //         lastStation.innerHTML = (destinationLocation + "\nExp Arrival: " +arv);
-            //     }
-            // }
+            
             for (let i = 0; i < allMovementData.length; i++) {
                 // route diagram code here
                 item = allMovementData[i];
                 console.log(item)
-                if (!item.hasOwnProperty('plannedArrival'))
-                {
                     //time
                     var elementDiv = document.createElement('div');
                     elementDiv.classList.add('timeContainer');
@@ -226,7 +185,7 @@ async function route(e) {
                     element.innerHTML = item.location;
                     elementDiv.append(element);
                     grid.append(elementDiv);
-                }
+                
             }
         })
     

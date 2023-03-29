@@ -48,6 +48,8 @@ function clearSidebar() {
     tiplocMenu.style.display = 'none';
     var journeyMenu = document.getElementById('journeyMenu');
     journeyMenu.replaceChildren();
+    var journeyInfoGrid = document.getElementById('journeyInfo-grid');
+    journeyInfoGrid.replaceChildren();
 }
 
 function resetSidebar(){
