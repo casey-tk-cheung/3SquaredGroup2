@@ -1,10 +1,11 @@
 async function route(e) {
     //changed instances of 'e.currentTarget' to 'e.explicitOriginalTarget' to facilitate reloading
-    var activationId = e.explicitOriginalTarget.activationId;
-    var scheduleId = e.explicitOriginalTarget.scheduleId;
-    var headCode = e.explicitOriginalTarget.headCode;
-    var destinationLocation = e.explicitOriginalTarget.destinationLocation;
-    var originLocation = e.explicitOriginalTarget.originLocation;
+    var activationId = e.srcElement.activationId;
+    var scheduleId = e.srcElement.scheduleId;
+    var headCode = e.srcElement.headCode;
+    var destinationLocation = e.srcElement.destinationLocation;
+    var originLocation = e.srcElement.originLocation;
+    console.log(e);
     var route = [];
     var left = [];
     var passGroup = new L.layerGroup();
@@ -128,7 +129,7 @@ async function route(e) {
                     lastStation.innerHTML = (destinationLocation + "\nExp Arrival: " +arv);
                 }
             }
-            allMovementData.forEach(item => {
+            /*allMovementData.forEach(item => {
                 // route diagram code here
 
                 var elementDiv = document.createElement('div');
@@ -150,7 +151,7 @@ async function route(e) {
                 element.dataset.rotate = '270deg';
                 elementDiv.append(element);
                 grid.append(elementDiv);
-            })
+            })*/
         })
     
     //Icon definitions

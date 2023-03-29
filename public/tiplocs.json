@@ -228,6 +228,10 @@
     "originTiploc": "ACTNLRS"
   },
   {
+    "originLocation": "NEASDEN ENGINEERS SDGS",
+    "originTiploc": "NEASDGS"
+  },
+  {
     "originLocation": "BOW EAST (DB CARGO)",
     "originTiploc": "BOWDOLY"
   },
@@ -398,6 +402,10 @@
   {
     "originLocation": "ARPLEY SIDINGS",
     "originTiploc": "ARPLEYS"
+  },
+  {
+    "originLocation": "STOKE MARCROFT ENGINEERING",
+    "originTiploc": "STOKMAR"
   },
   {
     "originLocation": "BESCOT DOWN SIDE",
@@ -1272,6 +1280,14 @@
     "originTiploc": "MOSELHS"
   },
   {
+    "originLocation": "LONDON GATEWAY FRGHTLINER",
+    "originTiploc": "THMSFLI"
+  },
+  {
+    "originLocation": "LONDON GATEWAY FRGHTLINER",
+    "originTiploc": "THMSFLI"
+  },
+  {
     "originLocation": "BARDON HILL GBRF",
     "originTiploc": "BARDGBR"
   },
@@ -1528,6 +1544,10 @@
     "originTiploc": "CREWBHM"
   },
   {
+    "originLocation": "CREWE BAS HALL S.S.M.",
+    "originTiploc": "CREWBHM"
+  },
+  {
     "originLocation": "WILLESDEN PRDC",
     "originTiploc": "WLSDRMT"
   },
@@ -1574,6 +1594,10 @@
   {
     "originLocation": "RUGBY UDT SIGNAL RN4184",
     "originTiploc": "RUGB184"
+  },
+  {
+    "originLocation": "LEEDS BALM RD LOCO (FHH)",
+    "originTiploc": "LEEDFHH"
   },
   {
     "originLocation": "DB CARGO FAN A AND B SDGS",
@@ -2160,6 +2184,18 @@
     "originTiploc": "DONCUDY"
   },
   {
+    "originLocation": "DONCASTER UP DECOY",
+    "originTiploc": "DONCUDY"
+  },
+  {
+    "originLocation": "DONCASTER UP DECOY",
+    "originTiploc": "DONCUDY"
+  },
+  {
+    "originLocation": "DONCASTER UP DECOY",
+    "originTiploc": "DONCUDY"
+  },
+  {
     "originLocation": "TYNE S.S.",
     "originTiploc": "TYNEY"
   },
@@ -2208,8 +2244,20 @@
     "originTiploc": "DONNGBF"
   },
   {
+    "originLocation": "DONCASTER UP DECOY",
+    "originTiploc": "DONCUDY"
+  },
+  {
+    "originLocation": "DONCASTER UP DECOY",
+    "originTiploc": "DONCUDY"
+  },
+  {
     "originLocation": "DONNINGTON RFT GBRF",
     "originTiploc": "DONNGBF"
+  },
+  {
+    "originLocation": "DONCASTER UP DECOY",
+    "originTiploc": "DONCUDY"
   },
   {
     "originLocation": "DONNINGTON RFT GBRF",
@@ -3040,6 +3088,10 @@
     "originTiploc": "EUSTON"
   },
   {
+    "originLocation": "GLASGOW CENTRAL",
+    "originTiploc": "GLGC"
+  },
+  {
     "originLocation": "EXETER RIVERSIDE HANSON",
     "originTiploc": "EXETRFH"
   },
@@ -3110,6 +3162,10 @@
   {
     "originLocation": "POLMADIE CAR M.D.",
     "originTiploc": "PLMDCMD"
+  },
+  {
+    "originLocation": "GLASGOW CENTRAL",
+    "originTiploc": "GLGC"
   },
   {
     "originLocation": "MIDDLETON TOWERS GBRF",
@@ -3417,6 +3473,10 @@
     "originTiploc": "IMNGHOR"
   },
   {
+    "originLocation": "HUMBER OIL REFINERY",
+    "originTiploc": "IMNGHOR"
+  },
+  {
     "originLocation": "IMMINGHAM H.I.T. (GBRF)",
     "originTiploc": "IMNGHIG"
   },
@@ -3447,6 +3507,10 @@
   {
     "originLocation": "BELMONT DOWN YARD",
     "originTiploc": "DONCBDY"
+  },
+  {
+    "originLocation": "HUMBER OIL REFINERY",
+    "originTiploc": "IMNGHOR"
   },
   {
     "originLocation": "INCE & ELTON ENCIRC WORKS",
@@ -4773,6 +4837,30 @@
     "originTiploc": "KNGX"
   },
   {
+    "originLocation": "YORK",
+    "originTiploc": "YORK"
+  },
+  {
+    "originLocation": "YORK",
+    "originTiploc": "YORK"
+  },
+  {
+    "originLocation": "LONDON KINGS CROSS",
+    "originTiploc": "KNGX"
+  },
+  {
+    "originLocation": "LONDON KINGS CROSS",
+    "originTiploc": "KNGX"
+  },
+  {
+    "originLocation": "LONDON KINGS CROSS",
+    "originTiploc": "KNGX"
+  },
+  {
+    "originLocation": "LONDON KINGS CROSS",
+    "originTiploc": "KNGX"
+  },
+  {
     "originLocation": "BIRCH COPPICE EXCHANGE SDG",
     "originTiploc": "KNGSBCE"
   },
@@ -5373,6 +5461,10 @@
   {
     "originLocation": "NEATH ABBEY WHARF GBRF",
     "originTiploc": "NEATAGB"
+  },
+  {
+    "originLocation": "NEASDEN ENGINEERS SDGS",
+    "originTiploc": "NEASDGS"
   },
   {
     "originLocation": "NEASDEN CHARRINGTON GBRF",
@@ -7099,6 +7191,10 @@
     "originTiploc": "ARPLEYS"
   },
   {
+    "originLocation": "STOKE MARCROFT ENGINEERING",
+    "originTiploc": "STOKMAR"
+  },
+  {
     "originLocation": "HEATON T&R.S.M.D.",
     "originTiploc": "HTONTMD"
   },
@@ -7295,12 +7391,24 @@
     "originTiploc": "TERCESL"
   },
   {
+    "originLocation": "LONDON GATEWAY FRGHTLINER",
+    "originTiploc": "THMSFLI"
+  },
+  {
     "originLocation": "LAWLEY STREET F.L.T.",
     "originTiploc": "LWLYSFT"
   },
   {
     "originLocation": "TRAFFORD PARK F.L.T.",
     "originTiploc": "TRFDFLT"
+  },
+  {
+    "originLocation": "LONDON GATEWAY FRGHTLINER",
+    "originTiploc": "THMSFLI"
+  },
+  {
+    "originLocation": "LONDON GATEWAY FRGHTLINER",
+    "originTiploc": "THMSFLI"
   },
   {
     "originLocation": "LONDON GATEWAY GBRF",
@@ -7771,6 +7879,10 @@
     "originTiploc": "FLXSNFL"
   },
   {
+    "originLocation": "LONDON GATEWAY FRGHTLINER",
+    "originTiploc": "THMSFLI"
+  },
+  {
     "originLocation": "SOTON W DOCKS BERTH 109",
     "originTiploc": "SOTD107"
   },
@@ -8169,6 +8281,14 @@
   {
     "originLocation": "LONDON KINGS CROSS",
     "originTiploc": "KNGX"
+  },
+  {
+    "originLocation": "YORK",
+    "originTiploc": "YORK"
+  },
+  {
+    "originLocation": "YORK",
+    "originTiploc": "YORK"
   },
   {
     "originLocation": "HUNSLET YARD (FLHH)",
