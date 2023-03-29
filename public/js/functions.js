@@ -27,6 +27,7 @@ function getJourneys(e) {
                 p.style.fontSize = '14px';
                 if (item.cancelled == true) {p.style.color = 'red';}
                 p.addEventListener("click", journeyClicked);
+                //p.addEventListener("click", getMovementUpdates)
                 p.classList.add('menuOptions');
                 container.append(p);
             }
@@ -56,27 +57,29 @@ function journeyClicked(e) {
         }
     })
     addTileLayer();
-    //setInterval(getMovementUpdates(e), 10000);
-    getMovementUpdates(e);
+    //console.log( e.currentTarget.activationId + `/` + e.currentTarget.scheduleId)
+    setInterval(getMovementUpdates(e), 10000);
     route(e);
+    
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'visible';
 }
 
+
 async function getMovementUpdates(e)
 {
-    //setInterval( async() => {
-        await fetch(`API/Movements_updates/` + e.currentTarget.activationId + `/` + e.currentTarget.scheduleId )
-        .then(response => response.json())
-        .then(data => {
-            //console.log(data)
-            data = data.data
-           // fs.writeFileSync('./public/tiplocs.json', JSON.stringify(workingTiplocs, null, 2), {encoding:'utf8',flag:'w'})
-            console.log('run')
-        })
-    //})
-
+    await fetch(`API/Movements_updates/` + e.currentTarget.activationId + `/` + e.currentTarget.scheduleId )
+    .then(response => response.json())
+    .then(data => {
+        //console.log(data)
+        data = data.data
+       // fs.writeFileSync('./public/tiplocs.json', JSON.stringify(workingTiplocs, null, 2), {encoding:'utf8',flag:'w'})
+        console.log('run')
+    })
 }
+    ///// added for the movements updates
+
+
 
 function filterTiplocs(){
     var alltiplocs = []
@@ -137,3 +140,24 @@ function tiplocBtnClick(){
         b.innerHTML = "Show all Tiplocs";
     }
 }
+
+
+
+
+
+//Import file 
+
+// let file = './movements.json'
+
+// fs.watchFile(file, (curr, prev) => {
+//     if (curr.mtimeMs !== prev.mtimeMs) {
+//       io.emit('jsonFileChanged', { message: 'JSON file has changed' });
+//       co
+//     }
+//   });
+
+//     //client
+
+// socket.on('jsonFileChanged', (data) => {
+//     route(e);
+//   });

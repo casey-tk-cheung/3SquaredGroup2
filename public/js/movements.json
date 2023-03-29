@@ -1,0 +1,59 @@
+[
+  {
+    "tiploc": "EDINBUR",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-28T01:13:00",
+    "actual": "2023-03-28T00:00:00",
+    "variation": -73,
+    "plannedDeparture": "2023-03-28T01:13:00",
+    "actualDeparture": "2023-03-28T00:00:00",
+    "latLong": {
+      "latitude": 55.952099,
+      "longitude": -3.188228
+    }
+  },
+  {
+    "location": "ABBEYHILL JN",
+    "tiploc": "ABHLJN",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-28T01:14:30",
+    "actual": "2023-03-28T00:02:00",
+    "variation": -72,
+    "plannedDeparture": "2023-03-28T01:14:30",
+    "actualDeparture": "2023-03-28T00:02:00",
+    "latLong": {
+      "latitude": 55.954551,
+      "longitude": -3.174959
+    }
+  },
+  {
+    "location": "CRAIGENTINNY JN",
+    "tiploc": "CRGNTYJ",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-28T01:17:00",
+    "actual": "2023-03-28T00:08:00",
+    "variation": -69,
+    "actualArrival": "2023-03-28T00:08:00",
+    "plannedArrival": "2023-03-28T01:17:00",
+    "plannedDeparture": "2023-03-28T01:17:00",
+    "actualDeparture": "2023-03-28T00:08:00",
+    "latLong": {
+      "latitude": 55.95650554,
+      "longitude": -3.137901158
+    }
+  },
+  {
+    "location": "CRAIGENTINNY T.&R.S.M.D",
+    "tiploc": "CRGNTNY",
+    "eventType": "DESTINATION",
+    "planned": "2023-03-28T01:20:00",
+    "actual": "2023-03-28T00:44:00",
+    "variation": -36,
+    "actualArrival": "2023-03-28T00:44:00",
+    "plannedArrival": "2023-03-28T01:20:00",
+    "latLong": {
+      "latitude": 55.952469,
+      "longitude": -3.125647
+    }
+  }
+]
