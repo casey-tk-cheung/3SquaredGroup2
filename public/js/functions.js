@@ -1,7 +1,13 @@
 var tiplocSearch = document.getElementById('tiplocSearch');
 tiplocSearch.addEventListener('input', filterTiplocs);
 
+var toggleTiploc = document.getElementById('tiplocBtn');
+toggleTiploc.addEventListener('click', journeyClicked);
+
+var storedJourney = [];
+
 function getJourneys(e) {
+    storedJourney = [];
     clearSidebar();
     var secondMenu = document.getElementById('journeyMenu');
     secondMenu.style.display = 'inline';
@@ -29,7 +35,7 @@ function getJourneys(e) {
                 p.originLocation = item.originLocation;
                 p.scheduledDeparture = item.scheduledDeparture;
                 p.style.fontSize = '14px';
-                if (item.cancelled == true) {p.style.color = 'red';}
+                if (item.cancelled == true) {p.style.color = 'red'}
                 p.addEventListener("click", journeyClicked);
                 p.classList.add('menuOptions');
                 container.append(p);
@@ -47,10 +53,9 @@ function clearSidebar() {
 function resetSidebar(){
     clearSidebar();
     tiplocMenu.style.display = 'inline';
-    // tiplocSearch.value = "";
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'hidden';
-    var journeyInfo = document.getElementById('journeyInfo');
+    var journeyInfo = document.getElementById("journeyInfo");
     journeyInfo.style.visibility = 'hidden';
 }
 
@@ -64,9 +69,12 @@ function journeyClicked(e) {
         }
     })
     addTileLayer();
-    route(e);
+    storedJourney.push(e);
+    route(storedJourney[0]);
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'visible';
+    var journeyInfo = document.getElementById("journeyInfo");
+    journeyInfo.style.visibility = 'visible';
 }
 
 function filterTiplocs(){
@@ -102,11 +110,7 @@ function filterTiplocs(){
         getTiplocs();
     }
 }
-// var keyBtn = L.DonUtil.get('keyBtn');
 
-// L.DomEvent.on(keyBtn, 'click', function(){
-    
-// });
 function toggleKey(){
     var b = document.getElementById("keyBtn");
     var s = document.getElementById("markersInfo");
@@ -119,13 +123,15 @@ function toggleKey(){
         b.innerHTML = 'Show Key';
     }
 }
+
 function tiplocBtnClick(){
-    
     var b = document.getElementById("tiplocBtn")
-    if(b.innerHTML == "Show all Tiplocs"){
-        b.innerHTML = "Hide all Tiplocs";
+    if(b.innerHTML == "Show all TIPLOCs"){
+        filterTiplocs();
+        b.innerHTML = "Hide Station Passes";
     }
     else{
-        b.innerHTML = "Show all Tiplocs";
+        b.innerHTML = "Show all TIPLOCs";
+        filterTiplocs();
     }
 }
