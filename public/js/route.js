@@ -1,9 +1,6 @@
-//var toggleTiplocs = document.getElementById('tiplocBtn');
-//toggleTiplocs.addEventListener('click', route);
-
 async function route(e) {
     //changed instances of 'e.currentTarget' to 'e.explicitOriginalTarget' to facilitate reloading
-    console.log(e.explicitOriginalTarget); 
+    console.log(e); 
     var activationId = e.explicitOriginalTarget.activationId;
     var scheduleId = e.explicitOriginalTarget.scheduleId;
     var headCode = e.explicitOriginalTarget.headCode;
@@ -17,10 +14,12 @@ async function route(e) {
     headers.append('X-ApiVersion', '1');
 
     var lastVisitedTiploc;
+    var allMovementData;
     await fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/' 
     + activationId + '/' + scheduleId, { headers: headers })
         .then(response => response.json())
         .then(data => {
+            allMovementData = data;
             if (data.length != 0)
             lastVisitedTiploc = data[data.length - 1].tiploc;
             else lastVisitedTiploc = 0;
@@ -65,10 +64,11 @@ async function route(e) {
                 }
             }
             map.addLayer(passGroup); //Add pass markers to layer group
-            var fullRoute = route.concat(left);
+
             new L.marker(route[0]).bindPopup(data[0].location).addTo(map);  //Journey starting marker
             new L.marker(left[left.length - 1]).bindPopup(data[data.length - 1].location).addTo(map); //Journey termination marker
-            new L.marker(left[0], {icon: train}).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map); //Train marker
+            var marker1 = new L.marker(left[0], {icon: train}).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map); //Train marker
+            marker1.setZIndexOffset(1000);
             if (route.length != 0){
                 const path = L.polyline.antPath(route, { // completed journey
                     "delay": 800,
@@ -101,7 +101,59 @@ async function route(e) {
                 });
                 map.addLayer(path2);
             }
+            var fullRoute = route.concat(left);
+
+            var grid = document.getElementById('journeyInfo-grid');
+            var hc = document.getElementById('headCode');
+            if(hc != 0){
+                 hc.innerHTML = ("Head Code: " + headCode);
+            }
+            var firstStation = document.getElementById('originStation');
+            console.log(allMovementData[0]);
+
+            if( firstStation !=0){
+                firstStation.innerHTML = (originLocation);
+                if (allMovementData[0].actualDeparture != 0){
+                    var dep = new Date(allMovementData[0].actualDeparture);
+                    dep = dep.toLocaleTimeString();
+                    firstStation.innerHTML = (originLocation + "\nDeparted: " + dep);
+                }
+            }
+            var lastStation = document.getElementById('destinationStation')
+            if( lastStation != 0){
+                lastStation.innerHTML = (destinationLocation);
+                if(allMovementData[0].plannedArrival != 0){
+                    var arv = new Date(allMovementData[0].plannedArrival);
+                    arv = arv.toLocaleTimeString();
+                    lastStation.innerHTML = (destinationLocation + "\nExp Arrival: " +arv);
+                }
+            }
+            allMovementData.forEach(item => {
+                // route diagram code here
+
+                var elementDiv = document.createElement('div');
+                elementDiv.classList.add('timeContainer');
+                var element = document.createElement('p');
+                const planned = new Date(item.plannedArrival);
+                element.innerHTML = planned.toLocaleTimeString();
+                elementDiv.append(element);
+                grid.append(elementDiv);
+
+                var elementDiv = document.createElement('div');
+                elementDiv.classList.add('iconWrapper');
+                var element = document.createElement('span');
+                element.classList.add('iconify');
+                element.dataset.icon = 'material-symbols:line-end';
+                element.dataset.width = '75';
+                element.dataset.height = '75';
+                element.dataset.rotate = '270deg';
+                elementDiv.append(element);
+                grid.append(elementDiv);
+            })
         })
+    
+
+
 
     //Icon definitions
     var station = L.icon({

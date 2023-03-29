@@ -18,7 +18,7 @@
     <div id="dateTime"></div>
     <button id="tiplocBtn" onclick="tiplocBtnClick()">Show all TIPLOCs</button>
     <button id="keyBtn" onclick="toggleKey()">Show Key</button>
-     <div id="markersInfo">
+    <div id="markersInfo">
         <img src="assets/destinationMarker.png" style="height: 40px;">
         Origin / Destination
         <img src="assets/station.png" style="height: 35px; width: 35px;">
@@ -33,7 +33,7 @@
     <div class='flex-row' style="height: 100vh; width:100%; position:absolute">
         <div id="sidebar">
             <div style="position: fixed; width: 350px; height: 45px; background-color: white; display: flex; align-items: center; justify-content: space-around; margin-top: 0px; border-radius: 20px;">
-                <span class="iconify" data-icon="material-symbols:arrow-back-rounded" data-width="20" data-height="20" onclick="resetSidebar()" style="cursor: pointer;"></span>
+            <span class="iconify" data-icon="material-symbols:arrow-back-rounded" data-width="20" data-height="20" onclick="resetSidebar()" style="cursor: pointer;"></span>
                 <div style="display: flex; align-items: center; justify-content: center; margin-top: 0px;">
                     <input id="tiplocSearch" type="text" placeholder="Search TIPLOCs..." style="width: 250px;">
                 </div>
@@ -41,26 +41,52 @@
             <div style="margin-top: 50px; overflow-y: scroll; height: calc(100% - 50px)">
             <div id="tiplocMenu" class="menu"></div>
             <div id="journeyMenu" class="menu"></div>
-            <div class="grid-container">
-                <div class="image-container">
-                    <img src="assets/lineDot.png" style="width: 23px; height: 75px;">
-                    <div class="text-container">
-                        Station 1
-                    </div>
-                    <img src="assets/lineDot.png" style="width: 23px; height: 75px;">
-                    <div class="text-container">
-                        Station 2
-                    </div>
+            <div id="journeyInfo" class="menu">
+                <div class="headCodeContainer" id="headCode">
+                    <p>HeadCodeHere</p>
                 </div>
+                    <div id="journeyInfo-grid" class="grid-container">
+                        <div class="timeContainer">
+                            <p>12:31</p>
+                        </div>
+                        <div style="align-items: center; display: flex; flex-direction: column;">
+                            <span class="iconify passed" data-icon="material-symbols:line-end-circle-outline" data-width="75" data-height="75" data-rotate="270deg"></span>
+                        </div>
+                        <div class="text-container">
+                            <p id="originStation">Station 1</p>
+                        </div>
+
+                        <div class="iconWrapper late">
+                            <span class="iconify passed" data-icon="mdi:horizontal-line" data-width="75" data-height="75" data-rotate="270deg"></span>
+                            <span class="iconify passed" data-icon="material-symbols:line-end" data-width="75" data-height="75" data-rotate="270deg" style="margin-top: -30px"></span>
+                        </div>
+                        <div class="text-container">
+                            Station 2
+                        </div>
+                        <div class="iconWrapper">
+                            <span class="iconify passed" data-icon="mdi:horizontal-line" data-width="75" data-height="75" data-rotate="270deg"></span>
+                            <span class="iconify passed" data-icon="material-symbols:line-end" data-width="75" data-height="75" data-rotate="270deg" style="margin-top: -30px"></span>
+                        </div>
+                        <div class="text-container">
+                             Station 3
+                        </div>
+
+                        <div class="iconWrapper">
+                            <span class="iconify" data-icon="mdi:horizontal-line" data-width="75" data-height="75" data-rotate="270deg"></span>
+                            <span class="iconify" data-icon="material-symbols:line-end" data-width="75" data-height="75" data-rotate="270deg" style="margin-top: -30px"></span>
+                        </div>
+                        <div class="text-container">
+                             Station 4
+                        </div>
+                        <div class="iconWrapper">
+                            <span class="iconify" data-icon="material-symbols:line-end-circle-outline" data-width="75" data-height="75" data-rotate="90deg"></span>
+                        </div>
+                        <div class="text-container" id="destinationStation">
+                            Station 5
+                        </div>
+                    </div>
+                
             </div>
-            <!-- <div style="display: flex; justify-content: center;">
-                <input type="text" id="tiplocSearch" placeholder="Search locations...">
-            </div>
-            <div id="menuItems"></div>
-            <div id="secondMenu" style="margin: 15px; display: none; ">
-                <p class="menuOptions" onclick="closeSecondMenu()" style="font-size: 12px; color: gray">Close</p>
-                <div id="secondMenuItems"></div>
-            </div> -->
         </div>
     </div>
     <div id="map"></div>

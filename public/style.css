@@ -133,6 +133,10 @@ p.menuOptions:hover {
 }
 .grid-container {
     display: grid;
+    grid-template-columns: 20% 20% 60%;
+    align-items: center;
+    margin-left: 2px;
+    width: 100%;
   }
   
   .image-container {
@@ -146,7 +150,42 @@ p.menuOptions:hover {
   
   .text-container {
     grid-area: auto;
-    grid-column: 2;
-    justify-self: end;
+    grid-column: 3;
     font: 1em sans-serif;
+    margin-top: -22px;
   }
+
+  #journeyInfo {
+    visibility: hidden;
+  }
+
+.iconWrapper{
+    margin-top: -22px;
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+}
+
+.passed{
+    color: green;
+}
+
+.grid{
+    display: grid;
+    width: 100%;
+}
+
+.timeContainer {
+    grid-area: auto;
+    grid-column: 1;
+    font: 1em sans-serif;
+    margin-top: -22px;
+    text-align: center;
+}
+
+.headCodeContainer {
+    font: 1em sans-serif;
+    text-align: center;
+    font-weight: bold;
+}

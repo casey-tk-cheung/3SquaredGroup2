@@ -52,9 +52,10 @@ function clearSidebar() {
 function resetSidebar(){
     clearSidebar();
     tiplocMenu.style.display = 'inline';
-    // tiplocSearch.value = "";
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'hidden';
+    var journeyInfo = document.getElementById("journeyInfo");
+    journeyInfo.style.visibility = 'hidden';
 }
 
 function journeyClicked(e) {
@@ -69,9 +70,8 @@ function journeyClicked(e) {
     route(storedJourney[0]);
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'visible';
-    for(i in storedJourney){
-        console.log(storedJourney[i]);
-    }
+    var journeyInfo = document.getElementById("journeyInfo");
+    journeyInfo.style.visibility = 'visible';
 }
 
 function filterTiplocs(){
