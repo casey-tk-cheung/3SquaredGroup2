@@ -13,6 +13,11 @@
 <script src = "/socket.io/socket.io.js"></script>
 <script>
    const socket = io();
+   socket.on('fileChanged', async () => {
+        console.log("fileChanged working")
+        //route(activationId, scheduleId)? No access
+        alert("file has changed");
+    });
 </script>
 <body>
     <div id="dateTime"></div>
@@ -62,7 +67,7 @@
 <script type="text/javascript" src="/js/map.js"></script>
 <script type="text/javascript" src="js/route.js"></script>
 <script type="text/javascript" src="js/gettiplocs.js"></script>
-<script type="text/javascript/module" src="js/functions.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
 <!-- <script type="text/javascript" src="js/livetrain.js"></script> -->
 <script type='text/javascript' src='js/clock.js'></script>
 <script type="text/javascript" src="js/movingMarker.js"></script>

@@ -1,16 +1,13 @@
-const { response } = require("express");
-async function route(e) {
-    var activationId = e.currentTarget.activationId;
-    var scheduleId = e.currentTarget.scheduleId;
+async function route(activationId, scheduleId) {
+    var activationId = activationId;
+    var scheduleId = scheduleId;
     var route = [];
     var left = [];
 
     var lastVisitedTiploc;
-
-    await fetch(`API/Movements/` + e.currentTarget.activationId + `/` + e.currentTarget.scheduleId )
+    await fetch(`API/Movements/` + activationId + `/` + scheduleId)
         .then(response => response.json())
         .then(data => {
-            //console.log(data)
             data = data.data
             if (data.length != 0)
             lastVisitedTiploc = data[data.length - 1].tiploc;
@@ -19,7 +16,6 @@ async function route(e) {
     fetch(`API/Schedule/` + activationId + `/` + scheduleId)
         .then(response => response.json())
         .then(data => {
-            //console.log(data)
             data = data.data
             while (!data[data.length - 1].hasOwnProperty('latLong')) data.pop()
             var completedJourney = true;
@@ -112,5 +108,4 @@ async function route(e) {
         forceZIndex: [400]
     })
     // map.fitBounds(path);
-    
 }

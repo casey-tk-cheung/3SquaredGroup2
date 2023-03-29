@@ -27,7 +27,6 @@ function getJourneys(e) {
                 p.style.fontSize = '14px';
                 if (item.cancelled == true) {p.style.color = 'red';}
                 p.addEventListener("click", journeyClicked);
-                //p.addEventListener("click", getMovementUpdates)
                 p.classList.add('menuOptions');
                 container.append(p);
             }
@@ -50,17 +49,25 @@ function resetSidebar(){
 }
 
 function journeyClicked(e) {
-    clearSidebar();
+    //clearSidebar();
+    console.log(e);
+    var activationId = e.currentTarget.activationId;
+    var scheduleId = e.currentTarget.scheduleId;
+    fetch(`API/writeE/${activationId}/${scheduleId}`)
+    .then((res => res.json()))
+    .then((data) =>
+    {
+        console.log(data)
+    })
     map.eachLayer(function (layer) {
         if (layer != Location.tileLayer) {
             map.removeLayer(layer);
         }
     })
     addTileLayer();
-    //console.log( e.currentTarget.activationId + `/` + e.currentTarget.scheduleId)
-    setInterval(getMovementUpdates(e), 10000);
-    route(e);
-    
+    route(activationId, scheduleId);
+    //setInterval(getMovementUpdates(e), 10000);
+    getMovementUpdates(e);
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'visible';
 }
@@ -77,9 +84,7 @@ async function getMovementUpdates(e)
         console.log('run')
     })
 }
-    ///// added for the movements updates
-
-
+//setInterval(getMovementUpdates(e), 10000);
 
 function filterTiplocs(){
     var alltiplocs = []
@@ -140,24 +145,3 @@ function tiplocBtnClick(){
         b.innerHTML = "Show all Tiplocs";
     }
 }
-
-
-
-
-
-//Import file 
-
-// let file = './movements.json'
-
-// fs.watchFile(file, (curr, prev) => {
-//     if (curr.mtimeMs !== prev.mtimeMs) {
-//       io.emit('jsonFileChanged', { message: 'JSON file has changed' });
-//       co
-//     }
-//   });
-
-//     //client
-
-// socket.on('jsonFileChanged', (data) => {
-//     route(e);
-//   });

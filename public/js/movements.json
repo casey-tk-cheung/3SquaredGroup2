@@ -1,59 +1,260 @@
 [
   {
-    "tiploc": "EDINBUR",
+    "location": "CHELMSFORD RECP.",
+    "tiploc": "CHLMSFR",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-28T01:13:00",
-    "actual": "2023-03-28T00:00:00",
-    "variation": -73,
-    "plannedDeparture": "2023-03-28T01:13:00",
-    "actualDeparture": "2023-03-28T00:00:00",
+    "planned": "2023-03-29T10:53:00",
+    "actual": "2023-03-29T10:24:00",
+    "variation": -29,
+    "plannedDeparture": "2023-03-29T10:53:00",
+    "actualDeparture": "2023-03-29T10:24:00",
     "latLong": {
-      "latitude": 55.952099,
-      "longitude": -3.188228
+      "latitude": 51.7384169,
+      "longitude": 0.478982003
     }
   },
   {
-    "location": "ABBEYHILL JN",
-    "tiploc": "ABHLJN",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-28T01:14:30",
-    "actual": "2023-03-28T00:02:00",
-    "variation": -72,
-    "plannedDeparture": "2023-03-28T01:14:30",
-    "actualDeparture": "2023-03-28T00:02:00",
+    "location": "CHELMSFORD",
+    "tiploc": "CHLMSFD",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T10:58:30",
+    "actual": "2023-03-29T10:55:00",
+    "variation": -3,
+    "actualArrival": "2023-03-29T10:55:00",
+    "plannedArrival": "2023-03-29T10:58:30",
+    "plannedDeparture": "2023-03-29T10:58:30",
+    "actualDeparture": "2023-03-29T10:56:00",
     "latLong": {
-      "latitude": 55.954551,
-      "longitude": -3.174959
+      "latitude": 51.7365,
+      "longitude": 0.4688
     }
   },
   {
-    "location": "CRAIGENTINNY JN",
-    "tiploc": "CRGNTYJ",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-28T01:17:00",
-    "actual": "2023-03-28T00:08:00",
-    "variation": -69,
-    "actualArrival": "2023-03-28T00:08:00",
-    "plannedArrival": "2023-03-28T01:17:00",
-    "plannedDeparture": "2023-03-28T01:17:00",
-    "actualDeparture": "2023-03-28T00:08:00",
+    "location": "SHENFIELD",
+    "tiploc": "SHENFLD",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T11:11:30",
+    "actual": "2023-03-29T11:10:00",
+    "variation": -1,
+    "actualArrival": "2023-03-29T11:10:00",
+    "plannedArrival": "2023-03-29T11:11:30",
+    "plannedDeparture": "2023-03-29T11:11:30",
+    "actualDeparture": "2023-03-29T11:10:00",
     "latLong": {
-      "latitude": 55.95650554,
-      "longitude": -3.137901158
+      "latitude": 51.630495,
+      "longitude": 0.329902
     }
   },
   {
-    "location": "CRAIGENTINNY T.&R.S.M.D",
-    "tiploc": "CRGNTNY",
-    "eventType": "DESTINATION",
-    "planned": "2023-03-28T01:20:00",
-    "actual": "2023-03-28T00:44:00",
-    "variation": -36,
-    "actualArrival": "2023-03-28T00:44:00",
-    "plannedArrival": "2023-03-28T01:20:00",
+    "location": "GIDEA PARK",
+    "tiploc": "GIDEAPK",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T11:18:30",
+    "actual": "2023-03-29T11:18:00",
+    "variation": 0,
+    "actualArrival": "2023-03-29T11:18:00",
+    "plannedArrival": "2023-03-29T11:18:30",
     "latLong": {
-      "latitude": 55.952469,
-      "longitude": -3.125647
+      "latitude": 51.581848,
+      "longitude": 0.205976
+    }
+  },
+  {
+    "location": "GIDEA PARK UP GOODS LOOP",
+    "tiploc": "GIDEUGL",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T11:18:30",
+    "actual": "2023-03-29T11:18:00",
+    "variation": 0,
+    "actualArrival": "2023-03-29T11:18:00",
+    "plannedArrival": "2023-03-29T11:18:30",
+    "latLong": {
+      "latitude": 51.581961,
+      "longitude": 0.20618367
+    }
+  },
+  {
+    "location": "GIDEA PARK",
+    "tiploc": "GIDEAPK",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:18:30",
+    "actual": "2023-03-29T11:18:00",
+    "variation": 0,
+    "plannedDeparture": "2023-03-29T11:18:30",
+    "actualDeparture": "2023-03-29T11:18:00",
+    "latLong": {
+      "latitude": 51.581848,
+      "longitude": 0.205976
+    }
+  },
+  {
+    "location": "GIDEA PARK UP GOODS LOOP",
+    "tiploc": "GIDEUGL",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:18:30",
+    "actual": "2023-03-29T11:18:00",
+    "variation": 0,
+    "plannedDeparture": "2023-03-29T11:18:30",
+    "actualDeparture": "2023-03-29T11:18:00",
+    "latLong": {
+      "latitude": 51.581961,
+      "longitude": 0.20618367
+    }
+  },
+  {
+    "location": "ILFORD",
+    "tiploc": "ILFORD",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:24:30",
+    "actual": "2023-03-29T11:24:00",
+    "variation": 0,
+    "actualArrival": "2023-03-29T11:25:00",
+    "plannedArrival": "2023-03-29T11:24:30",
+    "plannedDeparture": "2023-03-29T11:24:30",
+    "actualDeparture": "2023-03-29T11:24:00",
+    "latLong": {
+      "latitude": 51.559007,
+      "longitude": 0.069234
+    }
+  },
+  {
+    "location": "FOREST GATE JN",
+    "tiploc": "FRSTGTJ",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:26:00",
+    "actual": "2023-03-29T11:26:00",
+    "variation": 0,
+    "plannedDeparture": "2023-03-29T11:26:00",
+    "actualDeparture": "2023-03-29T11:26:00",
+    "latLong": {
+      "latitude": 51.551,
+      "longitude": 0.036145
+    }
+  },
+  {
+    "location": "STRATFORD",
+    "tiploc": "STFD",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T11:34:00",
+    "actual": "2023-03-29T11:32:00",
+    "variation": -2,
+    "actualArrival": "2023-03-29T11:32:00",
+    "plannedArrival": "2023-03-29T11:34:00",
+    "latLong": {
+      "latitude": 51.541615,
+      "longitude": -0.003747
+    }
+  },
+  {
+    "location": "STRATFORD COUNTRY END JCN",
+    "tiploc": "STFDCEJ",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T11:34:00",
+    "actual": "2023-03-29T11:32:00",
+    "variation": -2,
+    "actualArrival": "2023-03-29T11:32:00",
+    "plannedArrival": "2023-03-29T11:34:00",
+    "latLong": {
+      "latitude": 51.542297,
+      "longitude": -0.003306984
+    }
+  },
+  {
+    "location": "STRATFORD CENTRAL JUNCTION",
+    "tiploc": "STFDCJ",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T11:34:00",
+    "actual": "2023-03-29T11:32:00",
+    "variation": -2,
+    "actualArrival": "2023-03-29T11:32:00",
+    "plannedArrival": "2023-03-29T11:34:00",
+    "latLong": {
+      "latitude": 51.542297,
+      "longitude": -0.003306984
+    }
+  },
+  {
+    "location": "STRATFORD",
+    "tiploc": "STFD",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:36:00",
+    "actual": "2023-03-29T11:33:00",
+    "variation": -3,
+    "plannedDeparture": "2023-03-29T11:36:00",
+    "actualDeparture": "2023-03-29T11:33:00",
+    "latLong": {
+      "latitude": 51.541615,
+      "longitude": -0.003747
+    }
+  },
+  {
+    "location": "STRATFORD COUNTRY END JCN",
+    "tiploc": "STFDCEJ",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:36:00",
+    "actual": "2023-03-29T11:33:00",
+    "variation": -3,
+    "plannedDeparture": "2023-03-29T11:36:00",
+    "actualDeparture": "2023-03-29T11:33:00",
+    "latLong": {
+      "latitude": 51.542297,
+      "longitude": -0.003306984
+    }
+  },
+  {
+    "location": "STRATFORD CENTRAL JUNCTION",
+    "tiploc": "STFDCJ",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:36:00",
+    "actual": "2023-03-29T11:33:00",
+    "variation": -3,
+    "plannedDeparture": "2023-03-29T11:36:00",
+    "actualDeparture": "2023-03-29T11:33:00",
+    "latLong": {
+      "latitude": 51.542297,
+      "longitude": -0.003306984
+    }
+  },
+  {
+    "location": "LEA JUNCTION",
+    "tiploc": "LEAJ",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:42:00",
+    "actual": "2023-03-29T11:39:00",
+    "variation": -3,
+    "plannedDeparture": "2023-03-29T11:42:00",
+    "actualDeparture": "2023-03-29T11:39:00",
+    "latLong": {
+      "latitude": 51.543263,
+      "longitude": -0.015939
+    }
+  },
+  {
+    "location": "NAVARINO ROAD JN",
+    "tiploc": "NAVRDJ",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:48:30",
+    "actual": "2023-03-29T11:47:00",
+    "variation": -1,
+    "plannedDeparture": "2023-03-29T11:48:30",
+    "actualDeparture": "2023-03-29T11:47:00",
+    "latLong": {
+      "latitude": 51.547313,
+      "longitude": -0.06293
+    }
+  },
+  {
+    "location": "CANONBURY WEST JN",
+    "tiploc": "CNNBYWJ",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:52:30",
+    "actual": "2023-03-29T11:51:00",
+    "variation": -1,
+    "plannedDeparture": "2023-03-29T11:52:30",
+    "actualDeparture": "2023-03-29T11:51:00",
+    "latLong": {
+      "latitude": 51.548333,
+      "longitude": -0.078229
     }
   }
 ]
