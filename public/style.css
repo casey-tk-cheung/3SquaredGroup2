@@ -189,8 +189,7 @@ p.menuOptions:hover {
     width: 100%;
 }
 
-.timeContainer {
-  .iconWrapper{
+.iconWrapper{
     margin-top: -22px;
     align-items: center;
     display: flex;

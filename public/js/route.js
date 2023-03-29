@@ -184,7 +184,7 @@ async function route(e) {
                     lastStation.innerHTML = (destinationLocation + "\nExp Arrival: " +arv);
                 }
             }
-            /*allMovementData.forEach(item => {
+            allMovementData.forEach(item => {
                 // route diagram code here
 
                 var elementDiv = document.createElement('div');
@@ -206,7 +206,7 @@ async function route(e) {
                 element.dataset.rotate = '270deg';
                 elementDiv.append(element);
                 grid.append(elementDiv);
-            })*/
+            })
         })
     
     //Icon definitions
