@@ -1,260 +1,670 @@
 [
   {
-    "location": "CHELMSFORD RECP.",
-    "tiploc": "CHLMSFR",
+    "location": "LISKEARD",
+    "tiploc": "LISKARD",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T10:53:00",
-    "actual": "2023-03-29T10:24:00",
-    "variation": -29,
-    "plannedDeparture": "2023-03-29T10:53:00",
-    "actualDeparture": "2023-03-29T10:24:00",
+    "planned": "2023-03-29T05:20:00",
+    "actual": "2023-03-29T08:18:00",
+    "variation": 178,
+    "actualArrival": "2023-03-29T08:21:00",
+    "plannedArrival": "2023-03-29T05:20:00",
+    "plannedDeparture": "2023-03-29T05:20:00",
+    "actualDeparture": "2023-03-29T08:18:00",
     "latLong": {
-      "latitude": 51.7384169,
-      "longitude": 0.478982003
+      "latitude": 50.4075,
+      "longitude": -4.469209202
     }
   },
   {
-    "location": "CHELMSFORD",
-    "tiploc": "CHLMSFD",
+    "location": "MENHENIOT SIG UM259",
+    "tiploc": "MENH259",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T05:25:30",
+    "actual": "2023-03-29T08:28:00",
+    "variation": 183,
+    "plannedDeparture": "2023-03-29T05:25:30",
+    "actualDeparture": "2023-03-29T08:28:00"
+  },
+  {
+    "location": "ST GERMANS",
+    "tiploc": "STGRMNS",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T05:29:30",
+    "actual": "2023-03-29T08:31:00",
+    "variation": 182,
+    "actualArrival": "2023-03-29T08:32:00",
+    "plannedArrival": "2023-03-29T05:29:30",
+    "plannedDeparture": "2023-03-29T05:29:30",
+    "actualDeparture": "2023-03-29T08:31:00",
+    "latLong": {
+      "latitude": 50.3944,
+      "longitude": -4.3086
+    }
+  },
+  {
+    "location": "SALTASH",
+    "tiploc": "SASH",
     "eventType": "ARRIVAL",
+    "planned": "2023-03-29T05:41:30",
+    "actual": "2023-03-29T08:38:00",
+    "variation": 177,
+    "actualArrival": "2023-03-29T08:38:00",
+    "plannedArrival": "2023-03-29T05:41:30",
+    "plannedDeparture": "2023-03-29T05:41:30",
+    "actualDeparture": "2023-03-29T08:39:00",
+    "latLong": {
+      "latitude": 50.4075,
+      "longitude": -4.2091
+    }
+  },
+  {
+    "location": "ST BUDEAUX JN.",
+    "tiploc": "STBDXJN",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T05:49:30",
+    "actual": "2023-03-29T08:45:00",
+    "variation": 176,
+    "plannedDeparture": "2023-03-29T05:49:30",
+    "actualDeparture": "2023-03-29T08:45:00",
+    "latLong": {
+      "latitude": 50.39909227,
+      "longitude": -4.184665542
+    }
+  },
+  {
+    "location": "PLYMOUTH",
+    "tiploc": "PLYMTH",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T05:57:00",
+    "actual": "2023-03-29T08:54:00",
+    "variation": 177,
+    "actualArrival": "2023-03-29T08:54:00",
+    "plannedArrival": "2023-03-29T05:57:00",
+    "plannedDeparture": "2023-03-29T06:14:00",
+    "actualDeparture": "2023-03-29T09:00:00",
+    "latLong": {
+      "latitude": 50.3783,
+      "longitude": -4.1433
+    }
+  },
+  {
+    "location": "LAIRA JN",
+    "tiploc": "LARAJN",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T06:18:30",
+    "actual": "2023-03-29T09:04:00",
+    "variation": 166,
+    "plannedDeparture": "2023-03-29T06:18:30",
+    "actualDeparture": "2023-03-29T09:04:00",
+    "latLong": {
+      "latitude": 50.3871876,
+      "longitude": -4.088525377
+    }
+  },
+  {
+    "location": "LIPSON JUNCTION",
+    "tiploc": "LIPSONJ",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T06:18:00",
+    "actual": "2023-03-29T09:04:00",
+    "variation": 166,
+    "plannedDeparture": "2023-03-29T06:18:00",
+    "actualDeparture": "2023-03-29T09:04:00",
+    "latLong": {
+      "latitude": 50.38288701,
+      "longitude": -4.107537553
+    }
+  },
+  {
+    "location": "LAIRA JN",
+    "tiploc": "LARAJN",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T06:18:30",
+    "actual": "2023-03-29T09:05:00",
+    "variation": 167,
+    "actualArrival": "2023-03-29T09:05:00",
+    "plannedArrival": "2023-03-29T06:18:30",
+    "latLong": {
+      "latitude": 50.3871876,
+      "longitude": -4.088525377
+    }
+  },
+  {
+    "location": "HEMERDON",
+    "tiploc": "HEMERDN",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T07:11:00",
+    "actual": "2023-03-29T09:11:00",
+    "variation": 120,
+    "plannedDeparture": "2023-03-29T07:11:00",
+    "actualDeparture": "2023-03-29T09:11:00",
+    "latLong": {
+      "latitude": 50.3947922,
+      "longitude": -4.0143578
+    }
+  },
+  {
+    "location": "IVYBRIDGE",
+    "tiploc": "IVYBDGE",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T07:19:00",
+    "actual": "2023-03-29T09:16:00",
+    "variation": 117,
+    "actualArrival": "2023-03-29T09:17:00",
+    "plannedArrival": "2023-03-29T07:19:00",
+    "plannedDeparture": "2023-03-29T07:19:00",
+    "actualDeparture": "2023-03-29T09:16:00",
+    "latLong": {
+      "latitude": 50.3933,
+      "longitude": -3.9048
+    }
+  },
+  {
+    "location": "AISH EMERGENCY CROSSOVER",
+    "tiploc": "AISHXO",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T07:23:00",
+    "actual": "2023-03-29T09:21:00",
+    "variation": 118,
+    "plannedDeparture": "2023-03-29T07:23:00",
+    "actualDeparture": "2023-03-29T09:21:00",
+    "latLong": {
+      "latitude": 50.42144257,
+      "longitude": -3.844882164
+    }
+  },
+  {
+    "location": "TOTNES",
+    "tiploc": "TOTNES",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T07:31:00",
+    "actual": "2023-03-29T09:29:00",
+    "variation": 118,
+    "actualArrival": "2023-03-29T09:29:00",
+    "plannedArrival": "2023-03-29T07:31:00",
+    "plannedDeparture": "2023-03-29T07:31:00",
+    "actualDeparture": "2023-03-29T09:29:00",
+    "latLong": {
+      "latitude": 50.4349,
+      "longitude": -3.6891
+    }
+  },
+  {
+    "location": "DAINTON TUNNEL",
+    "tiploc": "DAINTNT",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T07:40:00",
+    "actual": "2023-03-29T09:34:00",
+    "variation": 114,
+    "plannedDeparture": "2023-03-29T07:40:00",
+    "actualDeparture": "2023-03-29T09:34:00",
+    "latLong": {
+      "latitude": 50.4858534,
+      "longitude": -3.620202089
+    }
+  },
+  {
+    "location": "NEWTON ABBOT",
+    "tiploc": "NABT",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T07:46:00",
+    "actual": "2023-03-29T09:38:00",
+    "variation": 112,
+    "plannedDeparture": "2023-03-29T07:46:00",
+    "actualDeparture": "2023-03-29T09:38:00",
+    "latLong": {
+      "latitude": 50.5301,
+      "longitude": -3.5995
+    }
+  },
+  {
+    "location": "NEWTON ABBOT WEST JUNCTION",
+    "tiploc": "NABTWJ",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T07:43:30",
+    "actual": "2023-03-29T09:38:00",
+    "variation": 115,
+    "plannedDeparture": "2023-03-29T07:43:30",
+    "actualDeparture": "2023-03-29T09:38:00",
+    "latLong": {
+      "latitude": 50.514982,
+      "longitude": -3.588752
+    }
+  },
+  {
+    "location": "NEWTON ABBOT",
+    "tiploc": "NABT",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T07:46:00",
+    "actual": "2023-03-29T09:39:00",
+    "variation": 113,
+    "actualArrival": "2023-03-29T09:39:00",
+    "plannedArrival": "2023-03-29T07:46:00",
+    "latLong": {
+      "latitude": 50.5301,
+      "longitude": -3.5995
+    }
+  },
+  {
+    "location": "TEIGNMOUTH",
+    "tiploc": "TEINMTH",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T07:51:30",
+    "actual": "2023-03-29T09:46:00",
+    "variation": 115,
+    "actualArrival": "2023-03-29T09:46:00",
+    "plannedArrival": "2023-03-29T07:51:30",
+    "plannedDeparture": "2023-03-29T07:51:30",
+    "actualDeparture": "2023-03-29T09:46:00",
+    "latLong": {
+      "latitude": 50.5483,
+      "longitude": -3.4947
+    }
+  },
+  {
+    "location": "DAWLISH",
+    "tiploc": "DAWLISH",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T07:54:30",
+    "actual": "2023-03-29T09:50:00",
+    "variation": 116,
+    "actualArrival": "2023-03-29T09:51:00",
+    "plannedArrival": "2023-03-29T07:54:30",
+    "plannedDeparture": "2023-03-29T07:54:30",
+    "actualDeparture": "2023-03-29T09:50:00",
+    "latLong": {
+      "latitude": 50.5807,
+      "longitude": -3.46468
+    }
+  },
+  {
+    "location": "DAWLISH WARREN",
+    "tiploc": "DAWLSHW",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T07:57:00",
+    "actual": "2023-03-29T09:52:00",
+    "variation": 115,
+    "actualArrival": "2023-03-29T09:53:00",
+    "plannedArrival": "2023-03-29T07:57:00",
+    "plannedDeparture": "2023-03-29T07:57:00",
+    "actualDeparture": "2023-03-29T09:52:00",
+    "latLong": {
+      "latitude": 50.5979,
+      "longitude": -3.4438
+    }
+  },
+  {
+    "location": "EXETER ST DAVIDS",
+    "tiploc": "EXETRSD",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T08:31:00",
+    "actual": "2023-03-29T10:04:00",
+    "variation": 93,
+    "actualArrival": "2023-03-29T10:04:00",
+    "plannedArrival": "2023-03-29T08:17:30",
+    "plannedDeparture": "2023-03-29T08:31:00",
+    "actualDeparture": "2023-03-29T10:04:00",
+    "latLong": {
+      "latitude": 50.729628,
+      "longitude": -3.543689
+    }
+  },
+  {
+    "location": "COWLEY BRIDGE JN",
+    "tiploc": "CWLYBDG",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T08:35:00",
+    "actual": "2023-03-29T10:06:00",
+    "variation": 91,
+    "plannedDeparture": "2023-03-29T08:35:00",
+    "actualDeparture": "2023-03-29T10:06:00",
+    "latLong": {
+      "latitude": 50.74873125,
+      "longitude": -3.547611619
+    }
+  },
+  {
+    "location": "TIVERTON LOOP",
+    "tiploc": "TIVILP",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T08:54:00",
+    "actual": "2023-03-29T10:22:00",
+    "variation": 88,
+    "actualArrival": "2023-03-29T10:22:00",
+    "plannedArrival": "2023-03-29T08:54:00",
+    "plannedDeparture": "2023-03-29T10:41:00",
+    "actualDeparture": "2023-03-29T10:43:00",
+    "latLong": {
+      "latitude": 50.89440304,
+      "longitude": -3.376754805
+    }
+  },
+  {
+    "location": "TIVERTON PARKWAY",
+    "tiploc": "TIVIPW",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T10:45:00",
+    "actual": "2023-03-29T10:48:00",
+    "variation": 3,
+    "actualArrival": "2023-03-29T10:48:00",
+    "plannedArrival": "2023-03-29T10:45:00",
+    "plannedDeparture": "2023-03-29T10:45:00",
+    "actualDeparture": "2023-03-29T10:48:00",
+    "latLong": {
+      "latitude": 50.9169,
+      "longitude": -3.3601
+    }
+  },
+  {
+    "location": "WHITEBALL",
+    "tiploc": "TIVITNL",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T10:49:00",
+    "actual": "2023-03-29T10:52:00",
+    "variation": 3,
+    "actualArrival": "2023-03-29T10:52:00",
+    "plannedArrival": "2023-03-29T10:49:00",
+    "plannedDeparture": "2023-03-29T10:49:00",
+    "actualDeparture": "2023-03-29T10:52:00",
+    "latLong": {
+      "latitude": 50.95351498,
+      "longitude": -3.29374632
+    }
+  },
+  {
+    "location": "NORTON FITZWARREN",
+    "tiploc": "NTNFTZN",
+    "eventType": "DEPARTURE",
     "planned": "2023-03-29T10:58:30",
-    "actual": "2023-03-29T10:55:00",
-    "variation": -3,
-    "actualArrival": "2023-03-29T10:55:00",
-    "plannedArrival": "2023-03-29T10:58:30",
+    "actual": "2023-03-29T11:02:00",
+    "variation": 4,
     "plannedDeparture": "2023-03-29T10:58:30",
-    "actualDeparture": "2023-03-29T10:56:00",
+    "actualDeparture": "2023-03-29T11:02:00",
     "latLong": {
-      "latitude": 51.7365,
-      "longitude": 0.4688
+      "latitude": 51.02499422,
+      "longitude": -3.137145896
     }
   },
   {
-    "location": "SHENFIELD",
-    "tiploc": "SHENFLD",
+    "location": "TAUNTON SIG.E611",
+    "tiploc": "TAUN611",
     "eventType": "ARRIVAL",
-    "planned": "2023-03-29T11:11:30",
-    "actual": "2023-03-29T11:10:00",
-    "variation": -1,
-    "actualArrival": "2023-03-29T11:10:00",
-    "plannedArrival": "2023-03-29T11:11:30",
-    "plannedDeparture": "2023-03-29T11:11:30",
-    "actualDeparture": "2023-03-29T11:10:00",
+    "planned": "2023-03-29T11:00:30",
+    "actual": "2023-03-29T11:04:00",
+    "variation": 4,
+    "actualArrival": "2023-03-29T11:04:00",
+    "plannedArrival": "2023-03-29T11:00:30",
     "latLong": {
-      "latitude": 51.630495,
-      "longitude": 0.329902
+      "latitude": 51.024852,
+      "longitude": -3.1239529
     }
   },
   {
-    "location": "GIDEA PARK",
-    "tiploc": "GIDEAPK",
+    "location": "TAUNTON SIGNAL E617",
+    "tiploc": "TAUN617",
     "eventType": "ARRIVAL",
-    "planned": "2023-03-29T11:18:30",
-    "actual": "2023-03-29T11:18:00",
-    "variation": 0,
-    "actualArrival": "2023-03-29T11:18:00",
-    "plannedArrival": "2023-03-29T11:18:30",
+    "planned": "2023-03-29T11:00:30",
+    "actual": "2023-03-29T11:04:00",
+    "variation": 4,
+    "actualArrival": "2023-03-29T11:04:00",
+    "plannedArrival": "2023-03-29T11:00:30",
     "latLong": {
-      "latitude": 51.581848,
-      "longitude": 0.205976
+      "latitude": 51.024852,
+      "longitude": -3.1239529
     }
   },
   {
-    "location": "GIDEA PARK UP GOODS LOOP",
-    "tiploc": "GIDEUGL",
+    "location": "TAUNTON SIG. E624",
+    "tiploc": "TAUN624",
     "eventType": "ARRIVAL",
-    "planned": "2023-03-29T11:18:30",
-    "actual": "2023-03-29T11:18:00",
-    "variation": 0,
-    "actualArrival": "2023-03-29T11:18:00",
-    "plannedArrival": "2023-03-29T11:18:30",
+    "planned": "2023-03-29T11:00:30",
+    "actual": "2023-03-29T11:04:00",
+    "variation": 4,
+    "actualArrival": "2023-03-29T11:04:00",
+    "plannedArrival": "2023-03-29T11:00:30",
     "latLong": {
-      "latitude": 51.581961,
-      "longitude": 0.20618367
+      "latitude": 51.024852,
+      "longitude": -3.1239529
     }
   },
   {
-    "location": "GIDEA PARK",
-    "tiploc": "GIDEAPK",
+    "location": "TAUNTON SIG. E22",
+    "tiploc": "TAUNE22",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T11:00:30",
+    "actual": "2023-03-29T11:04:00",
+    "variation": 4,
+    "actualArrival": "2023-03-29T11:04:00",
+    "plannedArrival": "2023-03-29T11:00:30",
+    "latLong": {
+      "latitude": 51.024852,
+      "longitude": -3.1239529
+    }
+  },
+  {
+    "location": "TAUNTON",
+    "tiploc": "TAUNTON",
+    "eventType": "ARRIVAL",
+    "planned": "2023-03-29T11:00:30",
+    "actual": "2023-03-29T11:04:00",
+    "variation": 4,
+    "actualArrival": "2023-03-29T11:04:00",
+    "plannedArrival": "2023-03-29T11:00:30",
+    "latLong": {
+      "latitude": 51.023281,
+      "longitude": -3.102778
+    }
+  },
+  {
+    "location": "TAUNTON SIG.E611",
+    "tiploc": "TAUN611",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:00:30",
+    "actual": "2023-03-29T11:05:00",
+    "variation": 5,
+    "plannedDeparture": "2023-03-29T11:00:30",
+    "actualDeparture": "2023-03-29T11:05:00",
+    "latLong": {
+      "latitude": 51.024852,
+      "longitude": -3.1239529
+    }
+  },
+  {
+    "location": "TAUNTON SIGNAL E617",
+    "tiploc": "TAUN617",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:00:30",
+    "actual": "2023-03-29T11:05:00",
+    "variation": 5,
+    "plannedDeparture": "2023-03-29T11:00:30",
+    "actualDeparture": "2023-03-29T11:05:00",
+    "latLong": {
+      "latitude": 51.024852,
+      "longitude": -3.1239529
+    }
+  },
+  {
+    "location": "TAUNTON SIG. E624",
+    "tiploc": "TAUN624",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:00:30",
+    "actual": "2023-03-29T11:05:00",
+    "variation": 5,
+    "plannedDeparture": "2023-03-29T11:00:30",
+    "actualDeparture": "2023-03-29T11:05:00",
+    "latLong": {
+      "latitude": 51.024852,
+      "longitude": -3.1239529
+    }
+  },
+  {
+    "location": "TAUNTON SIG. E22",
+    "tiploc": "TAUNE22",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:00:30",
+    "actual": "2023-03-29T11:05:00",
+    "variation": 5,
+    "plannedDeparture": "2023-03-29T11:00:30",
+    "actualDeparture": "2023-03-29T11:05:00",
+    "latLong": {
+      "latitude": 51.024852,
+      "longitude": -3.1239529
+    }
+  },
+  {
+    "location": "TAUNTON",
+    "tiploc": "TAUNTON",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:00:30",
+    "actual": "2023-03-29T11:05:00",
+    "variation": 5,
+    "plannedDeparture": "2023-03-29T11:00:30",
+    "actualDeparture": "2023-03-29T11:05:00",
+    "latLong": {
+      "latitude": 51.023281,
+      "longitude": -3.102778
+    }
+  },
+  {
+    "location": "COGLOAD JN",
+    "tiploc": "COGLOAD",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:05:30",
+    "actual": "2023-03-29T11:11:00",
+    "variation": 6,
+    "plannedDeparture": "2023-03-29T11:05:30",
+    "actualDeparture": "2023-03-29T11:11:00",
+    "latLong": {
+      "latitude": 51.0404259,
+      "longitude": -3.000984615
+    }
+  },
+  {
+    "location": "ATHELNEY CROSSING",
+    "tiploc": "ATHLNEY",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:09:30",
+    "actual": "2023-03-29T11:14:00",
+    "variation": 5,
+    "plannedDeparture": "2023-03-29T11:09:30",
+    "actualDeparture": "2023-03-29T11:14:00",
+    "latLong": {
+      "latitude": 51.05265867,
+      "longitude": -2.936421464
+    }
+  },
+  {
+    "location": "SOMERTON GROUND FRAME",
+    "tiploc": "SOMEGF",
     "eventType": "DEPARTURE",
     "planned": "2023-03-29T11:18:30",
-    "actual": "2023-03-29T11:18:00",
-    "variation": 0,
+    "actual": "2023-03-29T11:25:00",
+    "variation": 7,
     "plannedDeparture": "2023-03-29T11:18:30",
-    "actualDeparture": "2023-03-29T11:18:00",
+    "actualDeparture": "2023-03-29T11:25:00",
     "latLong": {
-      "latitude": 51.581848,
-      "longitude": 0.205976
+      "latitude": 51.05212018,
+      "longitude": -2.732275584
     }
   },
   {
-    "location": "GIDEA PARK UP GOODS LOOP",
-    "tiploc": "GIDEUGL",
+    "location": "SOMERTON VIADUCT",
+    "tiploc": "SOMEVIA",
     "eventType": "DEPARTURE",
     "planned": "2023-03-29T11:18:30",
-    "actual": "2023-03-29T11:18:00",
-    "variation": 0,
+    "actual": "2023-03-29T11:25:00",
+    "variation": 7,
     "plannedDeparture": "2023-03-29T11:18:30",
-    "actualDeparture": "2023-03-29T11:18:00",
+    "actualDeparture": "2023-03-29T11:25:00",
     "latLong": {
-      "latitude": 51.581961,
-      "longitude": 0.20618367
+      "latitude": 51.05264,
+      "longitude": -2.7335727
     }
   },
   {
-    "location": "ILFORD",
-    "tiploc": "ILFORD",
+    "location": "CASTLE CARY",
+    "tiploc": "CCARY",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:24:30",
-    "actual": "2023-03-29T11:24:00",
-    "variation": 0,
-    "actualArrival": "2023-03-29T11:25:00",
-    "plannedArrival": "2023-03-29T11:24:30",
-    "plannedDeparture": "2023-03-29T11:24:30",
-    "actualDeparture": "2023-03-29T11:24:00",
+    "planned": "2023-03-29T11:29:30",
+    "actual": "2023-03-29T11:36:00",
+    "variation": 7,
+    "actualArrival": "2023-03-29T11:37:00",
+    "plannedArrival": "2023-03-29T11:29:30",
+    "plannedDeparture": "2023-03-29T11:29:30",
+    "actualDeparture": "2023-03-29T11:36:00",
     "latLong": {
-      "latitude": 51.559007,
-      "longitude": 0.069234
+      "latitude": 51.1001,
+      "longitude": -2.5221
     }
   },
   {
-    "location": "FOREST GATE JN",
-    "tiploc": "FRSTGTJ",
+    "location": "EAST SOMERSET JN",
+    "tiploc": "ESTSOMJ",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:26:00",
-    "actual": "2023-03-29T11:26:00",
-    "variation": 0,
-    "plannedDeparture": "2023-03-29T11:26:00",
-    "actualDeparture": "2023-03-29T11:26:00",
+    "planned": "2023-03-29T11:42:30",
+    "actual": "2023-03-29T11:46:00",
+    "variation": 4,
+    "plannedDeparture": "2023-03-29T11:42:30",
+    "actualDeparture": "2023-03-29T11:46:00",
     "latLong": {
-      "latitude": 51.551,
-      "longitude": 0.036145
+      "latitude": 51.164963,
+      "longitude": -2.3689302
     }
   },
   {
-    "location": "STRATFORD",
-    "tiploc": "STFD",
-    "eventType": "ARRIVAL",
-    "planned": "2023-03-29T11:34:00",
-    "actual": "2023-03-29T11:32:00",
-    "variation": -2,
-    "actualArrival": "2023-03-29T11:32:00",
-    "plannedArrival": "2023-03-29T11:34:00",
-    "latLong": {
-      "latitude": 51.541615,
-      "longitude": -0.003747
-    }
-  },
-  {
-    "location": "STRATFORD COUNTRY END JCN",
-    "tiploc": "STFDCEJ",
-    "eventType": "ARRIVAL",
-    "planned": "2023-03-29T11:34:00",
-    "actual": "2023-03-29T11:32:00",
-    "variation": -2,
-    "actualArrival": "2023-03-29T11:32:00",
-    "plannedArrival": "2023-03-29T11:34:00",
-    "latLong": {
-      "latitude": 51.542297,
-      "longitude": -0.003306984
-    }
-  },
-  {
-    "location": "STRATFORD CENTRAL JUNCTION",
-    "tiploc": "STFDCJ",
-    "eventType": "ARRIVAL",
-    "planned": "2023-03-29T11:34:00",
-    "actual": "2023-03-29T11:32:00",
-    "variation": -2,
-    "actualArrival": "2023-03-29T11:32:00",
-    "plannedArrival": "2023-03-29T11:34:00",
-    "latLong": {
-      "latitude": 51.542297,
-      "longitude": -0.003306984
-    }
-  },
-  {
-    "location": "STRATFORD",
-    "tiploc": "STFD",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:36:00",
-    "actual": "2023-03-29T11:33:00",
-    "variation": -3,
-    "plannedDeparture": "2023-03-29T11:36:00",
-    "actualDeparture": "2023-03-29T11:33:00",
-    "latLong": {
-      "latitude": 51.541615,
-      "longitude": -0.003747
-    }
-  },
-  {
-    "location": "STRATFORD COUNTRY END JCN",
-    "tiploc": "STFDCEJ",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:36:00",
-    "actual": "2023-03-29T11:33:00",
-    "variation": -3,
-    "plannedDeparture": "2023-03-29T11:36:00",
-    "actualDeparture": "2023-03-29T11:33:00",
-    "latLong": {
-      "latitude": 51.542297,
-      "longitude": -0.003306984
-    }
-  },
-  {
-    "location": "STRATFORD CENTRAL JUNCTION",
-    "tiploc": "STFDCJ",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:36:00",
-    "actual": "2023-03-29T11:33:00",
-    "variation": -3,
-    "plannedDeparture": "2023-03-29T11:36:00",
-    "actualDeparture": "2023-03-29T11:33:00",
-    "latLong": {
-      "latitude": 51.542297,
-      "longitude": -0.003306984
-    }
-  },
-  {
-    "location": "LEA JUNCTION",
-    "tiploc": "LEAJ",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:42:00",
-    "actual": "2023-03-29T11:39:00",
-    "variation": -3,
-    "plannedDeparture": "2023-03-29T11:42:00",
-    "actualDeparture": "2023-03-29T11:39:00",
-    "latLong": {
-      "latitude": 51.543263,
-      "longitude": -0.015939
-    }
-  },
-  {
-    "location": "NAVARINO ROAD JN",
-    "tiploc": "NAVRDJ",
+    "location": "BLATCHBRIDGE JN",
+    "tiploc": "BLBGJN",
     "eventType": "DEPARTURE",
     "planned": "2023-03-29T11:48:30",
-    "actual": "2023-03-29T11:47:00",
-    "variation": -1,
+    "actual": "2023-03-29T11:49:00",
+    "variation": 1,
     "plannedDeparture": "2023-03-29T11:48:30",
-    "actualDeparture": "2023-03-29T11:47:00",
+    "actualDeparture": "2023-03-29T11:49:00",
     "latLong": {
-      "latitude": 51.547313,
-      "longitude": -0.06293
+      "latitude": 51.21256175,
+      "longitude": -2.311973765
     }
   },
   {
-    "location": "CANONBURY WEST JN",
-    "tiploc": "CNNBYWJ",
+    "location": "CLINK ROAD JN",
+    "tiploc": "CLNKRDJ",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:52:30",
+    "planned": "2023-03-29T11:50:30",
     "actual": "2023-03-29T11:51:00",
-    "variation": -1,
-    "plannedDeparture": "2023-03-29T11:52:30",
+    "variation": 1,
+    "plannedDeparture": "2023-03-29T11:50:30",
     "actualDeparture": "2023-03-29T11:51:00",
     "latLong": {
-      "latitude": 51.548333,
-      "longitude": -0.078229
+      "latitude": 51.23675103,
+      "longitude": -2.294232685
+    }
+  },
+  {
+    "location": "FAIRWOOD JN",
+    "tiploc": "FRWDJN",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-29T11:54:30",
+    "actual": "2023-03-29T11:55:00",
+    "variation": 1,
+    "plannedDeparture": "2023-03-29T11:54:30",
+    "actualDeparture": "2023-03-29T11:55:00",
+    "latLong": {
+      "latitude": 51.25933596,
+      "longitude": -2.226807074
+    }
+  },
+  {
+    "location": "WESTBURY DOWN T.C.",
+    "tiploc": "WSTBRDY",
+    "eventType": "DESTINATION",
+    "planned": "2023-03-29T12:00:00",
+    "actual": "2023-03-29T12:02:00",
+    "variation": 2,
+    "actualArrival": "2023-03-29T12:02:00",
+    "plannedArrival": "2023-03-29T12:00:00",
+    "latLong": {
+      "latitude": 51.26202976,
+      "longitude": -2.20446295
     }
   }
 ]

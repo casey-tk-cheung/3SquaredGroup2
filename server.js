@@ -83,9 +83,33 @@ tiplocsAtOnce = 25
 
 
 let file = './public/js/movements.json'
+var activation;
+var schedule;
+
+async function getMovementUpdates(activation, schedule)
+{
+    var movements = fs.readFileSync('movementTiploc.json', {encoding:'utf8',flag:'r'});
+    activation = movements.activationId;
+    schedule = movements.scheduleId;
+    console.log(`${activation} and ${schedule}`)
+    await fetch(`https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/${activation}/${schedule}`, { headers: headers })
+    .then(res => res.json())
+    .then(data => {
+          //console.log('in movements:' + data)
+          fs.writeFileSync(`./public/js/movements.json`, JSON.stringify(data, null, 2), 'utf-8');
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+}
 
 io.on('connection', (socket) => {
     console.log('Connected');
+
+    if(activation || schedule) {
+        console.log("ingetmovemevntupdates"+activation);
+        setInterval(getMovementUpdates(activation, schedule), 10000);
+    }
   
     //socket.emit('message', 'Hi');
   
@@ -110,11 +134,11 @@ function watchFileForChanges(file) {
         }
     });
 }
-
-setInterval(() => {
-    //call the file
-    watchFileForChanges(file);
-}, 5000);
+watchFileForChanges(file);
+// setInterval(() => {
+//     //call the file
+    
+// }, 5000);
 
 /*
 (node:12148) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 change listeners added to [StatWatcher]. Use emitter.setMaxListeners() to increase limit

@@ -66,25 +66,10 @@ function journeyClicked(e) {
     })
     addTileLayer();
     route(activationId, scheduleId);
-    //setInterval(getMovementUpdates(e), 10000);
-    getMovementUpdates(e);
+
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'visible';
 }
-
-
-async function getMovementUpdates(e)
-{
-    await fetch(`API/Movements_updates/` + e.currentTarget.activationId + `/` + e.currentTarget.scheduleId )
-    .then(response => response.json())
-    .then(data => {
-        //console.log(data)
-        data = data.data
-       // fs.writeFileSync('./public/tiplocs.json', JSON.stringify(workingTiplocs, null, 2), {encoding:'utf8',flag:'w'})
-        console.log('run')
-    })
-}
-//setInterval(getMovementUpdates(e), 10000);
 
 function filterTiplocs(){
     var alltiplocs = []

@@ -63,7 +63,7 @@ router.get('/Movements/:activation/:schedule', async (req, res) =>
   await fetch(`https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/${activation}/${schedule}`, { headers: headers })
   .then(res => res.json())
   .then(data => {
-        //console.log('in movements:' + data)
+        console.log('in movements:' + data)
         res.json({data})
   })
   .catch(error => {
@@ -78,7 +78,7 @@ router.get('/writeE/:activation/:schedule', async (req, res) =>
   var scheduleId = req.params.schedule;
 
   var test = activationId + '/' + scheduleId;
-  fs.writeFileSync('./movementTiploc.json', JSON.stringify({'activationId' : activationId, 'scheduleId' : scheduleId}, null, 2), {encoding:'utf8',flag:'w'});
+  fs.writeFileSync('./public/movementTiploc.json', JSON.stringify({'activationId' : activationId, 'scheduleId' : scheduleId}, null, 2), {encoding:'utf8',flag:'w'});
   //fs.writeFileSync('./movementTiploc.txt', test, {encoding:'utf8',flag:'w'});
   res.json({data: "ok"})
 })
