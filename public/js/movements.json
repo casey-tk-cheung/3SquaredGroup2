@@ -1,667 +1,239 @@
 [
   {
-    "location": "LISKEARD",
-    "tiploc": "LISKARD",
+    "location": "TUNNEL JN.",
+    "tiploc": "SLSBTJN",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T05:20:00",
-    "actual": "2023-03-29T08:18:00",
-    "variation": 178,
-    "actualArrival": "2023-03-29T08:21:00",
-    "plannedArrival": "2023-03-29T05:20:00",
-    "plannedDeparture": "2023-03-29T05:20:00",
-    "actualDeparture": "2023-03-29T08:18:00",
+    "planned": "2023-03-29T05:11:00",
+    "actual": "2023-03-29T04:36:00",
+    "variation": -35,
+    "plannedDeparture": "2023-03-29T05:11:00",
+    "actualDeparture": "2023-03-29T04:36:00",
     "latLong": {
-      "latitude": 50.4075,
-      "longitude": -4.469209202
+      "latitude": 51.07758664,
+      "longitude": -1.78525954
     }
   },
   {
-    "location": "MENHENIOT SIG UM259",
-    "tiploc": "MENH259",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T05:25:30",
-    "actual": "2023-03-29T08:28:00",
-    "variation": 183,
-    "plannedDeparture": "2023-03-29T05:25:30",
-    "actualDeparture": "2023-03-29T08:28:00"
-  },
-  {
-    "location": "ST GERMANS",
-    "tiploc": "STGRMNS",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T05:29:30",
-    "actual": "2023-03-29T08:31:00",
-    "variation": 182,
-    "actualArrival": "2023-03-29T08:32:00",
-    "plannedArrival": "2023-03-29T05:29:30",
-    "plannedDeparture": "2023-03-29T05:29:30",
-    "actualDeparture": "2023-03-29T08:31:00",
-    "latLong": {
-      "latitude": 50.3944,
-      "longitude": -4.3086
-    }
-  },
-  {
-    "location": "SALTASH",
-    "tiploc": "SASH",
+    "location": "SALISBURY SIGNAL SY43",
+    "tiploc": "SLSB43",
     "eventType": "ARRIVAL",
-    "planned": "2023-03-29T05:41:30",
-    "actual": "2023-03-29T08:38:00",
-    "variation": 177,
-    "actualArrival": "2023-03-29T08:38:00",
-    "plannedArrival": "2023-03-29T05:41:30",
-    "plannedDeparture": "2023-03-29T05:41:30",
-    "actualDeparture": "2023-03-29T08:39:00",
+    "planned": "2023-03-29T05:15:00",
+    "actual": "2023-03-29T04:39:00",
+    "variation": -36,
+    "actualArrival": "2023-03-29T04:39:00",
+    "plannedArrival": "2023-03-29T05:15:00",
     "latLong": {
-      "latitude": 50.4075,
-      "longitude": -4.2091
+      "latitude": 51.074893,
+      "longitude": -1.7977473
     }
   },
   {
-    "location": "ST BUDEAUX JN.",
-    "tiploc": "STBDXJN",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T05:49:30",
-    "actual": "2023-03-29T08:45:00",
-    "variation": 176,
-    "plannedDeparture": "2023-03-29T05:49:30",
-    "actualDeparture": "2023-03-29T08:45:00",
-    "latLong": {
-      "latitude": 50.39909227,
-      "longitude": -4.184665542
-    }
-  },
-  {
-    "location": "PLYMOUTH",
-    "tiploc": "PLYMTH",
+    "location": "SALISBURY SIGNAL SY52",
+    "tiploc": "SLSB52",
     "eventType": "ARRIVAL",
-    "planned": "2023-03-29T05:57:00",
-    "actual": "2023-03-29T08:54:00",
-    "variation": 177,
-    "actualArrival": "2023-03-29T08:54:00",
-    "plannedArrival": "2023-03-29T05:57:00",
-    "plannedDeparture": "2023-03-29T06:14:00",
-    "actualDeparture": "2023-03-29T09:00:00",
+    "planned": "2023-03-29T05:15:00",
+    "actual": "2023-03-29T04:39:00",
+    "variation": -36,
+    "actualArrival": "2023-03-29T04:39:00",
+    "plannedArrival": "2023-03-29T05:15:00",
     "latLong": {
-      "latitude": 50.3783,
-      "longitude": -4.1433
+      "latitude": 51.074893,
+      "longitude": -1.7977473
     }
   },
   {
-    "location": "LAIRA JN",
-    "tiploc": "LARAJN",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T06:18:30",
-    "actual": "2023-03-29T09:04:00",
-    "variation": 166,
-    "plannedDeparture": "2023-03-29T06:18:30",
-    "actualDeparture": "2023-03-29T09:04:00",
-    "latLong": {
-      "latitude": 50.3871876,
-      "longitude": -4.088525377
-    }
-  },
-  {
-    "location": "LIPSON JUNCTION",
-    "tiploc": "LIPSONJ",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T06:18:00",
-    "actual": "2023-03-29T09:04:00",
-    "variation": 166,
-    "plannedDeparture": "2023-03-29T06:18:00",
-    "actualDeparture": "2023-03-29T09:04:00",
-    "latLong": {
-      "latitude": 50.38288701,
-      "longitude": -4.107537553
-    }
-  },
-  {
-    "location": "LAIRA JN",
-    "tiploc": "LARAJN",
+    "location": "SALISBURY",
+    "tiploc": "SLSBRY",
     "eventType": "ARRIVAL",
-    "planned": "2023-03-29T06:18:30",
-    "actual": "2023-03-29T09:05:00",
-    "variation": 167,
-    "actualArrival": "2023-03-29T09:05:00",
-    "plannedArrival": "2023-03-29T06:18:30",
+    "planned": "2023-03-29T05:15:00",
+    "actual": "2023-03-29T04:39:00",
+    "variation": -36,
+    "actualArrival": "2023-03-29T04:39:00",
+    "plannedArrival": "2023-03-29T05:15:00",
     "latLong": {
-      "latitude": 50.3871876,
-      "longitude": -4.088525377
+      "latitude": 51.0703,
+      "longitude": -1.8063
     }
   },
   {
-    "location": "HEMERDON",
-    "tiploc": "HEMERDN",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T07:11:00",
-    "actual": "2023-03-29T09:11:00",
-    "variation": 120,
-    "plannedDeparture": "2023-03-29T07:11:00",
-    "actualDeparture": "2023-03-29T09:11:00",
-    "latLong": {
-      "latitude": 50.3947922,
-      "longitude": -4.0143578
-    }
-  },
-  {
-    "location": "IVYBRIDGE",
-    "tiploc": "IVYBDGE",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T07:19:00",
-    "actual": "2023-03-29T09:16:00",
-    "variation": 117,
-    "actualArrival": "2023-03-29T09:17:00",
-    "plannedArrival": "2023-03-29T07:19:00",
-    "plannedDeparture": "2023-03-29T07:19:00",
-    "actualDeparture": "2023-03-29T09:16:00",
-    "latLong": {
-      "latitude": 50.3933,
-      "longitude": -3.9048
-    }
-  },
-  {
-    "location": "AISH EMERGENCY CROSSOVER",
-    "tiploc": "AISHXO",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T07:23:00",
-    "actual": "2023-03-29T09:21:00",
-    "variation": 118,
-    "plannedDeparture": "2023-03-29T07:23:00",
-    "actualDeparture": "2023-03-29T09:21:00",
-    "latLong": {
-      "latitude": 50.42144257,
-      "longitude": -3.844882164
-    }
-  },
-  {
-    "location": "TOTNES",
-    "tiploc": "TOTNES",
+    "location": "SALISBURY 5 BAY",
+    "tiploc": "SLSBY5B",
     "eventType": "ARRIVAL",
-    "planned": "2023-03-29T07:31:00",
-    "actual": "2023-03-29T09:29:00",
-    "variation": 118,
-    "actualArrival": "2023-03-29T09:29:00",
-    "plannedArrival": "2023-03-29T07:31:00",
-    "plannedDeparture": "2023-03-29T07:31:00",
-    "actualDeparture": "2023-03-29T09:29:00",
+    "planned": "2023-03-29T05:15:00",
+    "actual": "2023-03-29T04:39:00",
+    "variation": -36,
+    "actualArrival": "2023-03-29T04:39:00",
+    "plannedArrival": "2023-03-29T05:15:00",
     "latLong": {
-      "latitude": 50.4349,
-      "longitude": -3.6891
+      "latitude": 51.074893,
+      "longitude": -1.7977473
     }
   },
   {
-    "location": "DAINTON TUNNEL",
-    "tiploc": "DAINTNT",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T07:40:00",
-    "actual": "2023-03-29T09:34:00",
-    "variation": 114,
-    "plannedDeparture": "2023-03-29T07:40:00",
-    "actualDeparture": "2023-03-29T09:34:00",
-    "latLong": {
-      "latitude": 50.4858534,
-      "longitude": -3.620202089
-    }
-  },
-  {
-    "location": "NEWTON ABBOT",
-    "tiploc": "NABT",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T07:46:00",
-    "actual": "2023-03-29T09:38:00",
-    "variation": 112,
-    "plannedDeparture": "2023-03-29T07:46:00",
-    "actualDeparture": "2023-03-29T09:38:00",
-    "latLong": {
-      "latitude": 50.5301,
-      "longitude": -3.5995
-    }
-  },
-  {
-    "location": "NEWTON ABBOT WEST JUNCTION",
-    "tiploc": "NABTWJ",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T07:43:30",
-    "actual": "2023-03-29T09:38:00",
-    "variation": 115,
-    "plannedDeparture": "2023-03-29T07:43:30",
-    "actualDeparture": "2023-03-29T09:38:00",
-    "latLong": {
-      "latitude": 50.514982,
-      "longitude": -3.588752
-    }
-  },
-  {
-    "location": "NEWTON ABBOT",
-    "tiploc": "NABT",
+    "location": "SALISBURY 6 BAY",
+    "tiploc": "SLSBY6B",
     "eventType": "ARRIVAL",
-    "planned": "2023-03-29T07:46:00",
-    "actual": "2023-03-29T09:39:00",
-    "variation": 113,
-    "actualArrival": "2023-03-29T09:39:00",
-    "plannedArrival": "2023-03-29T07:46:00",
+    "planned": "2023-03-29T05:15:00",
+    "actual": "2023-03-29T04:39:00",
+    "variation": -36,
+    "actualArrival": "2023-03-29T04:39:00",
+    "plannedArrival": "2023-03-29T05:15:00",
     "latLong": {
-      "latitude": 50.5301,
-      "longitude": -3.5995
+      "latitude": 51.074893,
+      "longitude": -1.7977473
     }
   },
   {
-    "location": "TEIGNMOUTH",
-    "tiploc": "TEINMTH",
-    "eventType": "ARRIVAL",
-    "planned": "2023-03-29T07:51:30",
-    "actual": "2023-03-29T09:46:00",
-    "variation": 115,
-    "actualArrival": "2023-03-29T09:46:00",
-    "plannedArrival": "2023-03-29T07:51:30",
-    "plannedDeparture": "2023-03-29T07:51:30",
-    "actualDeparture": "2023-03-29T09:46:00",
-    "latLong": {
-      "latitude": 50.5483,
-      "longitude": -3.4947
-    }
-  },
-  {
-    "location": "DAWLISH",
-    "tiploc": "DAWLISH",
+    "location": "SALISBURY SIGNAL SY43",
+    "tiploc": "SLSB43",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T07:54:30",
-    "actual": "2023-03-29T09:50:00",
-    "variation": 116,
-    "actualArrival": "2023-03-29T09:51:00",
-    "plannedArrival": "2023-03-29T07:54:30",
-    "plannedDeparture": "2023-03-29T07:54:30",
-    "actualDeparture": "2023-03-29T09:50:00",
+    "planned": "2023-03-29T05:15:00",
+    "actual": "2023-03-29T04:39:00",
+    "variation": -36,
+    "plannedDeparture": "2023-03-29T05:15:00",
+    "actualDeparture": "2023-03-29T04:39:00",
     "latLong": {
-      "latitude": 50.5807,
-      "longitude": -3.46468
+      "latitude": 51.074893,
+      "longitude": -1.7977473
     }
   },
   {
-    "location": "DAWLISH WARREN",
-    "tiploc": "DAWLSHW",
+    "location": "SALISBURY SIGNAL SY52",
+    "tiploc": "SLSB52",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T07:57:00",
-    "actual": "2023-03-29T09:52:00",
-    "variation": 115,
-    "actualArrival": "2023-03-29T09:53:00",
-    "plannedArrival": "2023-03-29T07:57:00",
-    "plannedDeparture": "2023-03-29T07:57:00",
-    "actualDeparture": "2023-03-29T09:52:00",
+    "planned": "2023-03-29T05:15:00",
+    "actual": "2023-03-29T04:39:00",
+    "variation": -36,
+    "plannedDeparture": "2023-03-29T05:15:00",
+    "actualDeparture": "2023-03-29T04:39:00",
     "latLong": {
-      "latitude": 50.5979,
-      "longitude": -3.4438
+      "latitude": 51.074893,
+      "longitude": -1.7977473
     }
   },
   {
-    "location": "EXETER ST DAVIDS",
-    "tiploc": "EXETRSD",
+    "location": "SALISBURY",
+    "tiploc": "SLSBRY",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T08:31:00",
-    "actual": "2023-03-29T10:04:00",
-    "variation": 93,
-    "actualArrival": "2023-03-29T10:04:00",
-    "plannedArrival": "2023-03-29T08:17:30",
-    "plannedDeparture": "2023-03-29T08:31:00",
-    "actualDeparture": "2023-03-29T10:04:00",
+    "planned": "2023-03-29T05:15:00",
+    "actual": "2023-03-29T04:39:00",
+    "variation": -36,
+    "plannedDeparture": "2023-03-29T05:15:00",
+    "actualDeparture": "2023-03-29T04:39:00",
     "latLong": {
-      "latitude": 50.729628,
-      "longitude": -3.543689
+      "latitude": 51.0703,
+      "longitude": -1.8063
     }
   },
   {
-    "location": "COWLEY BRIDGE JN",
-    "tiploc": "CWLYBDG",
+    "location": "SALISBURY 5 BAY",
+    "tiploc": "SLSBY5B",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T08:35:00",
-    "actual": "2023-03-29T10:06:00",
-    "variation": 91,
-    "plannedDeparture": "2023-03-29T08:35:00",
-    "actualDeparture": "2023-03-29T10:06:00",
+    "planned": "2023-03-29T05:15:00",
+    "actual": "2023-03-29T04:39:00",
+    "variation": -36,
+    "plannedDeparture": "2023-03-29T05:15:00",
+    "actualDeparture": "2023-03-29T04:39:00",
     "latLong": {
-      "latitude": 50.74873125,
-      "longitude": -3.547611619
+      "latitude": 51.074893,
+      "longitude": -1.7977473
     }
   },
   {
-    "location": "TIVERTON LOOP",
-    "tiploc": "TIVILP",
-    "eventType": "ARRIVAL",
-    "planned": "2023-03-29T08:54:00",
-    "actual": "2023-03-29T10:22:00",
-    "variation": 88,
-    "actualArrival": "2023-03-29T10:22:00",
-    "plannedArrival": "2023-03-29T08:54:00",
-    "plannedDeparture": "2023-03-29T10:41:00",
-    "actualDeparture": "2023-03-29T10:43:00",
-    "latLong": {
-      "latitude": 50.89440304,
-      "longitude": -3.376754805
-    }
-  },
-  {
-    "location": "TIVERTON PARKWAY",
-    "tiploc": "TIVIPW",
-    "eventType": "ARRIVAL",
-    "planned": "2023-03-29T10:45:00",
-    "actual": "2023-03-29T10:48:00",
-    "variation": 3,
-    "actualArrival": "2023-03-29T10:48:00",
-    "plannedArrival": "2023-03-29T10:45:00",
-    "plannedDeparture": "2023-03-29T10:45:00",
-    "actualDeparture": "2023-03-29T10:48:00",
-    "latLong": {
-      "latitude": 50.9169,
-      "longitude": -3.3601
-    }
-  },
-  {
-    "location": "WHITEBALL",
-    "tiploc": "TIVITNL",
-    "eventType": "ARRIVAL",
-    "planned": "2023-03-29T10:49:00",
-    "actual": "2023-03-29T10:52:00",
-    "variation": 3,
-    "actualArrival": "2023-03-29T10:52:00",
-    "plannedArrival": "2023-03-29T10:49:00",
-    "plannedDeparture": "2023-03-29T10:49:00",
-    "actualDeparture": "2023-03-29T10:52:00",
-    "latLong": {
-      "latitude": 50.95351498,
-      "longitude": -3.29374632
-    }
-  },
-  {
-    "location": "NORTON FITZWARREN",
-    "tiploc": "NTNFTZN",
+    "location": "SALISBURY 6 BAY",
+    "tiploc": "SLSBY6B",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T10:58:30",
-    "actual": "2023-03-29T11:02:00",
-    "variation": 4,
-    "plannedDeparture": "2023-03-29T10:58:30",
-    "actualDeparture": "2023-03-29T11:02:00",
+    "planned": "2023-03-29T05:15:00",
+    "actual": "2023-03-29T04:39:00",
+    "variation": -36,
+    "plannedDeparture": "2023-03-29T05:15:00",
+    "actualDeparture": "2023-03-29T04:39:00",
     "latLong": {
-      "latitude": 51.02499422,
-      "longitude": -3.137145896
+      "latitude": 51.074893,
+      "longitude": -1.7977473
     }
   },
   {
-    "location": "TAUNTON SIG.E611",
-    "tiploc": "TAUN611",
-    "eventType": "ARRIVAL",
-    "planned": "2023-03-29T11:00:30",
-    "actual": "2023-03-29T11:04:00",
-    "variation": 4,
-    "actualArrival": "2023-03-29T11:04:00",
-    "plannedArrival": "2023-03-29T11:00:30",
-    "latLong": {
-      "latitude": 51.024852,
-      "longitude": -3.1239529
-    }
-  },
-  {
-    "location": "TAUNTON SIGNAL E617",
-    "tiploc": "TAUN617",
-    "eventType": "ARRIVAL",
-    "planned": "2023-03-29T11:00:30",
-    "actual": "2023-03-29T11:04:00",
-    "variation": 4,
-    "actualArrival": "2023-03-29T11:04:00",
-    "plannedArrival": "2023-03-29T11:00:30",
-    "latLong": {
-      "latitude": 51.024852,
-      "longitude": -3.1239529
-    }
-  },
-  {
-    "location": "TAUNTON SIG. E624",
-    "tiploc": "TAUN624",
-    "eventType": "ARRIVAL",
-    "planned": "2023-03-29T11:00:30",
-    "actual": "2023-03-29T11:04:00",
-    "variation": 4,
-    "actualArrival": "2023-03-29T11:04:00",
-    "plannedArrival": "2023-03-29T11:00:30",
-    "latLong": {
-      "latitude": 51.024852,
-      "longitude": -3.1239529
-    }
-  },
-  {
-    "location": "TAUNTON SIG. E22",
-    "tiploc": "TAUNE22",
-    "eventType": "ARRIVAL",
-    "planned": "2023-03-29T11:00:30",
-    "actual": "2023-03-29T11:04:00",
-    "variation": 4,
-    "actualArrival": "2023-03-29T11:04:00",
-    "plannedArrival": "2023-03-29T11:00:30",
-    "latLong": {
-      "latitude": 51.024852,
-      "longitude": -3.1239529
-    }
-  },
-  {
-    "location": "TAUNTON",
-    "tiploc": "TAUNTON",
-    "eventType": "ARRIVAL",
-    "planned": "2023-03-29T11:00:30",
-    "actual": "2023-03-29T11:04:00",
-    "variation": 4,
-    "actualArrival": "2023-03-29T11:04:00",
-    "plannedArrival": "2023-03-29T11:00:30",
-    "latLong": {
-      "latitude": 51.023281,
-      "longitude": -3.102778
-    }
-  },
-  {
-    "location": "TAUNTON SIG.E611",
-    "tiploc": "TAUN611",
+    "location": "WILTON JN",
+    "tiploc": "WILTONJ",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:00:30",
-    "actual": "2023-03-29T11:05:00",
-    "variation": 5,
-    "plannedDeparture": "2023-03-29T11:00:30",
-    "actualDeparture": "2023-03-29T11:05:00",
+    "planned": "2023-03-29T05:17:30",
+    "actual": "2023-03-29T04:42:00",
+    "variation": -35,
+    "plannedDeparture": "2023-03-29T05:17:30",
+    "actualDeparture": "2023-03-29T04:42:00",
     "latLong": {
-      "latitude": 51.024852,
-      "longitude": -3.1239529
+      "latitude": 51.08128099,
+      "longitude": -1.847413312
     }
   },
   {
-    "location": "TAUNTON SIGNAL E617",
-    "tiploc": "TAUN617",
+    "location": "WISHFORD",
+    "tiploc": "WSHFORD",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:00:30",
-    "actual": "2023-03-29T11:05:00",
-    "variation": 5,
-    "plannedDeparture": "2023-03-29T11:00:30",
-    "actualDeparture": "2023-03-29T11:05:00",
+    "planned": "2023-03-29T05:22:00",
+    "actual": "2023-03-29T04:47:00",
+    "variation": -35,
+    "plannedDeparture": "2023-03-29T05:22:00",
+    "actualDeparture": "2023-03-29T04:47:00",
     "latLong": {
-      "latitude": 51.024852,
-      "longitude": -3.1239529
+      "latitude": 51.11682807,
+      "longitude": -1.887689872
     }
   },
   {
-    "location": "TAUNTON SIG. E624",
-    "tiploc": "TAUN624",
+    "location": "WYLYE AHB",
+    "tiploc": "WYLYAHB",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:00:30",
-    "actual": "2023-03-29T11:05:00",
-    "variation": 5,
-    "plannedDeparture": "2023-03-29T11:00:30",
-    "actualDeparture": "2023-03-29T11:05:00",
+    "planned": "2023-03-29T05:28:30",
+    "actual": "2023-03-29T04:50:00",
+    "variation": -38,
+    "plannedDeparture": "2023-03-29T05:28:30",
+    "actualDeparture": "2023-03-29T04:50:00",
     "latLong": {
-      "latitude": 51.024852,
-      "longitude": -3.1239529
+      "latitude": 51.13555497,
+      "longitude": -1.986749848
     }
   },
   {
-    "location": "TAUNTON SIG. E22",
-    "tiploc": "TAUNE22",
+    "location": "UPTON LOVELL",
+    "tiploc": "UPTNLOV",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:00:30",
-    "actual": "2023-03-29T11:05:00",
-    "variation": 5,
-    "plannedDeparture": "2023-03-29T11:00:30",
-    "actualDeparture": "2023-03-29T11:05:00",
+    "planned": "2023-03-29T05:37:30",
+    "actual": "2023-03-29T04:56:00",
+    "variation": -41,
+    "plannedDeparture": "2023-03-29T05:37:30",
+    "actualDeparture": "2023-03-29T04:56:00",
     "latLong": {
-      "latitude": 51.024852,
-      "longitude": -3.1239529
+      "latitude": 51.16365599,
+      "longitude": -2.079231181
     }
   },
   {
-    "location": "TAUNTON",
-    "tiploc": "TAUNTON",
+    "location": "WARMINSTER",
+    "tiploc": "WRMNSTR",
     "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:00:30",
-    "actual": "2023-03-29T11:05:00",
-    "variation": 5,
-    "plannedDeparture": "2023-03-29T11:00:30",
-    "actualDeparture": "2023-03-29T11:05:00",
+    "planned": "2023-03-29T05:47:00",
+    "actual": "2023-03-29T05:02:00",
+    "variation": -45,
+    "actualArrival": "2023-03-29T05:03:00",
+    "plannedArrival": "2023-03-29T05:47:00",
+    "plannedDeparture": "2023-03-29T05:47:00",
+    "actualDeparture": "2023-03-29T05:02:00",
     "latLong": {
-      "latitude": 51.023281,
-      "longitude": -3.102778
-    }
-  },
-  {
-    "location": "COGLOAD JN",
-    "tiploc": "COGLOAD",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:05:30",
-    "actual": "2023-03-29T11:11:00",
-    "variation": 6,
-    "plannedDeparture": "2023-03-29T11:05:30",
-    "actualDeparture": "2023-03-29T11:11:00",
-    "latLong": {
-      "latitude": 51.0404259,
-      "longitude": -3.000984615
-    }
-  },
-  {
-    "location": "ATHELNEY CROSSING",
-    "tiploc": "ATHLNEY",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:09:30",
-    "actual": "2023-03-29T11:14:00",
-    "variation": 5,
-    "plannedDeparture": "2023-03-29T11:09:30",
-    "actualDeparture": "2023-03-29T11:14:00",
-    "latLong": {
-      "latitude": 51.05265867,
-      "longitude": -2.936421464
-    }
-  },
-  {
-    "location": "SOMERTON GROUND FRAME",
-    "tiploc": "SOMEGF",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:18:30",
-    "actual": "2023-03-29T11:25:00",
-    "variation": 7,
-    "plannedDeparture": "2023-03-29T11:18:30",
-    "actualDeparture": "2023-03-29T11:25:00",
-    "latLong": {
-      "latitude": 51.05212018,
-      "longitude": -2.732275584
-    }
-  },
-  {
-    "location": "SOMERTON VIADUCT",
-    "tiploc": "SOMEVIA",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:18:30",
-    "actual": "2023-03-29T11:25:00",
-    "variation": 7,
-    "plannedDeparture": "2023-03-29T11:18:30",
-    "actualDeparture": "2023-03-29T11:25:00",
-    "latLong": {
-      "latitude": 51.05264,
-      "longitude": -2.7335727
-    }
-  },
-  {
-    "location": "CASTLE CARY",
-    "tiploc": "CCARY",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:29:30",
-    "actual": "2023-03-29T11:36:00",
-    "variation": 7,
-    "actualArrival": "2023-03-29T11:37:00",
-    "plannedArrival": "2023-03-29T11:29:30",
-    "plannedDeparture": "2023-03-29T11:29:30",
-    "actualDeparture": "2023-03-29T11:36:00",
-    "latLong": {
-      "latitude": 51.1001,
-      "longitude": -2.5221
-    }
-  },
-  {
-    "location": "EAST SOMERSET JN",
-    "tiploc": "ESTSOMJ",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:42:30",
-    "actual": "2023-03-29T11:46:00",
-    "variation": 4,
-    "plannedDeparture": "2023-03-29T11:42:30",
-    "actualDeparture": "2023-03-29T11:46:00",
-    "latLong": {
-      "latitude": 51.164963,
-      "longitude": -2.3689302
-    }
-  },
-  {
-    "location": "BLATCHBRIDGE JN",
-    "tiploc": "BLBGJN",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:48:30",
-    "actual": "2023-03-29T11:49:00",
-    "variation": 1,
-    "plannedDeparture": "2023-03-29T11:48:30",
-    "actualDeparture": "2023-03-29T11:49:00",
-    "latLong": {
-      "latitude": 51.21256175,
-      "longitude": -2.311973765
-    }
-  },
-  {
-    "location": "CLINK ROAD JN",
-    "tiploc": "CLNKRDJ",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:50:30",
-    "actual": "2023-03-29T11:51:00",
-    "variation": 1,
-    "plannedDeparture": "2023-03-29T11:50:30",
-    "actualDeparture": "2023-03-29T11:51:00",
-    "latLong": {
-      "latitude": 51.23675103,
-      "longitude": -2.294232685
-    }
-  },
-  {
-    "location": "FAIRWOOD JN",
-    "tiploc": "FRWDJN",
-    "eventType": "DEPARTURE",
-    "planned": "2023-03-29T11:54:30",
-    "actual": "2023-03-29T11:55:00",
-    "variation": 1,
-    "plannedDeparture": "2023-03-29T11:54:30",
-    "actualDeparture": "2023-03-29T11:55:00",
-    "latLong": {
-      "latitude": 51.25933596,
-      "longitude": -2.226807074
+      "latitude": 51.2068,
+      "longitude": -2.1767
     }
   },
   {
     "location": "WESTBURY DOWN T.C.",
     "tiploc": "WSTBRDY",
     "eventType": "DESTINATION",
-    "planned": "2023-03-29T12:00:00",
-    "actual": "2023-03-29T12:02:00",
-    "variation": 2,
-    "actualArrival": "2023-03-29T12:02:00",
-    "plannedArrival": "2023-03-29T12:00:00",
+    "planned": "2023-03-29T05:58:00",
+    "actual": "2023-03-29T05:17:00",
+    "variation": -41,
+    "actualArrival": "2023-03-29T05:17:00",
+    "plannedArrival": "2023-03-29T05:58:00",
     "latLong": {
       "latitude": 51.26202976,
       "longitude": -2.20446295

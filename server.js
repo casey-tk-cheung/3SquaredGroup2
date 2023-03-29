@@ -88,9 +88,6 @@ var schedule;
 
 async function getMovementUpdates(activation, schedule)
 {
-    var movements = fs.readFileSync('movementTiploc.json', {encoding:'utf8',flag:'r'});
-    activation = movements.activationId;
-    schedule = movements.scheduleId;
     console.log(`${activation} and ${schedule}`)
     await fetch(`https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/${activation}/${schedule}`, { headers: headers })
     .then(res => res.json())
@@ -105,11 +102,6 @@ async function getMovementUpdates(activation, schedule)
 
 io.on('connection', (socket) => {
     console.log('Connected');
-
-    if(activation || schedule) {
-        console.log("ingetmovemevntupdates"+activation);
-        setInterval(getMovementUpdates(activation, schedule), 10000);
-    }
   
     //socket.emit('message', 'Hi');
   
@@ -124,17 +116,27 @@ server.listen(`${port}`, () => {
   });
 
 
+var fileChanged = false;
+
 // put in /APIrouter.js
 function watchFileForChanges(file) {
     console.log("Called")
     fs.watchFile(file, (curr, prev) => {
         if (curr.mtimeMs !== prev.mtimeMs) {
+            fileChanged = true;
             console.log(`Changed`);
             io.emit('fileChanged');
         }
     });
 }
 watchFileForChanges(file);
+
+if (fileChanged) {
+    var movements = fs.readFileSync('movementTiploc.json', {encoding:'utf8',flag:'r'});
+    activation = movements.activationId;
+    schedule = movements.scheduleId;
+    setInterval(getMovementUpdates(activation, schedule), 10000);
+}
 // setInterval(() => {
 //     //call the file
     
