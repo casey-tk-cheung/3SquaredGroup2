@@ -5,7 +5,6 @@ async function route(e) {
     var headCode = e.srcElement.headCode;
     var destinationLocation = e.srcElement.destinationLocation;
     var originLocation = e.srcElement.originLocation;
-    console.log(e);
     var route = [];
     var left = [];
     var passGroup = new L.layerGroup();
@@ -29,7 +28,6 @@ async function route(e) {
     fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/' + activationId + '/' + scheduleId, {headers: headers})
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             while (!data[data.length - 1].hasOwnProperty('latLong')) data.pop()
             var completedJourney = true;
             for (const item of data) {
@@ -74,50 +72,6 @@ async function route(e) {
             if(hc != 0){
                  hc.innerHTML = ("Head Code: " + headCode);
             }
-            var firstStation = document.getElementById('originStation');
-            console.log(allMovementData[0]);
-
-            
-
-            if( firstStation !=0){
-                firstStation.innerHTML = (originLocation);
-                if (allMovementData[0].actualDeparture != 0){
-                    var dep = new Date(allMovementData[0].actualDeparture);
-                    dep = dep.toLocaleTimeString();
-                    firstStation.innerHTML = (originLocation + "\nDeparted: " + dep);
-                }
-            }
-            var lastStation = document.getElementById('destinationStation')
-            if( lastStation != 0){
-                lastStation.innerHTML = (destinationLocation);
-                if(allMovementData[0].plannedArrival != 0){
-                    var arv = new Date(allMovementData[0].plannedArrival);
-                    arv = arv.toLocaleTimeString();
-                    lastStation.innerHTML = (destinationLocation + "\nExp Arrival: " +arv);
-                }
-            }
-            allMovementData.forEach(item => {
-                // route diagram code here
-
-                var elementDiv = document.createElement('div');
-                elementDiv.classList.add('timeContainer');
-                var element = document.createElement('p');
-                const planned = new Date(item.plannedArrival);
-                element.innerHTML = planned.toLocaleTimeString();
-                elementDiv.append(element);
-                grid.append(elementDiv);
-
-                var elementDiv = document.createElement('div');
-                elementDiv.classList.add('iconWrapper');
-                var element = document.createElement('span');
-                element.classList.add('iconify');
-                element.dataset.icon = 'material-symbols:line-end';
-                element.dataset.width = '75';
-                element.dataset.height = '75';
-                element.dataset.rotate = '270deg';
-                elementDiv.append(element);
-                grid.append(elementDiv);
-            })
 
             
             var marker1 = new L.marker(left[0], {icon: train}).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map);
@@ -163,50 +117,76 @@ async function route(e) {
             if(hc != 0){
                 hc.innerHTML = ("Head Code: " + headCode);
             }
-            var firstStation = document.getElementById('originStation');
-            console.log(allMovementData[0]);
-            console.log(allMovementData[allMovementData.length-1].plannedArrival);
-
-            if( firstStation !=0){
-                firstStation.innerHTML = (originLocation);
-                if (allMovementData[0].actualDeparture != 0){
-                    var dep = new Date(allMovementData[0].actualDeparture);
-                    dep = dep.toLocaleTimeString();
-                    firstStation.innerHTML = (originLocation + "\nDeparted: " + dep);
-                }
-            }
-            var lastStation = document.getElementById('destinationStation')
-            if(lastStation != 0){
-                lastStation.innerHTML = (destinationLocation);
-                if(allMovementData[allMovementData.length-1].plannedArrival != 0){
-                    var arv = new Date(allMovementData[allMovementData.length-1].plannedArrval);
-                    arv = arv.toLocaleTimeString();
-                    lastStation.innerHTML = (destinationLocation + "\nExp Arrival: " +arv);
-                }
-            }
-            allMovementData.forEach(item => {
+            
+            for (let i = 0; i < allMovementData.length; i++) {
                 // route diagram code here
+                item = allMovementData[i];
+                console.log(item)
+                    //time
+                    var elementDiv = document.createElement('div');
+                    elementDiv.classList.add('timeContainer');
+                    var element = document.createElement('p');
+                    const planned = new Date(item.planned);
+                    element.innerHTML = planned.toLocaleTimeString();
+                    elementDiv.append(element);
+                    grid.append(elementDiv);
 
-                var elementDiv = document.createElement('div');
-                elementDiv.classList.add('timeContainer');
-                var element = document.createElement('p');
-                const planned = new Date(item.plannedArrival);
-                //console.log(item);
-                element.innerHTML = planned.toLocaleTimeString();
-                elementDiv.append(element);
-                grid.append(elementDiv);
-
-                var elementDiv = document.createElement('div');
-                elementDiv.classList.add('iconWrapper');
-                var element = document.createElement('span');
-                element.classList.add('iconify');
-                element.dataset.icon = 'material-symbols:line-end';
-                element.dataset.width = '75';
-                element.dataset.height = '75';
-                element.dataset.rotate = '270deg';
-                elementDiv.append(element);
-                grid.append(elementDiv);
-            })
+                    //icons
+                    if (i == 0) {
+                        var elementDiv = document.createElement('div');
+                        elementDiv.classList.add('iconWrapper');
+                        var element = document.createElement('span');
+                        element.classList.add('iconify');
+                        element.dataset.icon = 'material-symbols:line-end-circle-outline';
+                        element.dataset.width = '75';
+                        element.dataset.height = '75';
+                        element.dataset.rotate = '270deg';
+                        elementDiv.append(element);
+                        grid.append(elementDiv);
+                    }
+                    else if (i == allMovementData.length - 1){
+                        console.log('here');
+                        var elementDiv = document.createElement('div');
+                        elementDiv.classList.add('iconWrapper');
+                        var element = document.createElement('span');
+                        element.classList.add('iconify');
+                        element.dataset.icon = 'material-symbols:line-end-circle-outline';
+                        element.dataset.width = '75';
+                        element.dataset.height = '75';
+                        element.dataset.rotate = '90deg';
+                        elementDiv.append(element);
+                        grid.append(elementDiv);
+                    }
+                    else
+                    {
+                        var elementDiv = document.createElement('div');
+                        elementDiv.classList.add('iconWrapper');
+                        var element = document.createElement('span');
+                        element.classList.add('iconify');
+                        element.dataset.icon = 'mdi:horizontal-line';
+                        element.dataset.width = '75';
+                        element.dataset.height = '75';
+                        element.dataset.rotate = '270deg';
+                        elementDiv.append(element);
+                        var element = document.createElement('span');
+                        element.classList.add('iconify');
+                        element.dataset.icon = 'material-symbols:line-end';
+                        element.dataset.width = '75';
+                        element.dataset.height = '75';
+                        element.dataset.rotate = '270deg';
+                        element.style.marginTop = '-30px';
+                        elementDiv.append(element);
+                        grid.append(elementDiv);
+                    }
+                    //station
+                    var elementDiv = document.createElement('div');
+                    elementDiv.classList.add('text-container');
+                    var element = document.createElement('p');
+                    element.innerHTML = item.location;
+                    elementDiv.append(element);
+                    grid.append(elementDiv);
+                
+            }
         })
     
     //Icon definitions
