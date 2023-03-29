@@ -157,8 +157,10 @@ async function route(e) {
             //         lastStation.innerHTML = (destinationLocation + "\nExp Arrival: " +arv);
             //     }
             // }
-            allMovementData.forEach(item => {
+            for (let i = 0; i < allMovementData.length; i++) {
                 // route diagram code here
+                item = allMovementData[i];
+                console.log(item)
                 if (!item.hasOwnProperty('plannedArrival'))
                 {
                     //time
@@ -166,31 +168,57 @@ async function route(e) {
                     elementDiv.classList.add('timeContainer');
                     var element = document.createElement('p');
                     const planned = new Date(item.planned);
-                    console.log(planned.toLocaleTimeString());  
                     element.innerHTML = planned.toLocaleTimeString();
                     elementDiv.append(element);
                     grid.append(elementDiv);
 
                     //icons
-                    var elementDiv = document.createElement('div');
-                    elementDiv.classList.add('iconWrapper');
-                    var element = document.createElement('span');
-                    element.classList.add('iconify');
-                    element.dataset.icon = 'mdi:horizontal-line';
-                    element.dataset.width = '75';
-                    element.dataset.height = '75';
-                    element.dataset.rotate = '270deg';
-                    elementDiv.append(element);
-                    var element = document.createElement('span');
-                    element.classList.add('iconify');
-                    element.dataset.icon = 'material-symbols:line-end';
-                    element.dataset.width = '75';
-                    element.dataset.height = '75';
-                    element.dataset.rotate = '270deg';
-                    element.style.marginTop = '-30px';
-                    elementDiv.append(element);
-                    grid.append(elementDiv);
-
+                    if (i == 0) {
+                        var elementDiv = document.createElement('div');
+                        elementDiv.classList.add('iconWrapper');
+                        var element = document.createElement('span');
+                        element.classList.add('iconify');
+                        element.dataset.icon = 'material-symbols:line-end-circle-outline';
+                        element.dataset.width = '75';
+                        element.dataset.height = '75';
+                        element.dataset.rotate = '270deg';
+                        elementDiv.append(element);
+                        grid.append(elementDiv);
+                    }
+                    else if (i == allMovementData.length - 1){
+                        console.log('here');
+                        var elementDiv = document.createElement('div');
+                        elementDiv.classList.add('iconWrapper');
+                        var element = document.createElement('span');
+                        element.classList.add('iconify');
+                        element.dataset.icon = 'material-symbols:line-end-circle-outline';
+                        element.dataset.width = '75';
+                        element.dataset.height = '75';
+                        element.dataset.rotate = '90deg';
+                        elementDiv.append(element);
+                        grid.append(elementDiv);
+                    }
+                    else
+                    {
+                        var elementDiv = document.createElement('div');
+                        elementDiv.classList.add('iconWrapper');
+                        var element = document.createElement('span');
+                        element.classList.add('iconify');
+                        element.dataset.icon = 'mdi:horizontal-line';
+                        element.dataset.width = '75';
+                        element.dataset.height = '75';
+                        element.dataset.rotate = '270deg';
+                        elementDiv.append(element);
+                        var element = document.createElement('span');
+                        element.classList.add('iconify');
+                        element.dataset.icon = 'material-symbols:line-end';
+                        element.dataset.width = '75';
+                        element.dataset.height = '75';
+                        element.dataset.rotate = '270deg';
+                        element.style.marginTop = '-30px';
+                        elementDiv.append(element);
+                        grid.append(elementDiv);
+                    }
                     //station
                     var elementDiv = document.createElement('div');
                     elementDiv.classList.add('text-container');
@@ -199,7 +227,7 @@ async function route(e) {
                     elementDiv.append(element);
                     grid.append(elementDiv);
                 }
-            })
+            }
         })
     
     //Icon definitions
