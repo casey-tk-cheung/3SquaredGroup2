@@ -7,6 +7,7 @@ toggleTiploc.addEventListener('click', journeyClicked);
 var storedJourney = [];
 
 function getJourneys(e) {
+    storedJourney = [];
     //if(storedJourney.length > 1){storedJourney.shift();}
     clearSidebar();
     var secondMenu = document.getElementById('journeyMenu');
