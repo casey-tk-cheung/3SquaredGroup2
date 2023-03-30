@@ -67,17 +67,22 @@ function journeyClicked(e) {
     journeyInfo.style.visibility = 'visible';
     storedJourney.push(e);
     route(storedJourney[0]);
- 
+    map.eachLayer(function (layer) {
+        if (layer != Location.tileLayer) {
+            map.removeLayer(layer);
+        }
+    })
+    addTileLayer();
+
     setInterval(() => {
         route(storedJourney[0]);
-        console.log("...............")
         map.eachLayer(function (layer) {
             if (layer != Location.tileLayer) {
                 map.removeLayer(layer);
             }
         })
         addTileLayer();
-    }, 10000);
+    }, 30000);
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'visible';
     var journeyInfo = document.getElementById("journeyInfo");
