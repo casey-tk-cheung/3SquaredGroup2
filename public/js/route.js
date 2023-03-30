@@ -14,7 +14,7 @@ async function route(e) {
 
     var allMovementData;
     var lastVisitedTiploc;
-    var allMovementData;
+    var scheduleData;
     await fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/' 
     + activationId + '/' + scheduleId, { headers: headers })
         .then(response => response.json())
@@ -28,6 +28,7 @@ async function route(e) {
     fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/' + activationId + '/' + scheduleId, {headers: headers})
         .then(response => response.json())
         .then(data => {
+            scheduleData = data;
             while (!data[data.length - 1].hasOwnProperty('latLong')) data.pop()
             var completedJourney = true;
             for (const item of data) {
@@ -118,15 +119,16 @@ async function route(e) {
                 hc.innerHTML = ("Head Code: " + headCode);
             }
             
-            for (let i = 0; i < allMovementData.length; i++) {
+            for (let i = 0; i < scheduleData.length; i++) {
                 // route diagram code here
                 item = allMovementData[i];
-                console.log(item)
+                scheduleItem = scheduleData[i];
+                console.log(scheduleItem);
                     //time
                     var elementDiv = document.createElement('div');
                     elementDiv.classList.add('timeContainer');
                     var element = document.createElement('p');
-                    const planned = new Date(item.planned);
+                    const planned = new Date(scheduleItem.planned);
                     element.innerHTML = planned.toLocaleTimeString();
                     elementDiv.append(element);
                     grid.append(elementDiv);
@@ -182,7 +184,8 @@ async function route(e) {
                     var elementDiv = document.createElement('div');
                     elementDiv.classList.add('text-container');
                     var element = document.createElement('p');
-                    element.innerHTML = item.location;
+                    item.
+                    element.innerHTML = (item.location);
                     elementDiv.append(element);
                     grid.append(elementDiv);
                 
