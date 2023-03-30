@@ -122,11 +122,15 @@ async function route(e) {
                 hc.innerHTML = ("Head Code: " + headCode);
             }
 
+            console.log(allMovementData[allMovementData.length - 1]);
             for (let i = 0; i < scheduleData.length; i++) {
                 // route diagram code here
                 item = allMovementData[i];
                 scheduleItem = scheduleData[i];
                 item = allMovementData.filter(data => data.tiploc == scheduleItem.tiploc && data.eventType == 'DEPARTURE');
+                if (scheduleItem == scheduleData[scheduleData.length - 1]){
+                    item = allMovementData.filter(data => data.tiploc == scheduleItem.tiploc && data.eventType == 'DESTINATION');
+                }
                 if (item.length > 0) { item = item[0]; }
                 console.log('movement', item);
                 console.log('schedule', scheduleItem);
@@ -237,6 +241,24 @@ async function route(e) {
                         grid.append(elementDiv);
                     }
                     //console.log(item.plannedDeparture + " " + item.actualDeparture + " diff: " + timeDiff);
+                }
+                else if(item.hasOwnProperty('plannedArrival') && item.hasOwnProperty('actualArrival')){
+                    console.log(item.plannedArrival+" "+item.plannedDeparture);
+                    var timeDiffArv = calcTimeDiff(item.actualArrival, item.plannedArrival)
+                    if (timeDiffArv > 0) {
+                        element.innerHTML = (scheduleItem.location);
+                        elementDiv.append(element);
+                        timeElement.innerHTML = ("Arrived " + timeDiffArv + " min(s) late");
+                        elementDiv.append(timeElement);
+                        grid.append(elementDiv);
+                        grid.append(elementTimeDiv);
+                    }
+                    else {
+                        var colorChange = "<span style='color:#01b101'>Arrived On Time</span>";
+                        element.innerHTML = (scheduleItem.location + "<br>" +colorChange);
+                        elementDiv.append(element);
+                        grid.append(elementDiv);
+                    }
                 }
                 else if(scheduleItem.hasOwnProperty('departure')){
                     var noData = "<span style='color:#707370'>Exp: "+scheduleItem.departure+"</span>";
