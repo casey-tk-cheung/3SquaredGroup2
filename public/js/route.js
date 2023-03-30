@@ -9,26 +9,25 @@ async function route(e) {
     var route = [];
     var left = [];
     var passGroup = new L.layerGroup();
-    const headers = new Headers();
-    headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
-    headers.append('X-ApiVersion', '1');
+ 
 
     var allMovementData;
     var lastVisitedTiploc;
     var allMovementData;
-    await fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/' 
-    + activationId + '/' + scheduleId, { headers: headers })
+    await fetch(`API/Movements/` + activationId + `/` + scheduleId)
         .then(response => response.json())
         .then(data => {
+            data = data.data
             allMovementData = data;
             if (data.length != 0)
             lastVisitedTiploc = data[data.length - 1].tiploc;
             else lastVisitedTiploc = 0;
         })
 
-    fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/' + activationId + '/' + scheduleId, {headers: headers})
+        fetch(`API/Schedule/` + activationId + `/` + scheduleId)
         .then(response => response.json())
         .then(data => {
+            data = data.data
             console.log(data);
             while (!data[data.length - 1].hasOwnProperty('latLong')) data.pop()
             var completedJourney = true;
