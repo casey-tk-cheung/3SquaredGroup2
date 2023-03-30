@@ -1,0 +1,38 @@
+[
+    {
+        "departure": "0026",
+        "tiploc": "LEEDS",
+        "location": "LEEDS",
+        "latLong": {
+            "latitude": 53.794314,
+            "longitude": -1.547867
+        }
+    },
+    {
+        "pass": "0029",
+        "tiploc": "MRLNJN",
+        "location": "MARSH LANE JN LEEDS",
+        "latLong": {
+            "latitude": 53.79336968,
+            "longitude": -1.515943509
+        }
+    },
+    {
+        "pass": "0032",
+        "tiploc": "NEVLWJN",
+        "location": "NEVILLE H. WEST JN",
+        "latLong": {
+            "latitude": 53.79172571,
+            "longitude": -1.509511062
+        }
+    },
+    {
+        "arrival": "0036",
+        "tiploc": "NEVLTMD",
+        "location": "NEVILLE HILL T&R.S.M.D",
+        "latLong": {
+            "latitude": 53.79286252,
+            "longitude": -1.501831858
+        }
+    }
+]

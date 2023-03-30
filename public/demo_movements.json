@@ -1,0 +1,46 @@
+[
+    {
+        "location": "LEEDS",
+        "tiploc": "LEEDS",
+        "eventType": "DEPARTURE",
+        "planned": "2023-03-30T00:26:00",
+        "actual": "2023-03-30T00:24:00",
+        "variation": -2,
+        "plannedDeparture": "2023-03-30T00:26:00",
+        "actualDeparture": "2023-03-30T00:24:00",
+        "latLong": {
+            "latitude": 2.74314,
+            "longitude": -2.56477854
+        }
+    },
+    {
+        "location": "MARSH LANE JN LEEDS",
+        "tiploc": "MRLNJN",
+        "eventType": "DEPARTURE",
+        "planned": "2023-03-30T00:29:00",
+        "actual": "2023-03-30T00:27:00",
+        "variation": -2,
+        "actualArrival": "2023-03-30T00:27:00",
+        "plannedArrival": "2023-03-30T00:29:00",
+        "plannedDeparture": "2023-03-30T00:29:00",
+        "actualDeparture": "2023-03-30T00:27:00",
+        "latLong": {
+            "latitude": 53.79336968,
+            "longitude": -1.515943509
+        }
+    },
+    {
+        "location": "NEVILLE HILL T&R.S.M.D",
+        "tiploc": "NEVLTMD",
+        "eventType": "DESTINATION",
+        "planned": "2023-03-30T00:36:00",
+        "actual": "2023-03-30T00:28:00",
+        "variation": -8,
+        "actualArrival": "2023-03-30T00:28:00",
+        "plannedArrival": "2023-03-30T00:36:00",
+        "latLong": {
+            "latitude": 53.79286252,
+            "longitude": -1.501831858
+        }
+    }
+]
