@@ -73,7 +73,7 @@ p.menuOptions:hover {
     margin-right: 5px;
     position: absolute;
     top: 10px;
-    background-color:rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
     padding: 1px;
     right: 10px;
@@ -116,12 +116,14 @@ p.menuOptions:hover {
     margin-top: 5px;
     width: 80%;
 }
+
 #keyBtn {
     position: absolute;
     bottom: 10px;
     right: 10px;
     z-index: 1000;
 }
+
 #tiplocBtn {
     position: absolute;
     bottom: 10px;
@@ -130,7 +132,7 @@ p.menuOptions:hover {
     visibility: hidden;
 }
 
-#journeyInfo{
+#journeyInfo {
     visibility: hidden;
 }
 
@@ -141,8 +143,9 @@ p.menuOptions:hover {
     align-items: center;
     margin-left: 2px;
     width: 100%;
-  }
-  .image-container {
+}
+
+.image-container {
     width: 100px;
     grid-row: 1;
     width: 100%;
@@ -154,59 +157,68 @@ p.menuOptions:hover {
     display: grid;
     align-items: center;
     margin-left: 2px;
-  }
+}
 
-  .grid-container span{
+.grid-container span {
     justify-self: center;
     margin-top: -20px;
-  }
-  
-  .text-container {
+}
+
+.text-container {
     grid-area: auto;
     grid-column: 3;
     font: 1em sans-serif;
-    margin-top: -22px;
-  }
+}
 
-  #journeyInfo {
+.text-container p{
+    padding: 5px;
+    margin: 0px;
+}
+
+.text-container span {
+    color: red;
+}
+
+#journeyInfo {
     visibility: hidden;
-  }
-
-.iconWrapper{
-    margin-top: -22px;
-    align-items:center;
-    display: flex;
-    flex-direction: column;
-    grid-column: 2;
 }
 
-.passed{
-    color: green;
-}
-
-.grid{
-    display: grid;
-    width: 100%;
-}
-
-.iconWrapper{
+.iconWrapper {
     margin-top: -22px;
     align-items: center;
     display: flex;
     flex-direction: column;
     grid-column: 2;
-  }
+}
 
-  .passed{
+.passed {
     color: green;
-  }
+}
 
-  .timeContainer{
+.grid {
+    display: grid;
+    width: 100%;
+}
+
+.iconWrapper {
+    margin-top: -22px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+}
+
+.passed {
+    color: green;
+}
+
+.timeContainer {
     grid-area: auto;
     grid-column: 1;
     font: 1em sans-serif;
     margin-top: -22px;
-    text-align: center;
+    text-align: right;
+    color: #707370;
 }
 
 .headCodeContainer {
@@ -214,17 +226,23 @@ p.menuOptions:hover {
     font-weight: bolder;
     display: grid;
 }
-#schedule{
+
+#schedule {
     grid-row: 1;
     grid-column: 1;
     column-width: auto;
     font-weight: bolder;
 }
-#headCode{
+
+#headCode {
     grid-row: 1;
     grid-column: 2;
     column-width: auto;
     font-weight: bolder;
+}
+
+.late {
+    color: red;
 }
 
 button{
