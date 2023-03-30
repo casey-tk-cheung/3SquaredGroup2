@@ -1,6 +1,5 @@
 async function route(e) {
     //changed instances of 'e.currentTarget' to 'e.explicitOriginalTarget' to facilitate reloading
-    console.log('in route');
     document.getElementById('lastUpdated').innerHTML = ("Last Updated: " + new Date().toLocaleString().substring(12));
     var activationId = e.srcElement.activationId;
     var scheduleId = e.srcElement.scheduleId;
@@ -179,7 +178,6 @@ async function route(e) {
                     }
                 }
                 else if (i == scheduleData.length - 1) { // destination station
-                    console.log('here');
                     var elementDiv = document.createElement('div');
                     elementDiv.classList.add('iconWrapper');
                     var element = document.createElement('span');
@@ -238,7 +236,6 @@ async function route(e) {
                         timeElement.innerHTML = ("+ " + timeDiff + " min(s)");
                         elementDiv.append(timeElement);
                         grid.append(elementDiv);
-                        // elementTimeDiv.append(timeElement);
                         grid.append(elementTimeDiv);
                     }
                     else {
@@ -247,10 +244,9 @@ async function route(e) {
                         elementDiv.append(element);
                         grid.append(elementDiv);
                     }
-                    //console.log(item.plannedDeparture + " " + item.actualDeparture + " diff: " + timeDiff);
+
                 }
                 else if(item.hasOwnProperty('plannedArrival') && item.hasOwnProperty('actualArrival')){
-                    console.log(item.plannedArrival+" "+item.plannedDeparture);
                     var timeDiffArv = calcTimeDiff(item.actualArrival, item.plannedArrival)
                     if (timeDiffArv > 0) {
                         element.innerHTML = (scheduleItem.location);
