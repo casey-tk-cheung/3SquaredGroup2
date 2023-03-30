@@ -238,8 +238,20 @@ async function route(e) {
                     }
                     //console.log(item.plannedDeparture + " " + item.actualDeparture + " diff: " + timeDiff);
                 }
-                else {
+                else if(scheduleItem.hasOwnProperty('departure')){
+                    var noData = "<span style='color:#707370'>Exp: "+scheduleItem.departure+"</span>";
+                    element.innerHTML = (scheduleItem.location + "<br>" + noData);
+                    elementDiv.append(element);
+                    grid.append(elementDiv);
+                }
+                else if(scheduleData.hasOwnProperty('pass')){
                     var noData = "<span style='color:#707370'>Exp: "+scheduleItem.pass+"</span>";
+                    element.innerHTML = (scheduleItem.location + "<br>" + noData);
+                    elementDiv.append(element);
+                    grid.append(elementDiv);
+                }
+                else{
+                    var noData = "<span style='color:#707370'>No Data</span>";
                     element.innerHTML = (scheduleItem.location + "<br>" + noData);
                     elementDiv.append(element);
                     grid.append(elementDiv);
