@@ -14,7 +14,6 @@ async function route(e) {
 
     var allMovementData;
     var lastVisitedTiploc;
-    var allMovementData;
     await fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/' 
     + activationId + '/' + scheduleId, { headers: headers })
         .then(response => response.json())
