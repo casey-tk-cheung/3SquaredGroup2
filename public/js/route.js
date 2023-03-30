@@ -184,7 +184,7 @@ async function route(e) {
                     var elementDiv = document.createElement('div');
                     elementDiv.classList.add('text-container');
                     var element = document.createElement('p');
-                    item.
+                    const schedTime = (item.planned);
                     element.innerHTML = (item.location);
                     elementDiv.append(element);
                     grid.append(elementDiv);
