@@ -82,6 +82,18 @@ p.menuOptions:hover {
     color: green;
     font-family: 'Open Sans', sans-serif;
 }
+#lastUpdated{
+    margin-right: 5px;
+    position: absolute;
+    top: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 1px;
+    right: 10px;
+    z-index: 400;
+    color: red;
+    font-family: 'Open Sans', sans-serif;   
+}
 
 #secondMenu {
     z-index: 1;

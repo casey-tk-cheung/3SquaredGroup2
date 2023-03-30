@@ -1,6 +1,7 @@
 async function route(e) {
     //changed instances of 'e.currentTarget' to 'e.explicitOriginalTarget' to facilitate reloading
-    console.log('in route')
+    console.log('in route');
+    document.getElementById('lastUpdated').innerHTML = ("Last Updated: " + new Date().toLocaleString().substring(12));
     var activationId = e.srcElement.activationId;
     var scheduleId = e.srcElement.scheduleId;
     var headCode = e.srcElement.headCode;
