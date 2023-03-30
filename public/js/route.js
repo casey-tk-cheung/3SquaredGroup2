@@ -57,7 +57,7 @@ async function route(e) {
                     var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: station })
                         .addTo(map)
                         .bindPopup(item.location + ' - Expected Arrival: ' + item.arrival +
-                        ' / Expected Departure: ' + item.departure);
+                            ' / Expected Departure: ' + item.departure);
                 }
                 //Create all other markers, if showing all station passes is enabled via button
                 if (item.hasOwnProperty('latLong') && item.hasOwnProperty('pass') && btn.innerHTML == "Hide Station Passes" &&
@@ -120,25 +120,26 @@ async function route(e) {
                 hc.innerHTML = ("Head Code: " + headCode);
             }
 
-            console.log(allMovementData);  
+            console.log(allMovementData);
             for (let i = 0; i < scheduleData.length; i++) {
                 // route diagram code here
                 item = allMovementData[i];
                 scheduleItem = scheduleData[i];
-                item = allMovementData.filter(data => data.tiploc == scheduleItem && data.hasOwnProperty)
-                // console.log('movement', item);
+                item = allMovementData.filter(data => data.tiploc == scheduleItem.tiploc && data.eventType == 'DEPARTURE');
+                console.log(item);
+                if (item.length > 0) { item = item[0]; }
+                console.log('movement', item);
+                console.log('schedule', scheduleItem);
                 //time
                 var elementDiv = document.createElement('div');
                 elementDiv.classList.add('timeContainer');
                 var element = document.createElement('p');
                 // const planned = new Date(scheduleItem.planned);
                 // element.innerHTML = planned.toLocaleTimeString();
-                if (scheduleItem.hasOwnProperty('departure'))
-                {
+                if (scheduleItem.hasOwnProperty('departure')) {
                     element.innerHTML = scheduleItem.departure;
                 }
-                else if (scheduleItem.hasOwnProperty('pass'))
-                {
+                else if (scheduleItem.hasOwnProperty('pass')) {
                     element.innerHTML = scheduleItem.pass;
                 }
                 else {
@@ -148,7 +149,7 @@ async function route(e) {
                 grid.append(elementDiv);
 
                 //icons
-                if (i == 0) {
+                if (i == 0) { // origin station
                     var elementDiv = document.createElement('div');
                     elementDiv.classList.add('iconWrapper');
                     var element = document.createElement('span');
@@ -160,7 +161,7 @@ async function route(e) {
                     elementDiv.append(element);
                     grid.append(elementDiv);
                 }
-                else if (i == allMovementData.length - 1) {
+                else if (i == scheduleData.length - 1) { // destination station
                     console.log('here');
                     var elementDiv = document.createElement('div');
                     elementDiv.classList.add('iconWrapper');
@@ -173,7 +174,7 @@ async function route(e) {
                     elementDiv.append(element);
                     grid.append(elementDiv);
                 }
-                else {
+                else { // other stations
                     var elementDiv = document.createElement('div');
                     elementDiv.classList.add('iconWrapper');
                     var element = document.createElement('span');
@@ -199,11 +200,23 @@ async function route(e) {
                 var element = document.createElement('p');
                 if (item.hasOwnProperty('plannedDeparture') && item.hasOwnProperty('actualDeparture')) {
                     var timeDiff = calcTimeDiff(item.actualDeparture, item.plannedDeparture);
-                    // console.log(schedTime + " " + realTime + " diff: " + diffInMin);
+                    if (timeDiff > 0) {
+                        element.innerHTML = (scheduleItem.location + "\n+ " + timeDiff + " min(s)");
+                        elementDiv.append(element);
+                        grid.append(elementDiv);
+                    }
+                    else {
+                        element.innerHTML = (scheduleItem.location + " \nOn Time");
+                        elementDiv.append(element);
+                        grid.append(elementDiv);
+                    }
+                    //console.log(item.plannedDeparture + " " + item.actualDeparture + " diff: " + timeDiff);
                 }
-                element.innerHTML = (item.location);
-                elementDiv.append(element);
-                grid.append(elementDiv);
+                else {
+                    element.innerHTML = (scheduleItem.location);
+                    elementDiv.append(element);
+                    grid.append(elementDiv);
+                }
             }
         })
 
