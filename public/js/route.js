@@ -55,14 +55,15 @@ async function route(e) {
                 (item != data[0] && item != data[data.length[-1]])) {
                     var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: station })
                         .addTo(map)
-                        .bindPopup(item.location);
+                        .bindPopup(item.location + ' - Expected Arrival: ' + item.arrival +
+                        ' / Expected Departure: ' + item.departure);
                 }
                 //Create all other markers, if showing all station passes is enabled via button
                 if (item.hasOwnProperty('latLong') && item.hasOwnProperty('pass') && btn.innerHTML == "Hide Station Passes" &&
                  (item != data[0] && item != data[data.length[-1]])) {
                     var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: dot})
                         .addTo(passGroup)
-                        .bindPopup(item.location);
+                        .bindPopup(item.location + ' - Expected Pass Time: ' + item.pass);
                 }
             }
             map.addLayer(passGroup); //Add pass markers to layer group
