@@ -175,9 +175,9 @@ p.menuOptions:hover {
     margin: 0px;
 }
 
-/* .text-container span {
+.text-container span {
     color: red;
-} */
+}
 
 #journeyInfo {
     visibility: hidden;

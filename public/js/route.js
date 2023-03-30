@@ -215,36 +215,31 @@ async function route(e) {
                 elementDiv.classList.add('text-container');
                 var element = document.createElement('p');
 
-                // var elementTimeDiv = document.createElement('div');
-                // elementTimeDiv.classList.add('text-container');
-                // var timeElement = document.createElement('span');
+                var elementTimeDiv = document.createElement('div');
+                elementTimeDiv.classList.add('text-container');
+                var timeElement = document.createElement('span');
 
                 if (item.hasOwnProperty('plannedDeparture') && item.hasOwnProperty('actualDeparture')) {
                     var timeDiff = calcTimeDiff(item.actualDeparture, item.plannedDeparture);
                     if (timeDiff > 0) {
-                        var timeDiffColor = "<span style='color:#ff0000'>"+timeDiff+"</span>";
-                        element.innerHTML = (scheduleItem.location + "<br>+ " + timeDiffColor + " min(s)");
+                        element.innerHTML = (scheduleItem.location);
                         elementDiv.append(element);
+                        timeElement.innerHTML = ("+ " + timeDiff + " min(s)");
+                        elementDiv.append(timeElement);
                         grid.append(elementDiv);
-                        //elementDiv.append(timeElement);
                         // elementTimeDiv.append(timeElement);
-                        //timeElement.innerHTML = ("+ " + timeDiff + " min(s)");
-                        //grid.append(elementTimeDiv);
+                        grid.append(elementTimeDiv);
                     }
                     else {
                         var colorChange = "<span style='color:#01b101'>On Time</span>";
-                        element.innerHTML = (scheduleItem.location + "<br>" + colorChange);
+                        element.innerHTML = (scheduleItem.location + "<br>" +colorChange);
                         elementDiv.append(element);
                         grid.append(elementDiv);
                     }
                     //console.log(item.plannedDeparture + " " + item.actualDeparture + " diff: " + timeDiff);
                 }
-                if (!item.hasOwnProperty('actualDeparture')) {
-                    //console.log(item.plannedDeparture);
-                    element.innerHTML = (scheduleItem.location + "<br>exp: " + item.plannedDeparture);
-                }
                 else {
-                    var noData = "<span style='color:#707370'>No Data</span>";
+                    var noData = "<span style='color:#707370'>Exp: "+scheduleItem.pass+"</span>";
                     element.innerHTML = (scheduleItem.location + "<br>" + noData);
                     elementDiv.append(element);
                     grid.append(elementDiv);
