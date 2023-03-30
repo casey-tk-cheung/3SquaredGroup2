@@ -8,8 +8,20 @@ headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
 headers.append('X-ApiVersion', '1');
 
 
-dateStart = "2023-03-30"
-dateEnd = "2023-03-30"
+var date = new Date();
+var day = String(date.getDate()).padStart(2, '0');
+var month = String(date.getMonth() + 1).padStart(2, '0');
+var year = date.getFullYear();
+//dateStart, dateEnd = year + '-' + month + '-' + day;
+const now = new Date();
+const ukTime = now.toLocaleString('en-GB');
+
+var date = ukTime.split("/");
+var day = date[0];
+var month = date[1];
+var year = date[2].substring(0, 4);
+var dateStart = year + '-' + month + '-' + day;
+var dateEnd = year + '-' + month + '-' + day;
 
 
 router.use(express.static("./public"))
