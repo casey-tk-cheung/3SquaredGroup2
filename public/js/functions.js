@@ -145,7 +145,7 @@ function calcTimeDiff(realTime, schedTime){
     const diffInMs = Math.abs(realDate - schedDate);
     const diffInMin = Math.floor(diffInMs / 1000 / 60);
     return diffInMin;
-
+}
 function clearSearch(){
     var search = document.getElementById('tiplocSearch');
     search.value = '';
