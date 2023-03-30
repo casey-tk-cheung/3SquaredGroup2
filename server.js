@@ -2,7 +2,7 @@ const express = require ('express');
 const app = express(); //initialise the server
 const path = require('path');
 const port = process.env.PORT || 3000;
-//const jsonFile = require("./allTiplocs.json");
+// const jsonFile = require("./allTiplocs.json");
 const fs = require('fs');
 const tiplocArray = require("./allTiplocs.json");
 const http = require("http");
@@ -43,15 +43,17 @@ watchFileForChanges(file);
 const headers = new Headers();
 headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
 headers.append('X-ApiVersion', '1');
-
-var date = new Date();
-var day = String(date.getDate()).padStart(2, '0');
-var month = String(date.getMonth() + 1).padStart(2, '0');
-var year = date.getFullYear();
-//dateStart, dateEnd = year + '-' + month + '-' + day;
-dateStart, dateEnd = '2023-03-30'
 tiplocsAtOnce = 25
 
+const now = new Date();
+const ukTime = now.toLocaleString('en-GB');
+
+date = ukTime.split("/");
+console.log(date);
+var day = date[0];
+var month = date[1];
+var year = date[2].substring(0, 4);
+dateStart, dateEnd = year + '-' + month + '-' + day;
 
 //need error handling for if the connection times out;
 //in general, too many requests and the webpage 'freezes'
@@ -107,3 +109,49 @@ tiplocsAtOnce = 25
 //   }
 // getTiplocs()
 //});
+
+
+
+
+
+io.on('connection', (socket) => {
+  console.log('Connected');
+
+});
+
+
+setInterval(() => {
+  io.emit('fileChanged');
+  console.log("Working")
+}, 10000);
+
+
+
+// // put in /APIrouter.js
+// function watchFileForChanges(file) { */
+//     console.log("Called")
+//     fs.watchFile(file, (curr, prev) => {
+//         if (curr.mtimeMs !== prev.mtimeMs) {
+//             fileChanged = true;
+//             console.log(`Changed`);
+//             io.emit('fileChanged');
+//         }
+//     });
+// }
+
+
+/*
+(node:12148) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 change listeners added to [StatWatcher]. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+*/
+
+//fs.watch.setMaxListeners(20); Small fix
+
+// setInterval(() => {
+//     var movements = fs.readFileSync('movementTiploc.json', {encoding:'utf8',flag:'r'});
+//     activation = movements.activationId;
+//     schedule = movements.scheduleId;
+//     getMovementUpdates(activation, schedule);
+//     console.log("Working")
+// }, 10000);
+
