@@ -131,7 +131,7 @@ async function route(e) {
                 hc.innerHTML = ("Head Code: " + headCode);
             }
 
-            console.log(allMovementData[allMovementData.length - 1]);
+            document.getElementById('journeyInfo-grid').replaceChildren();
             for (let i = 0; i < scheduleData.length; i++) {
                 // route diagram code here
                 item = allMovementData[i];
@@ -141,8 +141,6 @@ async function route(e) {
                     item = allMovementData.filter(data => data.tiploc == scheduleItem.tiploc && data.eventType == 'DESTINATION');
                 }
                 if (item.length > 0) { item = item[0]; }
-                console.log('movement', item);
-                console.log('schedule', scheduleItem);
                 //time
                 var elementDiv = document.createElement('div');
                 elementDiv.classList.add('timeContainer');
