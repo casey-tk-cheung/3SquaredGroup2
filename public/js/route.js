@@ -15,17 +15,17 @@ async function route(e) {
     var allMovementData;
     var lastVisitedTiploc;
     var scheduleData;
-    await fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/' 
-    + activationId + '/' + scheduleId, { headers: headers })
+    await fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/'
+        + activationId + '/' + scheduleId, { headers: headers })
         .then(response => response.json())
         .then(data => {
             allMovementData = data;
             if (data.length != 0)
-            lastVisitedTiploc = data[data.length - 1].tiploc;
+                lastVisitedTiploc = data[data.length - 1].tiploc;
             else lastVisitedTiploc = 0;
         })
 
-    fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/' + activationId + '/' + scheduleId, {headers: headers})
+    fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/' + activationId + '/' + scheduleId, { headers: headers })
         .then(response => response.json())
         .then(data => {
             scheduleData = data;
@@ -37,7 +37,7 @@ async function route(e) {
                         lastVisitedTiploc = data[data.indexOf(item)].tiploc;
                     }
                     var latlng = [item.latLong.latitude, item.latLong.longitude];
-                    if (completedJourney) { 
+                    if (completedJourney) {
                         route.push(latlng);
                     }
                     else {
@@ -53,15 +53,15 @@ async function route(e) {
                 //Create departure markers
                 var btn = document.getElementById("tiplocBtn");
                 if (item.hasOwnProperty('latLong') && item.hasOwnProperty('departure') &&
-                (item != data[0] && item != data[data.length[-1]])) {
+                    (item != data[0] && item != data[data.length[-1]])) {
                     var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: station })
                         .addTo(map)
                         .bindPopup(item.location);
                 }
                 //Create all other markers, if showing all station passes is enabled via button
                 if (item.hasOwnProperty('latLong') && item.hasOwnProperty('pass') && btn.innerHTML == "Hide Station Passes" &&
-                 (item != data[0] && item != data[data.length[-1]])) {
-                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: dot})
+                    (item != data[0] && item != data[data.length[-1]])) {
+                    var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: dot })
                         .addTo(passGroup)
                         .bindPopup(item.location);
                 }
@@ -70,16 +70,16 @@ async function route(e) {
             var fullRoute = route.concat(left);
             var grid = document.getElementById('journeyInfo-grid');
             var hc = document.getElementById('headCode');
-            if(hc != 0){
-                 hc.innerHTML = ("Head Code: " + headCode);
+            if (hc != 0) {
+                hc.innerHTML = ("Head Code: " + headCode);
             }
 
-            
-            var marker1 = new L.marker(left[0], {icon: train}).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map);
+
+            var marker1 = new L.marker(left[0], { icon: train }).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map);
             marker1.setZIndexOffset(1000);
-            new L.marker(route[0], {icon: locationIcon}).bindPopup(data[0].location).addTo(map);
-            new L.marker(left[left.length - 1],{icon: locationIcon}).bindPopup(data[data.length - 1].location).addTo(map);
-            if (route.length != 0){
+            new L.marker(route[0], { icon: locationIcon }).bindPopup(data[0].location).addTo(map);
+            new L.marker(left[left.length - 1], { icon: locationIcon }).bindPopup(data[data.length - 1].location).addTo(map);
+            if (route.length != 0) {
                 const path = L.polyline.antPath(route, { // completed journey
                     "delay": 800,
                     "dashArray": [
@@ -95,7 +95,7 @@ async function route(e) {
                 });
                 map.addLayer(path);
             }
-            if (left.length != 0){
+            if (left.length != 0) {
                 const path2 = L.polyline.antPath(left, { // journey left to complete
                     "delay": 800,
                     "dashArray": [
@@ -115,83 +115,97 @@ async function route(e) {
 
             var grid = document.getElementById('journeyInfo-grid');
             var hc = document.getElementById('headCode');
-            if(hc != 0){
+            if (hc != 0) {
                 hc.innerHTML = ("Head Code: " + headCode);
             }
-            
+
+            console.log(allMovementData);  
             for (let i = 0; i < scheduleData.length; i++) {
                 // route diagram code here
                 item = allMovementData[i];
                 scheduleItem = scheduleData[i];
-                console.log(scheduleItem);
-                    //time
-                    var elementDiv = document.createElement('div');
-                    elementDiv.classList.add('timeContainer');
-                    var element = document.createElement('p');
-                    const planned = new Date(scheduleItem.planned);
-                    element.innerHTML = planned.toLocaleTimeString();
-                    elementDiv.append(element);
-                    grid.append(elementDiv);
+                item = allMovementData.filter(data => data.tiploc == scheduleItem && data.hasOwnProperty)
+                // console.log('movement', item);
+                //time
+                var elementDiv = document.createElement('div');
+                elementDiv.classList.add('timeContainer');
+                var element = document.createElement('p');
+                // const planned = new Date(scheduleItem.planned);
+                // element.innerHTML = planned.toLocaleTimeString();
+                if (scheduleItem.hasOwnProperty('departure'))
+                {
+                    element.innerHTML = scheduleItem.departure;
+                }
+                else if (scheduleItem.hasOwnProperty('pass'))
+                {
+                    element.innerHTML = scheduleItem.pass;
+                }
+                else {
+                    element.innerHTML = scheduleItem.arrival;
+                }
+                elementDiv.append(element);
+                grid.append(elementDiv);
 
-                    //icons
-                    if (i == 0) {
-                        var elementDiv = document.createElement('div');
-                        elementDiv.classList.add('iconWrapper');
-                        var element = document.createElement('span');
-                        element.classList.add('iconify');
-                        element.dataset.icon = 'material-symbols:line-end-circle-outline';
-                        element.dataset.width = '75';
-                        element.dataset.height = '75';
-                        element.dataset.rotate = '270deg';
-                        elementDiv.append(element);
-                        grid.append(elementDiv);
-                    }
-                    else if (i == allMovementData.length - 1){
-                        console.log('here');
-                        var elementDiv = document.createElement('div');
-                        elementDiv.classList.add('iconWrapper');
-                        var element = document.createElement('span');
-                        element.classList.add('iconify');
-                        element.dataset.icon = 'material-symbols:line-end-circle-outline';
-                        element.dataset.width = '75';
-                        element.dataset.height = '75';
-                        element.dataset.rotate = '90deg';
-                        elementDiv.append(element);
-                        grid.append(elementDiv);
-                    }
-                    else
-                    {
-                        var elementDiv = document.createElement('div');
-                        elementDiv.classList.add('iconWrapper');
-                        var element = document.createElement('span');
-                        element.classList.add('iconify');
-                        element.dataset.icon = 'mdi:horizontal-line';
-                        element.dataset.width = '75';
-                        element.dataset.height = '75';
-                        element.dataset.rotate = '270deg';
-                        elementDiv.append(element);
-                        var element = document.createElement('span');
-                        element.classList.add('iconify');
-                        element.dataset.icon = 'material-symbols:line-end';
-                        element.dataset.width = '75';
-                        element.dataset.height = '75';
-                        element.dataset.rotate = '270deg';
-                        element.style.marginTop = '-30px';
-                        elementDiv.append(element);
-                        grid.append(elementDiv);
-                    }
-                    //station
+                //icons
+                if (i == 0) {
                     var elementDiv = document.createElement('div');
-                    elementDiv.classList.add('text-container');
-                    var element = document.createElement('p');
-                    const schedTime = (item.planned);
-                    element.innerHTML = (item.location);
+                    elementDiv.classList.add('iconWrapper');
+                    var element = document.createElement('span');
+                    element.classList.add('iconify');
+                    element.dataset.icon = 'material-symbols:line-end-circle-outline';
+                    element.dataset.width = '75';
+                    element.dataset.height = '75';
+                    element.dataset.rotate = '270deg';
                     elementDiv.append(element);
                     grid.append(elementDiv);
-                
+                }
+                else if (i == allMovementData.length - 1) {
+                    console.log('here');
+                    var elementDiv = document.createElement('div');
+                    elementDiv.classList.add('iconWrapper');
+                    var element = document.createElement('span');
+                    element.classList.add('iconify');
+                    element.dataset.icon = 'material-symbols:line-end-circle-outline';
+                    element.dataset.width = '75';
+                    element.dataset.height = '75';
+                    element.dataset.rotate = '90deg';
+                    elementDiv.append(element);
+                    grid.append(elementDiv);
+                }
+                else {
+                    var elementDiv = document.createElement('div');
+                    elementDiv.classList.add('iconWrapper');
+                    var element = document.createElement('span');
+                    element.classList.add('iconify');
+                    element.dataset.icon = 'mdi:horizontal-line';
+                    element.dataset.width = '75';
+                    element.dataset.height = '75';
+                    element.dataset.rotate = '270deg';
+                    elementDiv.append(element);
+                    var element = document.createElement('span');
+                    element.classList.add('iconify');
+                    element.dataset.icon = 'material-symbols:line-end';
+                    element.dataset.width = '75';
+                    element.dataset.height = '75';
+                    element.dataset.rotate = '270deg';
+                    element.style.marginTop = '-30px';
+                    elementDiv.append(element);
+                    grid.append(elementDiv);
+                }
+                //station
+                var elementDiv = document.createElement('div');
+                elementDiv.classList.add('text-container');
+                var element = document.createElement('p');
+                if (item.hasOwnProperty('plannedDeparture') && item.hasOwnProperty('actualDeparture')) {
+                    var timeDiff = calcTimeDiff(item.actualDeparture, item.plannedDeparture);
+                    // console.log(schedTime + " " + realTime + " diff: " + diffInMin);
+                }
+                element.innerHTML = (item.location);
+                elementDiv.append(element);
+                grid.append(elementDiv);
             }
         })
-    
+
     //Icon definitions
     var station = L.icon({
         iconUrl: '../assets/station.png',

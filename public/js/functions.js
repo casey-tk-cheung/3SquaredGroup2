@@ -137,3 +137,11 @@ function tiplocBtnClick(){
         filterTiplocs();
     }
 }
+
+function calcTimeDiff(realTime, schedTime){
+    const schedDate = new Date(schedTime);
+    const realDate = new Date(realTime);
+    const diffInMs = Math.abs(realDate - schedDate);
+    const diffInMin = Math.floor(diffInMs / 1000 / 60);
+    return diffInMin;
+}
