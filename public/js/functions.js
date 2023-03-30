@@ -78,6 +78,7 @@ function journeyClicked(e) {
     })
     addTileLayer();
  
+    newJourney();
     intervalBegan = true;
     if (intervalBegan) {clearInterval(interval); }
     interval = setInterval(() => {

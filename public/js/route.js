@@ -1,3 +1,9 @@
+var rezoom = true;
+
+function newJourney(){
+    rezoom = true;
+}
+
 async function route(e) {
     //changed instances of 'e.currentTarget' to 'e.explicitOriginalTarget' to facilitate reloading
     document.getElementById('lastUpdated').innerHTML = ("Last Updated: " + new Date().toLocaleString().substring(12));
@@ -283,9 +289,12 @@ async function route(e) {
                 }
             }
 
-            bounds = L.latLngBounds(startMarker.getLatLng(), endMarker.getLatLng());
-            map.fitBounds(bounds);
-            zoom = map.getZoom();
+            if (rezoom){
+                bounds = L.latLngBounds(startMarker.getLatLng(), endMarker.getLatLng());
+                map.fitBounds(bounds);
+                zoom = map.getZoom();
+                rezoom = false;
+            }
         })
 
     //Icon definitions
