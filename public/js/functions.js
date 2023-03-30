@@ -1,6 +1,9 @@
 var tiplocSearch = document.getElementById('tiplocSearch');
 tiplocSearch.addEventListener('input', filterTiplocs);
 
+var interval;
+var intervalBegan = false;
+
 var toggleTiploc = document.getElementById('tiplocBtn');
 toggleTiploc.addEventListener('click', journeyClicked);
 
@@ -67,8 +70,17 @@ function journeyClicked(e) {
     journeyInfo.style.visibility = 'visible';
     storedJourney.push(e);
     route(storedJourney[0]);
+
+    map.eachLayer(function (layer) {
+        if (layer != Location.tileLayer) {
+            map.removeLayer(layer);
+        }
+    })
+    addTileLayer();
  
-    setInterval(() => {
+    intervalBegan = true;
+    if (intervalBegan) {clearInterval(interval); }
+    interval = setInterval(() => {
         route(storedJourney[0]);
         console.log("...............")
         map.eachLayer(function (layer) {
@@ -77,7 +89,7 @@ function journeyClicked(e) {
             }
         })
         addTileLayer();
-    }, 10000);
+    }, 15000);
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'visible';
     var journeyInfo = document.getElementById("journeyInfo");

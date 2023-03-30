@@ -1,4 +1,4 @@
-const express = require ('express');
+const express = require('express');
 const app = express(); //initialise the server
 const path = require('path');
 const port = process.env.PORT || 3000;
@@ -19,8 +19,8 @@ const APIRouter = require('./APIrouter.js');
 app.use('/API', APIRouter);
 
 io.on('connection', (socket) => {
-    console.log('connected');
-  });
+  console.log('connected');
+});
 
 server.listen(`${port}`, () => {
   console.log('listening on :3000');
@@ -28,14 +28,14 @@ server.listen(`${port}`, () => {
 
 let file = './public/js/movements.json'
 function watchFileForChanges(file) {
-    console.log("Called")
-    fs.watchFile(file, (curr, prev) => {
-        if (curr.mtimeMs !== prev.mtimeMs) {
-            fileChanged = true;
-            console.log(`Changed`);
-            io.emit('fileChanged');
-        }
-    });
+  console.log("Called")
+  fs.watchFile(file, (curr, prev) => {
+    if (curr.mtimeMs !== prev.mtimeMs) {
+      fileChanged = true;
+      console.log(`Changed`);
+      io.emit('fileChanged');
+    }
+  });
 }
 watchFileForChanges(file);
 
@@ -114,16 +114,7 @@ dateStart, dateEnd = year + '-' + month + '-' + day;
 
 
 
-io.on('connection', (socket) => {
-  console.log('Connected');
 
-});
-
-
-setInterval(() => {
-  io.emit('fileChanged');
-  console.log("Working")
-}, 10000);
 
 
 
