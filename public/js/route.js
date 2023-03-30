@@ -120,13 +120,11 @@ async function route(e) {
                 hc.innerHTML = ("Head Code: " + headCode);
             }
 
-            console.log(allMovementData);
             for (let i = 0; i < scheduleData.length; i++) {
                 // route diagram code here
                 item = allMovementData[i];
                 scheduleItem = scheduleData[i];
                 item = allMovementData.filter(data => data.tiploc == scheduleItem.tiploc && data.eventType == 'DEPARTURE');
-                console.log(item);
                 if (item.length > 0) { item = item[0]; }
                 console.log('movement', item);
                 console.log('schedule', scheduleItem);
@@ -137,18 +135,21 @@ async function route(e) {
                 // const planned = new Date(scheduleItem.planned);
                 // element.innerHTML = planned.toLocaleTimeString();
                 if (scheduleItem.hasOwnProperty('departure')) {
-                    element.innerHTML = scheduleItem.departure;
+                    element.innerHTML = scheduleItem.departure[0] + scheduleItem.departure[1] + ':' + scheduleItem.departure[2] + scheduleItem.departure[3];
                 }
                 else if (scheduleItem.hasOwnProperty('pass')) {
-                    element.innerHTML = scheduleItem.pass;
+                    element.innerHTML = scheduleItem.pass[0] + scheduleItem.pass[1] + ':' + scheduleItem.pass[2] + scheduleItem.pass[3];
                 }
                 else {
-                    element.innerHTML = scheduleItem.arrival;
+                    element.innerHTML = scheduleItem.arrival[0] + scheduleItem.arrival[1] + ':' + scheduleItem.arrival[2] + scheduleItem.arrival[3];
                 }
                 elementDiv.append(element);
                 grid.append(elementDiv);
 
                 //icons
+
+                var timeDiff = calcTimeDiff(item.actualDeparture, item.plannedDeparture);
+
                 if (i == 0) { // origin station
                     var elementDiv = document.createElement('div');
                     elementDiv.classList.add('iconWrapper');
@@ -160,6 +161,9 @@ async function route(e) {
                     element.dataset.rotate = '270deg';
                     elementDiv.append(element);
                     grid.append(elementDiv);
+                    if (timeDiff > 0) { //works out whether train is late to style icons
+                        element.classList.add('late');
+                    }
                 }
                 else if (i == scheduleData.length - 1) { // destination station
                     console.log('here');
@@ -171,6 +175,9 @@ async function route(e) {
                     element.dataset.width = '75';
                     element.dataset.height = '75';
                     element.dataset.rotate = '90deg';
+                    if (timeDiff > 0) { //works out whether train is late to style icons
+                        element.classList.add('late');
+                    }
                     elementDiv.append(element);
                     grid.append(elementDiv);
                 }
@@ -184,6 +191,9 @@ async function route(e) {
                     element.dataset.height = '75';
                     element.dataset.rotate = '270deg';
                     elementDiv.append(element);
+                    if (timeDiff > 0) { //works out whether train is late to style icons
+                        element.classList.add('late');
+                    }
                     var element = document.createElement('span');
                     element.classList.add('iconify');
                     element.dataset.icon = 'material-symbols:line-end';
@@ -193,27 +203,45 @@ async function route(e) {
                     element.style.marginTop = '-30px';
                     elementDiv.append(element);
                     grid.append(elementDiv);
+                    if (timeDiff > 0) { //works out whether train is late to style icons
+                        element.classList.add('late');
+                    }
                 }
+
                 //station
                 var elementDiv = document.createElement('div');
                 elementDiv.classList.add('text-container');
                 var element = document.createElement('p');
+
+                var elementTimeDiv = document.createElement('div');
+                elementTimeDiv.classList.add('text-container');
+                var timeElement = document.createElement('span');
+
                 if (item.hasOwnProperty('plannedDeparture') && item.hasOwnProperty('actualDeparture')) {
                     var timeDiff = calcTimeDiff(item.actualDeparture, item.plannedDeparture);
                     if (timeDiff > 0) {
-                        element.innerHTML = (scheduleItem.location + "\n+ " + timeDiff + " min(s)");
+                        element.innerHTML = (scheduleItem.location);
                         elementDiv.append(element);
+                        timeElement.innerHTML = ("+ " + timeDiff + " min(s)");
+                        elementDiv.append(timeElement);
                         grid.append(elementDiv);
+                        // elementTimeDiv.append(timeElement);
+                        grid.append(elementTimeDiv);
                     }
                     else {
-                        element.innerHTML = (scheduleItem.location + " \nOn Time");
+                        var colorChange = "<span style='color:#01b101'>On Time</span>";
+                        element.innerHTML = (scheduleItem.location + "<br>" +colorChange);
                         elementDiv.append(element);
                         grid.append(elementDiv);
                     }
                     //console.log(item.plannedDeparture + " " + item.actualDeparture + " diff: " + timeDiff);
                 }
-                else {
+                if(item.hasOwnProperty('plannedDeparture') &&! item.hasOwnProperty('actualDeparture')){
                     element.innerHTML = (scheduleItem.location);
+                }
+                else {
+                    var noData = "<span style='color:#707370'>No Data</span>";
+                    element.innerHTML = (scheduleItem.location + "<br>" + noData);
                     elementDiv.append(element);
                     grid.append(elementDiv);
                 }
