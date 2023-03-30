@@ -12,6 +12,8 @@ async function route(e) {
 
     var startMarker;
     var endMarker;
+    var zoom;
+    map.setZoom(zoom);
     const headers = new Headers();
     headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
     headers.append('X-ApiVersion', '1');
@@ -72,7 +74,7 @@ async function route(e) {
                     (item != data[0] && item != data[data.length[-1]])) {
                     var marker = new L.marker([item.latLong.latitude, item.latLong.longitude], { icon: dot })
                         .addTo(passGroup)
-                        .bindPopup(item.location + ' - Expected Pass Time: ' + item.pass);
+                        .bindPopup(item.location + ' - Pass Time: ' + item.pass);
                 }
             }
             map.addLayer(passGroup); //Add pass markers to layer group
@@ -288,6 +290,7 @@ async function route(e) {
 
             bounds = L.latLngBounds(startMarker.getLatLng(), endMarker.getLatLng());
             map.fitBounds(bounds);
+            zoom = map.getZoom();
         })
 
     //Icon definitions
