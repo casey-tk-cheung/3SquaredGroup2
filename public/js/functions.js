@@ -10,7 +10,8 @@ toggleTiploc.addEventListener('click', journeyClicked);
 var storedJourney = [];
 
 function getJourneys(e) {
-    for(i in storedJourney){storedJourney.pop();}
+    storedJourney = [];
+    //for(i in storedJourney){storedJourney.pop();}
     clearSidebar();
     var secondMenu = document.getElementById('journeyMenu');
     secondMenu.style.display = 'inline';
@@ -76,6 +77,7 @@ function journeyClicked(e) {
             map.removeLayer(layer);
         }
     })
+    for(i in storedJourney){i + console.log(storedJourney[i]);}
     addTileLayer();
  
     newJourney();
