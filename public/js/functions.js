@@ -11,7 +11,6 @@ var storedJourney = [];
 
 function getJourneys(e) {
     storedJourney = [];
-    //for(i in storedJourney){storedJourney.pop();}
     clearSidebar();
     var secondMenu = document.getElementById('journeyMenu');
     secondMenu.style.display = 'inline';
