@@ -137,3 +137,9 @@ function tiplocBtnClick(){
         filterTiplocs();
     }
 }
+
+function clearSearch(){
+    var search = document.getElementById('tiplocSearch');
+    search.value = '';
+    filterTiplocs();
+}
