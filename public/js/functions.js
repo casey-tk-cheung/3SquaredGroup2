@@ -88,7 +88,7 @@ function journeyClicked(e) {
             }
         })
         addTileLayer();
-    }, 30000);
+    }, 20000);
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'visible';
     var journeyInfo = document.getElementById("journeyInfo");
