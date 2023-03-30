@@ -272,7 +272,7 @@ async function route(e) {
                     elementDiv.append(element);
                     grid.append(elementDiv);
                 }
-                else if(scheduleData.hasOwnProperty('pass')){
+                else if(scheduleItem.hasOwnProperty('pass')){
                     var noData = "<span style='color:#707370'>Exp: "+scheduleItem.pass+"</span>";
                     element.innerHTML = (scheduleItem.location + "<br>" + noData);
                     elementDiv.append(element);
