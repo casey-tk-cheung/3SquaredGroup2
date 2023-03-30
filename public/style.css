@@ -92,7 +92,7 @@ p.menuOptions:hover {
 
 #markersInfo {
     position: absolute;
-    bottom: 30px;
+    bottom: 70px;
     right: 10px;
     z-index: 1000;
     display: flex;
