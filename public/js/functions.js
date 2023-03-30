@@ -73,6 +73,13 @@ function journeyClicked(e) {
     addTileLayer();
     storedJourney.push(e);
     route(storedJourney[0]);
+ 
+ 
+    setInterval(() => {
+        route(e);
+        console.log("...............")
+    }, 10000);
+    
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'visible';
     var journeyInfo = document.getElementById("journeyInfo");

@@ -1,5 +1,6 @@
 async function route(e) {
     //changed instances of 'e.currentTarget' to 'e.explicitOriginalTarget' to facilitate reloading
+    console.log('in route')
     var activationId = e.srcElement.activationId;
     var scheduleId = e.srcElement.scheduleId;
     var headCode = e.srcElement.headCode;
@@ -8,29 +9,34 @@ async function route(e) {
     var route = [];
     var left = [];
     var passGroup = new L.layerGroup();
+
     var startMarker;
     var endMarker;
     const headers = new Headers();
     headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
     headers.append('X-ApiVersion', '1');
+ 
 
     var allMovementData;
     var lastVisitedTiploc;
-    var scheduleData;
-    await fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/movement/'
-        + activationId + '/' + scheduleId, { headers: headers })
+    var allMovementData;
+    await fetch(`API/Movements/` + activationId + `/` + scheduleId)
         .then(response => response.json())
         .then(data => {
+            data = data.data
             allMovementData = data;
             if (data.length != 0)
                 lastVisitedTiploc = data[data.length - 1].tiploc;
             else lastVisitedTiploc = 0;
         })
 
-    fetch('https://traindata-stag-api.railsmart.io/api/ifmtrains/schedule/' + activationId + '/' + scheduleId, { headers: headers })
+
+        fetch(`API/Schedule/` + activationId + `/` + scheduleId)
         .then(response => response.json())
         .then(data => {
+            data = data.data
             scheduleData = data;
+
             while (!data[data.length - 1].hasOwnProperty('latLong')) data.pop()
             var completedJourney = true;
             for (const item of data) {
