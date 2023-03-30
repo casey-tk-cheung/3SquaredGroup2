@@ -8,6 +8,8 @@ async function route(e) {
     var route = [];
     var left = [];
     var passGroup = new L.layerGroup();
+    var startMarker;
+    var endMarker;
     const headers = new Headers();
     headers.append('X-ApiKey', 'AA26F453-D34D-4EFC-9DC8-F63625B67F4A');
     headers.append('X-ApiVersion', '1');
@@ -78,8 +80,8 @@ async function route(e) {
 
             var marker1 = new L.marker(left[0], { icon: train }).bindPopup(headCode + '  ||  ' + originLocation + ' - ' + destinationLocation).addTo(map);
             marker1.setZIndexOffset(1000);
-            new L.marker(route[0], { icon: locationIcon }).bindPopup(data[0].location).addTo(map);
-            new L.marker(left[left.length - 1], { icon: locationIcon }).bindPopup(data[data.length - 1].location).addTo(map);
+            startMarker = new L.marker(route[0], { icon: locationIcon }).bindPopup(data[0].location).addTo(map);
+            endMarker = new L.marker(left[left.length - 1], { icon: locationIcon }).bindPopup(data[data.length - 1].location).addTo(map);
             if (route.length != 0) {
                 const path = L.polyline.antPath(route, { // completed journey
                     "delay": 800,
@@ -230,14 +232,15 @@ async function route(e) {
                     }
                     else {
                         var colorChange = "<span style='color:#01b101'>On Time</span>";
-                        element.innerHTML = (scheduleItem.location + "<br>" +colorChange);
+                        element.innerHTML = (scheduleItem.location + "<br>" + colorChange);
                         elementDiv.append(element);
                         grid.append(elementDiv);
                     }
                     //console.log(item.plannedDeparture + " " + item.actualDeparture + " diff: " + timeDiff);
                 }
-                if(item.hasOwnProperty('plannedDeparture') &&! item.hasOwnProperty('actualDeparture')){
-                    element.innerHTML = (scheduleItem.location);
+                if (item.hasOwnProperty('plannedDeparture') && !item.hasOwnProperty('actualDeparture')) {
+                    //console.log(item.plannedDeparture);
+                    element.innerHTML = (scheduleItem.location + "<br>exp: " + item.plannedDeparture);
                 }
                 else {
                     var noData = "<span style='color:#707370'>No Data</span>";
@@ -246,6 +249,9 @@ async function route(e) {
                     grid.append(elementDiv);
                 }
             }
+
+            bounds = L.latLngBounds(startMarker.getLatLng(), endMarker.getLatLng());
+            map.fitBounds(bounds);
         })
 
     //Icon definitions
