@@ -35,7 +35,7 @@ function getJourneys(e) {
                 p.originLocation = item.originLocation;
                 p.scheduledDeparture = item.scheduledDeparture;
                 p.style.fontSize = '14px';
-                if (item.cancelled == true) {p.style.color = 'red'}
+                if (item.cancelled == true) { p.style.color = 'red' }
                 p.addEventListener("click", journeyClicked);
                 p.classList.add('menuOptions');
                 container.append(p);
@@ -52,7 +52,7 @@ function clearSidebar() {
     journeyInfoGrid.replaceChildren();
 }
 
-function resetSidebar(){
+function resetSidebar() {
     clearSidebar();
     tiplocMenu.style.display = 'inline';
     var b = document.getElementById("tiplocBtn");
@@ -79,21 +79,19 @@ function journeyClicked(e) {
     journeyInfo.style.visibility = 'visible';
 }
 
-function filterTiplocs(){
+function filterTiplocs() {
     var alltiplocs = []
     var query = tiplocSearch.value;
     var container = document.getElementById('tiplocMenu').replaceChildren();
-    var container = document.getElementById('tiplocMenu');  
-    if (query != ''){
+    var container = document.getElementById('tiplocMenu');
+    if (query != '') {
         let gettiplocs = fetch("../tiplocs.json")
             .then(r => r.json())
             .then(data => {
                 for (const item of data) {
-                    if (!alltiplocs.includes(item.originTiploc))
-                    {
-                        if (item.originLocation){
-                            if (item.originLocation.toLowerCase().includes(query.toLowerCase()))
-                            {
+                    if (!alltiplocs.includes(item.originTiploc)) {
+                        if (item.originLocation) {
+                            if (item.originLocation.toLowerCase().includes(query.toLowerCase())) {
                                 var p = document.createElement('p');
                                 p.innerHTML = item.originLocation;
                                 p.id = item.originTiploc;
@@ -106,47 +104,48 @@ function filterTiplocs(){
                     }
                 }
             }
-        )
+            )
     }
     else {
         getTiplocs();
     }
 }
 
-function toggleKey(){
+function toggleKey() {
     var b = document.getElementById("keyBtn");
     var s = document.getElementById("markersInfo");
-    if(b.innerHTML == 'Show Key'){
+    if (b.innerHTML == 'Show Key') {
         s.style.visibility = 'visible';
         b.innerHTML = 'Hide Key'
     }
-    else{
+    else {
         s.style.visibility = 'hidden';
         b.innerHTML = 'Show Key';
     }
 }
 
-function tiplocBtnClick(){
+function tiplocBtnClick() {
     var b = document.getElementById("tiplocBtn")
-    if(b.innerHTML == "Show all TIPLOCs"){
+    if (b.innerHTML == "Show all TIPLOCs") {
         filterTiplocs();
         b.innerHTML = "Hide Station Passes";
     }
-    else{
+    else {
         b.innerHTML = "Show all TIPLOCs";
         filterTiplocs();
     }
 }
 
 
-function calcTimeDiff(realTime, schedTime){
+function calcTimeDiff(realTime, schedTime) {
     const schedDate = new Date(schedTime);
     const realDate = new Date(realTime);
     const diffInMs = Math.abs(realDate - schedDate);
     const diffInMin = Math.floor(diffInMs / 1000 / 60);
     return diffInMin;
+}
 
-function clearSearch(){
+function clearSearch() {
     var search = document.getElementById('tiplocSearch');
     search.value = '';
     filterTiplocs();
