@@ -82,14 +82,13 @@ function journeyClicked(e) {
     if (intervalBegan) {clearInterval(interval); }
     interval = setInterval(() => {
         route(storedJourney[0]);
-        console.log("...............")
         map.eachLayer(function (layer) {
             if (layer != Location.tileLayer) {
                 map.removeLayer(layer);
             }
         })
         addTileLayer();
-    }, 15000);
+    }, 30000);
     var b = document.getElementById("tiplocBtn");
     b.style.visibility = 'visible';
     var journeyInfo = document.getElementById("journeyInfo");
