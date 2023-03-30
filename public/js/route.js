@@ -217,9 +217,9 @@ async function route(e) {
     var train = L.icon({
         iconUrl: '../assets/train.png',
         shadowUrl: '../assets/train.png',
-        iconSize: [24, 24], // size of the icon
+        iconSize: [40, 40], // size of the icon
         shadowSize: [0, 0], // size of the shadow
-        iconAnchor: [12, 22], // point of the icon which will correspond to marker's location
+        iconAnchor: [18, 22], // point of the icon which will correspond to marker's location
         shadowAnchor: [0, 0],  // the same for the shadow
         popupAnchor: [2, -20]
     })
