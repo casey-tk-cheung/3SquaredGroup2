@@ -1,0 +1,44 @@
+[
+  {
+    "location": "ACTON MAIN LINE",
+    "tiploc": "ACTONML",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-30T01:45:00",
+    "actual": "2023-03-30T01:48:00",
+    "variation": 3,
+    "plannedDeparture": "2023-03-30T01:45:00",
+    "actualDeparture": "2023-03-30T01:48:00",
+    "latLong": {
+      "latitude": 51.516993,
+      "longitude": -0.267811
+    }
+  },
+  {
+    "location": "ACTON WELLS JN",
+    "tiploc": "ACWLJN",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-30T01:49:00",
+    "actual": "2023-03-30T01:52:00",
+    "variation": 3,
+    "plannedDeparture": "2023-03-30T01:49:00",
+    "actualDeparture": "2023-03-30T01:52:00",
+    "latLong": {
+      "latitude": 51.518486,
+      "longitude": -0.261763
+    }
+  },
+  {
+    "location": "WILLESDEN SIGNAL WM623",
+    "tiploc": "WLSD107",
+    "eventType": "DEPARTURE",
+    "planned": "2023-03-30T01:49:00",
+    "actual": "2023-03-30T01:52:00",
+    "variation": 3,
+    "plannedDeparture": "2023-03-30T01:49:00",
+    "actualDeparture": "2023-03-30T01:52:00",
+    "latLong": {
+      "latitude": 51.522739,
+      "longitude": -0.2548693
+    }
+  }
+]
